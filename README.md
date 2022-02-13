@@ -9,7 +9,7 @@ covid19_vaccine_records
 # Author(s)
   1. Manasvi Narayanan
   2. William Kopec
-  3.
+  3. Jonathan Chen
   4.
 # Database description
 Write the database description and requirements here
