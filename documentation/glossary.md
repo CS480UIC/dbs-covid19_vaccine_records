@@ -4,36 +4,36 @@ Entities
     description: basic information of the patient/person who is receiving the vaccine
 
 2. address
-    synonyms:
-    description:
+    synonyms: location, home, residence
+    description: information on the patients home/residence
 
 3. contact
-    synonyms:
-    description:
+    synonyms: coorespondence, communication
+    description: patients main contact information - phone and email
 
 4. primary_physician
-    synonyms:
-    description:
+    synonyms: main_doctor, doctor, md, med_practitioner
+    description: information on the patients primary doctor - full name, phone, address, zip
 
 5. dose_1
-    synonyms:
-    description:
+    synonyms:first_dose, vaccine_dose_1
+    description: information on the patients first dose for the covid-19 vaccine - tyep (JJ VS Pfiezer vs Moderna), date, lot number, location
 
 6. dose_2
-    synonyms:
-    description:
+    synonyms:second_dose, vaccine_dose_2
+    description: information on the patients second dose for the covid-19 vaccine - type (JJ VS Pfiezer vs Moderna), date, lot number, location - if JJ, then information will be repeated
 
 7. booster
-    synonyms:
-    description:
+    synonyms: booster_dose, booster_injection
+    description:information on the patients first dose for the covid-19 vaccine - tyep (JJ VS Pfiezer vs Moderna), date, lot number, location
 
 8. medical_history
-    synonyms:
-    description:
+    synonyms: health_records, past_health
+    description: information on a patients medical history - if they contracted covid, preexisiting conditions, any other notes (i.e. are the immunosuppressed)
 
 9. login
-    synonyms:
-    description:
+    synonyms: logon, credentials, user_identification
+    description: users login information
 
 Relationships
 
