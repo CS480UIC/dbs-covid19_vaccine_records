@@ -38,12 +38,12 @@ Entities
 Relationships:
 
 **Maxima**
-Patient to address: many-to-one
-Patient to contact: one-to-one
-Patient to primary_physician: one-to-one
-Patient to medical_history: one-to-one
-Patient to dose_1: many-to-one
-Dose_1 to dose_2: one-to-one
-Dose_2 to booster: one-to-one
+    Patient to address: many-to-one
+    Patient to contact: one-to-one
+    Patient to primary_physician: one-to-one
+    Patient to medical_history: one-to-one
+    Patient to dose_1: many-to-one
+    Dose_1 to dose_2: one-to-one
+    Dose_2 to booster: one-to-one
 
 Attributes
