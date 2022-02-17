@@ -38,67 +38,67 @@
 **Relationships:**
 
 **Relationship Maxima**  
-    Patient to address: many-to-one  
-    Patient to contact: one-to-one  
-    Patient to primary_physician: one-to-one  
-    Patient to medical_history: one-to-one  
-    Patient to dose_1: many-to-one  
-    Dose_1 to dose_2: one-to-one  
-    Dose_2 to booster: one-to-one  
+    patient to address: many-to-one  
+    patient to contact: one-to-one  
+    patient to primary_physician: one-to-one  
+    patient to medical_history: one-to-one  
+    patient to dose_1: many-to-one  
+    dose_1 to dose_2: one-to-one  
+    dose_2 to booster: one-to-one  
     
 **Relationship Minima**  
-    Patient Lives at address: zero-to-one  
-    Patient communicates via contact: one-to-zero  
-    Patient recieves dose_1: one-to-one  
-    Patient accesses login: one-to-one  
-    Patient owns medical_history: one-to-one  
-    Patient visits primary_physician: one-to-zero  
-    Dose_1 requires dose_2: one-to-one  
-    Dose_2 recommends booster: one-to-zero  
+    patient Lives at address: zero-to-one  
+    patient communicates via contact: one-to-zero  
+    patient recieves dose_1: one-to-one  
+    patient accesses login: one-to-one  
+    patient owns medical_history: one-to-one  
+    patient visits primary_physician: one-to-zero  
+    dose_1 requires dose_2: one-to-one  
+    dose_2 recommends booster: one-to-zero  
 
 
 **Attributes**  
-    Entity: Patient  
+    Entity: patient  
     first_name  many-to-one  
     last_name   many-to-one  
     dob         many-to-one  
     gender      many-to-one  
     patient_id  one-to-one  
     
-    Entity: Address  
+    Entity: address  
     street_address  many-to-one  
     zip             many-to-one  
     city            many-to-one  
     state           many-to-one  
     
-    Entity: Contact
+    Entity: contact
     email_address   one-to-many  
     phone_num       one-to-many  
     
-    Entity: Primary_physician  
+    Entity: primary_physician  
     p_street_address  many-to-one  
     p_zip             many-to-one  
     p_first_name      many-to-one  
     p_last_name       many-to-one  
     p_phone_num       one-to-one  
     
-    Entity: Login  
+    Entity: login  
     username    one-to-one  
     password    many-to-one  
     
-    Entity: Dose_1  
+    Entity: dose_1  
     type_1      many-to-one  
     lot_num_1   many-to-one  
     location_1  many-to-one  
     dose_1_date many-to-one  
     
-    Entity: Dose_2  
+    Entity: dose_2  
     type_2      many-to-one  
     lot_num_2   many-to-one  
     dose_2_date many-to-one  
     location_2  many-to-one  
     
-    Entity: Booster  
+    Entity: booster  
     type_b      many-to-one  
     lot_num_b   many-to-one  
     dose_b_date many-to-one  
