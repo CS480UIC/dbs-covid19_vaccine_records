@@ -45,5 +45,16 @@ Relationships:
     Patient to dose_1: many-to-one  
     Dose_1 to dose_2: one-to-one  
     Dose_2 to booster: one-to-one  
+    
+**Relationship Minima**  
+    Patient Lives at address: zero-to-one  
+    Patient communicates via contact: one-to-zero  
+    Patient recieves dose_1: one-to-one  
+    Patient accesses login: one-to-one  
+    Patient owns medical_history: one-to-one  
+    Patient visits primary_physician: one-to-zero  
+    Dose_1 requires dose_2: one-to-one  
+    Dose_2 recommends booster: one-to-zero  
+
 
 Attributes
