@@ -38,16 +38,17 @@
 **Relationships:**
 
 **Relationship Maxima**  
-    patient to address: many-to-one  
-    patient to contact: one-to-one  
-    patient to primary_physician: one-to-one  
-    patient to medical_history: one-to-one  
-    patient to dose_1: many-to-one  
-    dose_1 to dose_2: one-to-one  
-    dose_2 to booster: one-to-one  
+    patient lives at address: many-to-one  
+    patient communicates via contact: one-to-one  
+    patient visits primary_physician: one-to-one  
+    patient owns medical_history: one-to-one  
+    patient accesses login: one-to-one
+    patient recieves dose_1: many-to-one  
+    dose_1 requires dose_2: one-to-one  
+    dose_2 reccomends booster: one-to-one  
     
 **Relationship Minima**  
-    patient Lives at address: zero-to-one  
+    patient lives at address: zero-to-one  
     patient communicates via contact: one-to-zero  
     patient recieves dose_1: one-to-one  
     patient accesses login: one-to-one  
@@ -58,6 +59,8 @@
 
 
 **Attributes**  
+
+**Attribute Maxima**
     Entity: patient  
     first_name  many-to-one  
     last_name   many-to-one  
@@ -109,3 +112,54 @@
     pre_existing_conditions      many-to-many
     contracted_covid             many-to-one
     
+   **Attribute Minima**
+    Entity: patient  
+    first_name  required  
+    last_name   required 
+    dob         required  
+    gender      required  
+    patient_id  required  
+    
+    Entity: address  
+    street_address  required  
+    zip             required  
+    city            required 
+    state           required  
+    
+    Entity: contact
+    email_address   optional  
+    phone_num       required  
+    
+    Entity: primary_physician  
+    p_street_address  optional  
+    p_zip             optional  
+    p_first_name      optional  
+    p_last_name       optional  
+    p_phone_num       optional  
+    
+    Entity: login  
+    username    required  
+    password    required  
+    
+    Entity: dose_1  
+    type_1      required  
+    lot_num_1   required  
+    location_1  required  
+    dose_1_date required  
+    
+    Entity: dose_2  
+    type_2      required  
+    lot_num_2   required  
+    dose_2_date required 
+    location_2  required 
+    
+    Entity: booster  
+    type_b      required  
+    lot_num_b   required  
+    dose_b_date required  
+    location_b  required 
+    
+    Entity: medical_history
+    notes                        optional
+    pre_existing_conditions      optional
+    contracted_covid             optional
