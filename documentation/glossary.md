@@ -102,5 +102,10 @@
     type_b      many-to-one  
     lot_num_b   many-to-one  
     dose_b_date many-to-one  
-    location_b  many-to-one  
+    location_b  many-to-one 
+    
+    Entity: medical_history
+    notes                        many-to-one
+    pre_existing_conditions      many-to-many
+    contracted_covid             many-to-one
     
