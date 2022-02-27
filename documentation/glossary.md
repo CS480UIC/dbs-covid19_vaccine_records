@@ -128,7 +128,7 @@
     pre_existing_conditions      many-to-many
     contracted_covid             many-to-one
     
-   **Attribute Minima**
+**Attribute Minima**
     Entity: patient  
     first_name  required  
     last_name   required 
