@@ -35,10 +35,19 @@
     synonyms: logon, credentials, user_identification
     description: users login information
 
+**Supertype**
+    patient
+
+**Subtype**
+    patient visits primary_physician - primary_physician can also be a patient
+
+**Dependent Entities**
+    No dependent entities
+
 **Relationships:**
 
 **Relationship Maxima**  
-    patient lives at address: many-to-one  
+    patient lives at address: many-to-one 
     patient communicates via contact: one-to-one  
     patient visits primary_physician: one-to-one  
     patient owns medical_history: one-to-one  
@@ -55,8 +64,13 @@
     patient owns medical_history: one-to-one  
     patient visits primary_physician: one-to-zero  
     dose_1 requires dose_2: one-to-one  
-    dose_2 recommends booster: one-to-zero  
+    dose_2 recommends booster: one-to-zero
 
+**Dependency Relationships**
+    No dependency relationships
+
+**Foreign Keys Implement Dependency Relationship**
+    Not applicable, no dependency relationships
 
 **Attributes**  
 
@@ -80,7 +94,9 @@
     
     Entity: primary_physician  
     p_street_address  many-to-one  
-    p_zip             many-to-one  
+    p_zip             many-to-one
+    p_city            many-to-one
+    p_state           many-to-one
     p_first_name      many-to-one  
     p_last_name       many-to-one  
     p_phone_num       one-to-one  
@@ -163,3 +179,60 @@
     notes                        optional
     pre_existing_conditions      optional
     contracted_covid             optional
+
+**Attribute Types and Cardinality**
+    Entity: patient  
+    first_name  varchar(50) NOT NULL 
+    last_name   varchar(50) NOT NULL 
+    dob         date NOT NULL
+    gender      char(1) NOT NULL
+    patient_id  INT NOT NULL
+    
+    Entity: address  
+    street_address  varchar(50) NOT NULL  
+    zip             INT NOT NULL  
+    city            varchar(50) NOT NULL   
+    state           char(2) NOT NULL
+    
+    Entity: contact
+    email_address   varchar(50) NOT NULL  
+    phone_num       INT NOT NULL 
+    
+    Entity: primary_physician  
+    p_street_address  varchar(50) NULL 
+    p_zip             INT NOT NULL
+    p_city            varchar(50) NOT NULL
+    p_state           char(2) NOT NULL
+    p_first_name      varchar(50) NOT NULL 
+    p_last_name       varchar(50) NOT NULL
+    p_phone_num       INT NOT NULL
+    
+    Entity: login  
+    username    varchar(20) UNIQUE NOT NULL
+    password    varchar(20) NOT NULL
+    
+    Entity: dose_1  
+    type_1      varchar(10) NOT NULL 
+    lot_num_1   varchar(10) NOT NULL
+    location_1  varchar(50) NOT NULL
+    dose_1_date date NOT NULL
+    
+    Entity: dose_2  
+    type_2      varchar(10) NOT NULL 
+    lot_num_2   varchar(10) NOT NULL 
+    dose_2_date date NOT NULL
+    location_2  varchar(50) NOT NULL 
+    
+    Entity: booster  
+    type_b      varchar(10) NOT NULL   
+    lot_num_b   varchar(10) NOT NULL 
+    dose_b_date date NOT NULL
+    location_b  varchar(50) NOT NULL 
+    
+    Entity: medical_history
+    notes                        varchar(200) 
+    pre_existing_conditions      varchar(200)
+    contracted_covid             date
+
+**Plural Attributes**
+    The plural attribute that we implemented is phone_num in contact. We decided it was a plural attribute because many patients can have multiple phone numbers (i.e. home and cell). We made another entity and labeled it "contact_phone_num" that contains patient_id (primary and foreign key that references the patient_id in the contact entity) and phone_num (primary key) to accommodate that.
