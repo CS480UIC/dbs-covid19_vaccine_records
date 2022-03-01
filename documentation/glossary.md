@@ -186,7 +186,7 @@
     last_name   varchar(50) NOT NULL 
     dob         date NOT NULL
     gender      char(1) NOT NULL
-    patient_id  INT NOT NULL
+    patient_id  INT UNIQUE NOT NULL
     
     Entity: address  
     street_address  varchar(50) NOT NULL  
