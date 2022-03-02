@@ -186,7 +186,7 @@
     last_name   VARCHAR(50) NOT NULL 
     dob         DATE NOT NULL
     gender      CHAR(1) NOT NULL
-    patient_id  INT UNIQUE AUTO_INCREMENT NOT NULL
+    patient_id  INT AUTO_INCREMENT
     
     Entity: address  
     street_address  VARCHAR(50) NOT NULL  
