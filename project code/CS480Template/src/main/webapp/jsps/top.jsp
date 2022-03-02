@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">Jonathan Chen</h1>
+<h1 style="text-align: center;">COVID-19 Vaccine Records</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
