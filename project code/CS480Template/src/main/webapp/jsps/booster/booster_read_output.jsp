@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Dose #2 Output</title>
+    <title>Read Booster Dose Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,18 +21,18 @@
   </head>
   
   <body>
-  <h1>Read Dose #2 Output</h1>
+  <h1>Read Booster Dose Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
+	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
 	<br/>
-	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
+	Type： <input type="text" name="booster_type" value="${booster.booster_type }" disabled/>
 	<br/>
-	Lot Number： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
+	Lot Number： <input type="text" name="booster_lot_num" value="${booster.booster_lot_num }" disabled/>
 	<br/>
-	Location： <input type="text" name="dose_2_location" value="${dose_2.dose_2_location }" disabled/>
+	Location： <input type="text" name="booster_location" value="${booster.booster_location }" disabled/>
 	<br/>
-	Date of Dose： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
+	Date of Dose： <input type="date" name="booster_date" value="${booster.booster_date }" disabled/>
 	<br/>
 </form>
 
