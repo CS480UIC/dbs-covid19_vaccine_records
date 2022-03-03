@@ -22,20 +22,20 @@
   
   <body>
   <h1>Dose #2</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Full Name :<input type="text" name="fullname" value="${form.fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.fullname }</span>
+<form action="<c:url value='/Dose2ServletCreate'/>" method="post">
+	Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
 	<br/>
-	Type      ：<input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
+	Type： <input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_type }</span>
 	<br/>
-	Lot Number：<input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
+	Lot Number： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_lot_num }</span>
 	<br/>
-	Location  ：<input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
+	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
 	<br/>
-	Date of Dose:<input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
+	Date of Dose: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
 	<br/>
 	<input type="submit" value="Create Dose 2"/>

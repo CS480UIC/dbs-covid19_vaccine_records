@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity1</title>
+    <title>Read Dose #2</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,12 +21,12 @@
   </head>
   
   <body>
-  <h1>Read Entity1</h1>
+  <h1>Read Dose #2</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	User    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/Dose2ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="dose_2_regist"/>
+	Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -34,7 +34,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read Entity1"/>
+	<input type="submit" value="Read Dose #2"/>
 </form>
   </body>
 </html>

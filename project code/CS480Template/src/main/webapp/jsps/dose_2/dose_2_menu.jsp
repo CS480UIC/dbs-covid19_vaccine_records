@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Entity1 </h1>
+    <h1>CRUD operations for Dose #2</h1>
     <br>
-	<a href="<c:url value='/jsps/dose_2/dose_2_create.jsp'/>" target="_parent">Create dose_2</a> |&nbsp; 
-	<a href="<c:url value='/jsps/dose_2/dose_2_read.jsp'/>" target="_parent">Read dose_2</a> |&nbsp;
-	<a href="<c:url value='/jsps/dose_2/dose_2_1update.jsp'/>" target="_parent">Update dose_2</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/dose_2/dose_2_1delete.jsp'/>" target="_parent">Delete dose_2</a>	
+	<a href="<c:url value='/jsps/dose_2/dose_2_create.jsp'/>" target="_parent">Create Dose #2</a> |&nbsp; 
+	<a href="<c:url value='/jsps/dose_2/dose_2_read.jsp'/>" target="_parent">Read Dose #2</a> |&nbsp;
+	<a href="<c:url value='/jsps/dose_2/dose_2_update.jsp'/>" target="_parent">Update Dose #2</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/dose_2/dose_2_delete.jsp'/>" target="_parent">Delete Dose #2</a>	
 	    
   </body>
 </html>

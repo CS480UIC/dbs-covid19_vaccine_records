@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity1</title>
+    <title>Delete Booster Dose</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete Entity1</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete User   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Delete Booster Dose</h1>
+<form action="<c:url value='/BoosterServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="booster_search"/>
+	Full Name: <input type="text" name="booster_fullname" value="${form.booster_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_fullname }</span>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete Booster Dose"/>
 </form>
   </body>
 </html>

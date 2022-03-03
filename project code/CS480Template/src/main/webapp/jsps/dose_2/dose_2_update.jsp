@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Entity1</title>
+    <title>Update Dose #2</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update User   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Update Dose #2</h1>
+<form action="<c:url value='/Dose2ServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="dose_2_search"/>
+	Update Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	<input type="submit" value="Update Dose #2"/>
 </form>
   </body>
 </html>

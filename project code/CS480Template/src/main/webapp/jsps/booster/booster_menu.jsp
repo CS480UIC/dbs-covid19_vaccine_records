@@ -7,7 +7,7 @@
   <head>
     <base href="">
     
-    <title>body</title>
+    <title>Booster Dose</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Entity1 </h1>
+    <h1>CRUD operations for Booster Dose</h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create Entity1</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read Entity1</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update Entity1</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete Entity1</a>	
+	<a href="<c:url value='/jsps/booster/booster_create.jsp'/>" target="_parent">Create Dose #2</a> |&nbsp; 
+	<a href="<c:url value='/jsps/booster/booster_read.jsp'/>" target="_parent">Read Dose #2</a> |&nbsp;
+	<a href="<c:url value='/jsps/booster/booster_update.jsp'/>" target="_parent">Update Dose #2</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/booster/booster_delete.jsp'/>" target="_parent">Delete Dose #2</a>	
 	    
   </body>
 </html>

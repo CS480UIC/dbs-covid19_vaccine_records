@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity1</title>
+    <title>Read Booster Dose</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,12 +21,12 @@
   </head>
   
   <body>
-  <h1>Read Entity1</h1>
+  <h1>Read Booster Dose</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	User    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/BoosterServletRead'/>" method="post">
+	<input type="hidden" name="method" value="booster_regist"/>
+	Full Name: <input type="text" name="booster_fullname" value="${form.booster_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_fullname }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -34,7 +34,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read Entity1"/>
+	<input type="submit" value="Read Booster Dose"/>
 </form>
   </body>
 </html>

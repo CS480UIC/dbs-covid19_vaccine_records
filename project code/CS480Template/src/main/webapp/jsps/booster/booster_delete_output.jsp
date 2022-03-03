@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Booster Dose</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,22 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Booster Dose</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+<form action="<c:url value='/BoosterServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="booster_delete"/>
+		<input type="hidden" name="booster_fullname" value="${booster.booster_fullname }"/>
+	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Type： <input type="text" name="booster_type" value="${booster.booster_type }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Lot Number： <input type="text" name="booster_lot_num" value="${booster.booster_lot_num }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	Location： <input type="text" name="booster_location" value="${booster.booster_location }" disabled/>
+	<br/>
+	Date of Dose： <input type="date" name="booster_date" value="${booster.booster_date }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Booster Dose"/>
 </form>
 
 </body>

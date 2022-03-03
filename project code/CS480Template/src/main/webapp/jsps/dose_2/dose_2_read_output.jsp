@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Dose #2 Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,18 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Dose #2 Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Lot Number： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
+	<br/>
+	Location： <input type="text" name="dose_2_location" value="${dose_2.dose_2_location }" disabled/>
+	<br/>
+	Date of Dose： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
 	<br/>
 </form>
 

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Dose #2</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,37 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Dose #2</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
+	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
+	Lot Number： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
+	<br/>
+	Location： <input type="text" name="dose_2_location" value="${dose_2.dose_2_location }" disabled/>
+	<br/>
+	Date of Dose： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+		<input type="hidden" name="method" value="dose_2_update"/>
+				<input type="hidden" name="dose_2_fullname" value="${dose_2.dose_2_fullname }"/>
+	Type： <input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_type }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Lot Number： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_lot_num }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
+	<br/>
+	Date of Dose: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
+	<br/>
+	<input type="submit" value="Update Dose #2"/>
 </form>
 
 </body>
