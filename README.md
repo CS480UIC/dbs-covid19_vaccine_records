@@ -35,4 +35,15 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 ![address_read](https://user-images.githubusercontent.com/77519227/156854670-e8415330-d4d4-4cab-b458-c69ca99ab8a2.png)  
 ![address_update](https://user-images.githubusercontent.com/77519227/156854671-7581dec6-9cbf-4d1b-9da7-7c6ce70c15ca.png)  
 ![address_create](https://user-images.githubusercontent.com/77519227/156854673-c698f80a-6032-42d9-83b0-f6f8c662d430.png)  
-![address_delete](https://user-images.githubusercontent.com/77519227/156854675-f5489e84-0805-4d0d-8cab-72f069d43bac.png)  
+![address_delete](https://user-images.githubusercontent.com/77519227/156854675-f5489e84-0805-4d0d-8cab-72f069d43bac.png) 
+
+# CRUD for Contact
+![contact_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_menu.png)
+
+![contact_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_read.png)
+
+![contact_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_update.png)
+
+![contact_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_create.png)
+
+![contact_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_delete.png)
