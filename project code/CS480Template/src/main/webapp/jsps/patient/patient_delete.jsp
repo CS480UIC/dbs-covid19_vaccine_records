@@ -5,9 +5,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="">
     
-    <title>Contact Menu</title>
+    <title>Delete Patient</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +21,16 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Contact </h1>
-    <br>
-	<a href="<c:url value='/jsps/contact/contact_create.jsp'/>" target="_parent">Create Contact</a> |&nbsp; 
-	<a href="<c:url value='/jsps/contact/contact_read.jsp'/>" target="_parent">Read Contact</a> |&nbsp;
-	<a href="<c:url value='/jsps/contact/contact_update.jsp'/>" target="_parent">Update Contact</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/contact/contact_delete.jsp'/>" target="_parent">Delete Contact</a>	
-	    
+  <h1>Delete Patient</h1>
+<form action="<c:url value='/PatientServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	First Name   :<input type="text" name="patient_first_name" value="${form.patient_first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_first_name }</span>
+	<br/>
+	Last Name   :<input type="text" name="patient_last_name" value="${form.patient_last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_last_name }</span>
+	<br/>
+	<input type="submit" value="Delete Patient"/>
+</form>
   </body>
 </html>

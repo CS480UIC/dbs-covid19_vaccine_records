@@ -44,6 +44,7 @@
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/patient/patient_menu.jsp'/>" target="body">Patient</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/contact/contact_menu.jsp'/>" target="body">Contact</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/address/address_menu.jsp'/>" target="body">Address</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/dose_1/dose_1_menu.jsp'/>" target="body">Dose #1</a> |&nbsp;&nbsp;

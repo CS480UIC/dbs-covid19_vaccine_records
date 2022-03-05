@@ -35,7 +35,7 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/ContactServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${contact.username }"/>
+				<input type="hidden" name="contact_full_name" value="${contact.contact_full_name }"/>
 	Phone Number：<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
 	<br/>

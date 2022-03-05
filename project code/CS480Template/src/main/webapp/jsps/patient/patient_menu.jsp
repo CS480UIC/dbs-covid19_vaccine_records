@@ -7,7 +7,7 @@
   <head>
     <base href="">
     
-    <title>Contact Menu</title>
+    <title>Patient Menu</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Contact </h1>
+    <h1>CRUD operations for Patient </h1>
     <br>
-	<a href="<c:url value='/jsps/contact/contact_create.jsp'/>" target="_parent">Create Contact</a> |&nbsp; 
-	<a href="<c:url value='/jsps/contact/contact_read.jsp'/>" target="_parent">Read Contact</a> |&nbsp;
-	<a href="<c:url value='/jsps/contact/contact_update.jsp'/>" target="_parent">Update Contact</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/contact/contact_delete.jsp'/>" target="_parent">Delete Contact</a>	
+	<a href="<c:url value='/jsps/patient/patient_create.jsp'/>" target="_parent">Create Patient</a> |&nbsp; 
+	<a href="<c:url value='/jsps/patient/patient_read.jsp'/>" target="_parent">Read Patient</a> |&nbsp;
+	<a href="<c:url value='/jsps/patient/patient_update.jsp'/>" target="_parent">Update Patient</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/patient/patient_delete.jsp'/>" target="_parent">Delete Patient</a>	
 	    
   </body>
 </html>
