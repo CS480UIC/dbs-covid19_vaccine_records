@@ -47,3 +47,14 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 ![contact_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_create.png)
 
 ![contact_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_delete.png)
+
+# CRUD for Patient
+![patient_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/patient_menu.png)
+
+![patient_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/patient_read.png)
+
+![patient_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/patient_update.png)
+
+![patient_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/patient_create.png)
+
+![patient_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/patient_delete.png)
