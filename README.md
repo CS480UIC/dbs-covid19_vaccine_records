@@ -39,7 +39,11 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 # CRUD for Contact
 ![contact_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_menu.png)
+
 ![contact_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_read.png)
+
 ![contact_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_update.png)
+
 ![contact_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_create.png)
+
 ![contact_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_delete.png)
