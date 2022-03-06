@@ -49,6 +49,7 @@
 			<a href="<c:url value='/jsps/address/address_menu.jsp'/>" target="body">Address</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/dose_1/dose_1_menu.jsp'/>" target="body">Dose #1</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/dose_2/dose_2_menu.jsp'/>" target="body">Dose #2</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/primary_physician/primary_physician_menu.jsp'/>" target="body">Primary Physician</a>|&nbsp;&nbsp;
 		</c:otherwise>
 	</c:choose>
 

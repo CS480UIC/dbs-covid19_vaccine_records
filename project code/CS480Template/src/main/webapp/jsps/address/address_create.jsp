@@ -23,7 +23,7 @@
   <body>
   <h1>Address</h1>
 <form action="<c:url value='/AddressServletCreate'/>" method="post">
-	Full name： <input type="text" name="address_full_name" value="${form.address_zip_code }"/>
+	Full name： <input type="text" name="address_full_name" value="${form.address_full_name }"/>
 	<span style="color: red; font-weight: 900">${errors.address_zip_code }</span>
 	<br/>
 	Street Address: <input type="text" name="address_streetaddress" value="${form.address_streetaddress }"/>
