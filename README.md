@@ -61,24 +61,24 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 
 # CRUD for Primary Physician
-![primary_physician_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_menu.png)
+![primary_physician_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_menu.jpg)
 
-![primary_physician_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_read.png)
+![primary_physician_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_read.jpg)
 
-![primary_physician_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_update.png)
+![primary_physician_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_update.jpg)
 
-![primary_physician_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_create.png)
+![primary_physician_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_create.jpg)
 
-![primary_physician_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_delete.png)
+![primary_physician_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_delete.jpg)
 
 
 # CRUD for Medical History
-![medical_history_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_menu.png)
+![medical_history_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_menu.jpg)
 
-![medical_history_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_read.png)
+![medical_history_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_read.jpg)
 
-![medical_history_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_update.png)
+![medical_history_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_update.jpg)
 
-![medical_history_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_create.png)
+![medical_history_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_create.jpg)
 
-![medical_history_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_delete.png)
+![medical_history_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_delete.jpg)
