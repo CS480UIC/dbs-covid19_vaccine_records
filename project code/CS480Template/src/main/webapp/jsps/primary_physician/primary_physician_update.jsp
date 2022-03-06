@@ -23,11 +23,30 @@
   <body>
   <h1>Update Primary Physician</h1>
 <form action="<c:url value='/PrimaryPhysicianServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="primary_physician_search"/>
-	Update Full Name: <input type="text" name="primary_physician" value="${form.primary_physician }"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician }</span>
+	<input type="hidden" name="method" value="search"/>
+	Update First Name   :<input type="text" name="primary_physician_first_name" value="${form.primary_physician_first_name}"/>
+	<span style="color: red; font-weight: 900">${errors.primary_physician_first_name}</span>
 	<br/>
+	Update Last Name   :<input type="text" name="primary_physician_last_name" value="${form.primary_physician_last_name}"/>
+	<span style="color: red; font-weight: 900">${errors.primary_physician_last_name}</span>
+	<br/>
+	Update Street Address： <input type="text" name="p_street_address" value="${form.primary_physician_street_address }"/>
+	<span style="color: red; font-weight: 900">${errors.p_street_address }</span>
+	<br/>
+	Update City： <input type="text" name="primary_physician_city" value="${form.primary_physician_city }"/>
+	<span style="color: red; font-weight: 900">${errors.p_city }</span>
+	<br/>
+	Update State： <input type="text" name="primary_physician_state" value="${form.primary_physician_state }"/>
+	<span style="color: red; font-weight: 900">${errors.p_state }</span>
+	<br/>
+	Update Zip： <input type="number" name="primary_physician_zip" value="${form.primary_physician_zip }"/>
+	<span style="color: red; font-weight: 900">${errors.p_zip }</span>
+	</br>
+	Update Phone number： <input type="tel" name="primary_physician_phone_num" value="${form.primary_physician_phone_num }"/>
+	<span style="color: red; font-weight: 900">${errors.p_phone_num }</span>
 	<input type="submit" value="Update Primary Physician"/>
+	
+	
 </form>
   </body>
 </html>

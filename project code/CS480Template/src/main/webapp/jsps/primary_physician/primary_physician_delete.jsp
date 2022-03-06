@@ -24,9 +24,17 @@
   <h1>Delete Primary Physician</h1>
 <form action="<c:url value='/PrimaryPhysicianServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="primary_physican_search"/>
-	Full Name: <input type="text" name="primary_physician_fullname" value="${form.primary_physician_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_fullname }</span>
+	First Name: <input type="text" name="primary_physician_first_name" value="${primary_physician.primary_physician_first_name }" disabled/>
 	<br/>
+	Last Name ： <input type="text" name="primary_physician_last_name" value="${primary_physician.primary_physician_last_name }" disabled/>
+	<br/>
+	Street Address： <input type="text" name="primary_physician_street_address" value="${primary_physician.primary_physician_street_address}" disabled/>
+	<br/>
+	City： <input type="text" name="primary_physician_city" value="${primary_physician.primary_physician_city}" disabled/>
+	<br/>
+	Zip： <input type="number" name="primary_physician_zip" value="${primary_physician.primary_physician_zip}" disabled/>
+	<br/>
+	Phone Number： <input type="tel" name="primary_physician_phone_num" value="${primary_physician.primary_physician_phone_num}" disabled/>
 	<input type="submit" value="Delete Primary Physician"/>
 </form>
   </body>

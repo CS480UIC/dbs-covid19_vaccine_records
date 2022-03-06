@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Patient</title>
+    <title>Read Medical History</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,23 +21,21 @@
   </head>
   
   <body>
-  <h1>Read Patient</h1>
+  <h1>Read Medical History</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/PatientServletRead'/>" method="post">
+<form action="<c:url value='/MedicalHistoryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	First Name    :<input type="text" name="patient_first_name" value="${form.patient_first_name }"/>
+	Full Name :<input type="text" name="medical_history_fullname" value="${form.medical_history_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_first_name }</span>
 	<br/>
-	Last Name    :<input type="text" name="patient_last_name" value="${form.patient_last_name }"/>
-	<span style="color: red; font-weight: 900">${errors.patient_last_name }</span>
-	<br/>
+	
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read Patient"/>
+	<input type="submit" value="Read Medical History"/>
 </form>
   </body>
 </html>
