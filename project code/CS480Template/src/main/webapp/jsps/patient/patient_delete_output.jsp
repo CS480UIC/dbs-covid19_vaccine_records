@@ -27,8 +27,7 @@
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="patient_first_name" value="${patient.patient_first_name }"/>
 	First Name    :<input type="text" name="patient_first_name" value="${patient.patient_first_name }" disabled/>
-	<br/>
-	
+	<br/>	
 	Last Name：<input type="text" name="patient_last_name" value="${patient.patient_last_name }" disabled/>
 	<br/>
 	Date of Birth	：<input type="date" name="patient_dob" value="${patient.patient_dob }" disabled/>

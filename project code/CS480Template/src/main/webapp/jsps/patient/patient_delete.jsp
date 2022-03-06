@@ -30,6 +30,12 @@
 	Last Name   :<input type="text" name="patient_last_name" value="${form.patient_last_name }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_last_name }</span>
 	<br/>
+	Date of Birth   :<input type="date" name="patient_dob" value="${form.patient_dob }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_dob }</span>
+	<br/>
+	Gender(Female, Male, Intersex)   :<input type="text" name="patient_gender" value="${form.patient_gender }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_gender }</span>
+	<br/>
 	<input type="submit" value="Delete Patient"/>
 </form>
   </body>

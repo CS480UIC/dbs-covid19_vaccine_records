@@ -37,7 +37,12 @@
 <form action="<c:url value='/PatientServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="patient_first_name" value="${patient.patient_first_name }"/>
-				<input type="hidden" name="patient_last_name" value="${patient.patient_last_name }"/>	
+	First Name：<input type="text" name="patient_first_name" value="${form.patient_first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_first_name }</span>
+	<br/>
+	Last Name：<input type="text" name="patient_last_name" value="${form.patient_last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_last_name }</span>
+	<br/>
 	Date of Birth：<input type="date" name="patient_dob" value="${form.patient_dob }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_dob }</span>
 	<br/>

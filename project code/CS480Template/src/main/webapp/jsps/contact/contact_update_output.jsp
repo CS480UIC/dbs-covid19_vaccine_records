@@ -25,8 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	Full Name    :<input type="text" name="contact_full_name" value="${contact.contact_full_name }" disabled/>
-	<br/>
-	
+	<br/>	
 	Phone Number：<input type="tel" name="contact_phone_num" value="${contact.contact_phone_num }" disabled />
 	<br/>
 	Email Address	：<input type="email" name="contact_email_address" value="${contact.contact_email_address }" disabled/>
@@ -36,6 +35,9 @@
 <form action="<c:url value='/ContactServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="contact_full_name" value="${contact.contact_full_name }"/>
+	Full Name：<input type="text" name="contact_full_name" value="${form.contact_full_name }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_full_name }</span>
+	<br/>
 	Phone Number：<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
 	<br/>

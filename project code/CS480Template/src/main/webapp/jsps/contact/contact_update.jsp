@@ -27,6 +27,12 @@
 	Update Full Name   :<input type="text" name="contact_full_name" value="${form.contact_full_name }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_full_name }</span>
 	<br/>
+	Update Phone Number   :<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
+	<br/>
+	Update Email Address   :<input type="text" name="contact_email_address" value="${form.contact_email_address }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_email_address }</span>
+	<br/>
 	<input type="submit" value="Update Contact"/>
 </form>
   </body>
