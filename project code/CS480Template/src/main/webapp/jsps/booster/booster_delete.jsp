@@ -27,6 +27,18 @@
 	Full Name: <input type="text" name="booster_fullname" value="${form.booster_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_fullname }</span>
 	<br/>
+	Type： <input type="text" name="booster_type" value="${form.booster_type }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_type }</span>
+	<br/>
+	Lot Number： <input type="text" name="booster_lot_num" value="${form.booster_lot_num }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_lot_num }</span>
+	<br/>
+	Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
+	<br/>
+	Date of Dose: <input type="date" name="booster_date" value="${form.booster_date }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_date }</span>
+	<br/>
 	<input type="submit" value="Delete Booster Dose"/>
 </form>
   </body>

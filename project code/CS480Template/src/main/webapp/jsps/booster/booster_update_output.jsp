@@ -39,6 +39,9 @@
 <form action="<c:url value='/BoosterServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="booster_update"/>
 				<input type="hidden" name="booster_fullname" value="${booster.booster_fullname }"/>
+	Full Name: <input type="text" name="booster_fullname" value="${form.booster_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_fullname }</span>
+	<br/>
 	Type： <input type="text" name="booster_type" value="${form.booster_type }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_type }</span>
 	<br/>

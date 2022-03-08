@@ -39,6 +39,9 @@
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="dose_2_update"/>
 				<input type="hidden" name="dose_2_fullname" value="${dose_2.dose_2_fullname }"/>
+	Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
+	<br/>
 	Type： <input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_type }</span>
 	<br/>
