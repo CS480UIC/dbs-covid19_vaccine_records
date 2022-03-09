@@ -27,6 +27,18 @@
 	Full Name: <input type="text" name="address_fullname" value="${form.address_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.address_fullname }</span>
 	<br/>
+	Street Address: <input type="text" name="address_streetaddress" value="${form.address_streetaddress }"/>
+	<span style="color: red; font-weight: 900">${errors.address_streetaddress }</span>
+	<br/>
+	Zip code： <input type="text" name="address_zip_code" value="${form.address_zip_code }"/>
+	<span style="color: red; font-weight: 900">${errors.address_zip_code }</span>
+	<br/>
+	City： <input type="text" name="address_city" value="${form.address_city }"/>
+	<span style="color: red; font-weight: 900">${errors.address_city }</span>
+	<br/>
+	State： <input type="text" name="address_state" value="${form.address_state }"/>
+	<span style="color: red; font-weight: 900">${errors.address_state }</span>
+	<br/>
 	<input type="submit" value="Delete Address"/>
 </form>
   </body>

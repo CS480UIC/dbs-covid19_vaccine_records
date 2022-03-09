@@ -27,6 +27,18 @@
 	Update Full Name: <input type="text" name="dose_1_fullname" value="${form.dose_1_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_1_fullname }</span>
 	<br/>
+	Update Type： <input type="text" name="dose_1_type" value="${form.dose_1_type }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_type }</span>
+	<br/>
+	Update Lot Number： <input type="text" name="dose_1_lot_num" value="${form.dose_1_lot_num }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_lot_num }</span>
+	<br/>
+	Update Location： <input type="text" name="dose_1_location" value="${form.dose_1_location }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_location }</span>
+	<br/>
+	Update Date of Dose: <input type="date" name="dose_1_date" value="${form.dose_1_date }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_date }</span>
+	<br/>
 	<input type="submit" value="Update Dose #1"/>
 </form>
   </body>
