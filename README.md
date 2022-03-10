@@ -21,7 +21,7 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 ![dose1_read](https://user-images.githubusercontent.com/77519227/156854574-0f8c8ae3-2fca-44ba-955a-34d992c2b5a4.png)
 
-![dose1_update](https://user-images.githubusercontent.com/77519227/156854576-cd116dbe-668e-4fad-99b1-e794fc89d816.png)
+![dose1_update](https://user-images.githubusercontent.com/77519227/157561957-9314d805-a417-4927-ac56-e43a2a86977a.png)
 
 ![dose1_create](https://user-images.githubusercontent.com/77519227/156854577-a9907f95-c048-47b0-bc27-0dba23765138.png)
 
