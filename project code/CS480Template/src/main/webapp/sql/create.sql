@@ -21,3 +21,22 @@ CREATE TABLE contact(
 	FOREIGN KEY(patient_id) REFERENCES patient(patient_id)
 
 );
+
+CREATE TABLE primary_physician(
+	p_first_name VARCHAR(50) NOT NULL,
+	p_last_name VARCHAR(50) NOT NULL,
+	p_zip INT NOT NULL,
+	p_state CHAR(2) NOT NULL,
+	p_city VARCHAR(50) NOT NULL,
+	p_phone_num INT NOT NULL,
+	p_street_address INT NOT NULL,
+	
+	PRIMARY KEY(p_phone_num)
+);
+
+
+CREATE TABLE medical_history(
+	notes VARCHAR(200),
+	pre_existing_conditions VARCHAR(200),
+	contracted_covid DATE,
+);
