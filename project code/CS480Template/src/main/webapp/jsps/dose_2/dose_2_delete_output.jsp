@@ -26,15 +26,19 @@
 <form action="<c:url value='/Dose2ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="dose_2_delete"/>
 		<input type="hidden" name="dose_2_fullname" value="${dose_2.dose_2_fullname }"/>
+	Lot Number for Dose #1： <input type="text" name="dose_1_lot_num" value="${dose_1.dose_1_lot_num }" disabled/>
+	<br/>
+	Date of Dose #1： <input type="date" name="dose_1_date" value="${dose_1.dose_1_date }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
 	<br/>
 	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
 	<br/>
-	Lot Number： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
 	<br/>
 	Location： <input type="text" name="dose_2_location" value="${dose_2.dose_2_location }" disabled/>
 	<br/>
-	Date of Dose： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
+	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Dose #2"/>
 </form>

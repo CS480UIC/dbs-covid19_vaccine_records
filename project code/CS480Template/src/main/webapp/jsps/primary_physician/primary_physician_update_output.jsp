@@ -24,6 +24,8 @@
   <h1>Update Primary Physician</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${primary_physician.patient_id }" disabled/>
+	<br/>
 	Full Name    :<input type="text" name="primary_physician_full_name" value="${primary_physician.primary_physician_full_name }" disabled/>
 	<br/>
 	Street Address： <input type="text" name="primary_physician_street_address" value="${primary_physician.primary_physician_street_address}" disabled/>
@@ -39,6 +41,9 @@
 <form action="<c:url value='/PrimaryPhysicianServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="primary_physician_full_name" value="${primary_physician.primary_physician_full_name }"/>
+	Patient ID : <input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	First Name：<input type="text" name="primary_physician_first_name" value="${form.primary_physician_first_name }"/>
 	<span style="color: red; font-weight: 900">${errors.primary_physician_first_name}</span>
 	<br/>

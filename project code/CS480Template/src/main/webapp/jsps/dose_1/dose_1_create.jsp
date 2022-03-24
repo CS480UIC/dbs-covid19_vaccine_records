@@ -23,6 +23,9 @@
   <body>
   <h1>Dose #1</h1>
 <form action="<c:url value='/Dose1ServletCreate'/>" method="post">
+	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	Full Name: <input type="text" name="dose_1_fullname" value="${form.dose_1_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_1_fullname }</span>
 	<br/>

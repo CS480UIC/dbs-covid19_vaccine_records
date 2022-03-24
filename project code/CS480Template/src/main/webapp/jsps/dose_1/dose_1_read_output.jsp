@@ -24,6 +24,8 @@
   <h1>Read Dose #1 Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="dose_1_fullname" value="${dose_1.dose_1_fullname }" disabled/>
 	<br/>
 	Type： <input type="text" name="dose_1_type" value="${dose_1.dose_1_type }" disabled/>

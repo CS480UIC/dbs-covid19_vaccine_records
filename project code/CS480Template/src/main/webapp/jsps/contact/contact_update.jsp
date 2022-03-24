@@ -24,6 +24,9 @@
   <h1>Update Contact</h1>
 <form action="<c:url value='/ContactServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
+	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	Update Full Name   :<input type="text" name="contact_full_name" value="${form.contact_full_name }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_full_name }</span>
 	<br/>

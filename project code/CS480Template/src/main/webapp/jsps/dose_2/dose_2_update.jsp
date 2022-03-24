@@ -24,19 +24,25 @@
   <h1>Update Dose #2</h1>
 <form action="<c:url value='/Dose2ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="dose_2_search"/>
+	Lot Number for Dose #1: <input type="text" name="dose_1_lot_num" value="${form.dose_1_lot_num }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_lot_num }</span>
+	<br/>
+	Date of Dose #1: <input type="date" name="dose_1_date" value="${form.dose_1_date }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_date }</span>
+	<br/>
 	Update Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
 	<br/>
 	Update Type： <input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_type }</span>
 	<br/>
-	Update Lot Number： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
+	Update Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_lot_num }</span>
 	<br/>
 	Update Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
 	<br/>
-	Update Date of Dose: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
+	Update Date of Dose #2: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
 	<br/>
 	<input type="submit" value="Update Dose #2"/>

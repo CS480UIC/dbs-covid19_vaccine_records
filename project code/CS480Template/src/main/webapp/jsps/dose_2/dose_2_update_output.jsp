@@ -24,21 +24,31 @@
   <h1>Update Dose #2</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Lot Number for Dose #1： <input type="text" name="dose_1_lot_num" value="${dose_2.dose_1_lot_num }" disabled/>
+	<br/>
+	Date of Dose #1： <input type="date" name="dose_1_date" value="${dose_2.dose_1_date }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
 	<br/>
 	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
 	<br/>
-	Lot Number： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
 	<br/>
 	Location： <input type="text" name="dose_2_location" value="${dose_2.dose_2_location }" disabled/>
 	<br/>
-	Date of Dose： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
+	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="dose_2_update"/>
 				<input type="hidden" name="dose_2_fullname" value="${dose_2.dose_2_fullname }"/>
+	Lot Number for Dose #1: <input type="text" name="dose_1_lot_num" value="${form.dose_1_lot_num }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_lot_num }</span>
+	<br/>
+	Date of Dose #1: <input type="date" name="dose_1_date" value="${form.dose_1_date }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_1_date }</span>
+	<br/>
 	Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
 	<br/>
@@ -51,7 +61,7 @@
 	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
 	<br/>
-	Date of Dose: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
+	Date of Dose #2: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
 	<br/>
 	<input type="submit" value="Update Dose #2"/>

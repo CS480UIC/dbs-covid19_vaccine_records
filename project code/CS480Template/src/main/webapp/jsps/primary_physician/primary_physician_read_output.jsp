@@ -24,6 +24,8 @@
   <h1>Read Primary Physician Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${primary_physician.patient_id }" disabled/>
+	<br/>
 	First Name: <input type="text" name="primary_physician_first_name" value="${primary_physician.primary_physician_first_name }" disabled/>
 	<br/>
 	Last Name ： <input type="text" name="primary_physician_last_name" value="${primary_physician.primary_physician_last_name }" disabled/>

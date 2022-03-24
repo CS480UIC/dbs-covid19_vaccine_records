@@ -24,6 +24,12 @@
   <h1>Update Address</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${booster.dose_2_lot_num }" disabled/>
+	<br/>
+	Date of Dose #2： <input type="date" name="dose_2_date" value="${booster.dose_2_date }" disabled/>
+	<br/>
+	Patient ID :<input type="text" name="patient_id" value="${address.patient_id }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="address_fullname" value="${address.address_fullname }" disabled/>
 	<br/>
 	Street address: <input type="text" name="address_streetaddress" value="${address.address_streetaddress }" disabled/>

@@ -24,6 +24,8 @@
   <h1>Read Patient Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID: <input type="text" name="patient_id" value="${patient.patient_id }" disabled/>
+	<br/>
 	First Name    :<input type="text" name="patient_first_name" value="${patient.patient_first_name }" disabled/>
 	<br/>
 	Last Name：<input type="text" name="patient_last_name" value="${patient.patient_last_name }" disabled/>

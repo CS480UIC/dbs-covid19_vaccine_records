@@ -24,6 +24,8 @@
   <h1>Update Patient</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${patient.patient_id }" disabled/>
+	<br/>
 	First Name    :<input type="text" name="patient_first_name" value="${patient.patient_first_name }" disabled/>
 	<br/>	
 	Last Name：<input type="text" name="patient_last_name" value="${patient.patient_last_name }" disabled />
@@ -37,6 +39,9 @@
 <form action="<c:url value='/PatientServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="patient_first_name" value="${patient.patient_first_name }"/>
+	Patient ID :<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	First Name：<input type="text" name="patient_first_name" value="${form.patient_first_name }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_first_name }</span>
 	<br/>

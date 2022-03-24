@@ -24,6 +24,8 @@
   <h1>Read Contact Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${contact.patient_id }" disabled/>
+	<br/>
 	Full Name    :<input type="text" name="contact_full_name" value="${contact.contact_full_name }" disabled/>
 	<br/>
 	Phone Number ：<input type="tel" name="contact_phone_num" value="${contact.contact_phone_num }" disabled/>

@@ -23,6 +23,9 @@
   <body>
   <h1>Create Medical History</h1>
 <form action="<c:url value='/MedicalHistoryServletCreate'/>" method="post">
+	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	Notes:<input type="text" name="medical_history_notes" value="${form.medical_history_notes}"/>
 	<span style="color: red; font-weight: 900">${errors.medical_history_notes }</span>
 	<br/>

@@ -26,6 +26,8 @@
 <form action="<c:url value='/MedicalHistoryServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="medical_history_full_name" value="${medical_history.medical_history_full_name }"/>
+	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	<br/>
 	Notes:<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
 	<br/>
 	

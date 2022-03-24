@@ -24,6 +24,8 @@
   <h1>Read Medical History Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	<br/>
 	Notes    :<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
 	<br/>
 	Pre-existing Conditions：<input type="text" name="medical_history_preexisting_conditions" value="${medical_history.medical_history_preexisting_conditions}" disabled/>

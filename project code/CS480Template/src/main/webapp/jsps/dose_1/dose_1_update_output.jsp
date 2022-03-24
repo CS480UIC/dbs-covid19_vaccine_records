@@ -24,6 +24,8 @@
   <h1>Update Dose #1</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="dose_1_fullname" value="${dose_1.dose_1_fullname }" disabled/>
 	<br/>
 	Type： <input type="text" name="dose_1_type" value="${dose_1.dose_1_type }" disabled/>
@@ -39,6 +41,9 @@
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="dose_1_update"/>
 				<input type="hidden" name="dose_1_fullname" value="${dose_1.dose_1_fullname }"/>
+	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	Type： <input type="text" name="dose_1_type" value="${form.dose_1_type }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_1_type }</span>
 	<br/>

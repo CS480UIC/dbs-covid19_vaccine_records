@@ -26,6 +26,8 @@
 <form action="<c:url value='/AddressServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="dose_2_delete"/>
 		<input type="hidden" name="address_fullname" value="${address.address_fullname }"/>
+	Patient ID :<input type="text" name="patient_id" value="${address.patient_id }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="address_fullname" value="${address.address_fullname }" disabled/>
 	<br/>
 	Street Address： <input type="text" name="address_streetaddress" value="${address.address_streetaddress }" disabled/>

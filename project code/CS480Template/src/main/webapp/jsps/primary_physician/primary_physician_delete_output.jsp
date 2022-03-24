@@ -26,6 +26,8 @@
 <form action="<c:url value='/PrimaryPhysicianServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="primary_physician_delete"/>
 		<input type="hidden" name="primary_physician_fullname" value="${primary_physician.primary_physician_fullname }"/>
+	Patient ID :<input type="text" name="patient_id" value="${primary_physician.patient_id }" disabled/>
+	<br/>
 	First Name: <input type="text" name="primary_physician_first_name" value="${primary_physician.primary_physician_first_name }" disabled/>
 	<br/>
 	Last Name ： <input type="text" name="primary_physician_last_name" value="${primary_physician.primary_physician_last_name }" disabled/>

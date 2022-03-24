@@ -26,6 +26,8 @@
 <form action="<c:url value='/Dose1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="dose_1_delete"/>
 		<input type="hidden" name="dose_1_fullname" value="${dose_1.dose_1_fullname }"/>
+	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	<br/>
 	Full Name: <input type="text" name="dose_1_fullname" value="${dose_1.dose_1_fullname }" disabled/>
 	<br/>
 	Type： <input type="text" name="dose_1_type" value="${dose_1.dose_1_type }" disabled/>

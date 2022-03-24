@@ -24,6 +24,8 @@
   <h1>Update Medical History</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
+	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	<br/>
 	Notes:<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
 	<br/>	
 	Pre-existing Conditions：<input type="text" name="medical_history_preexisiting_conditions" value="${medical_history.medical_history_preexisiting_conditions}" disabled />
@@ -35,6 +37,9 @@
 <form action="<c:url value='/MedicalHistoryServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="medical_history_fullname" value="${medical_history.medical_history_fullname }"/>
+	Patient ID : <input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	Update Notes:<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
 	<br/>	
 	Update Pre-existing Conditions：<input type="text" name="medical_history_preexisiting_conditions" value="${medical_history.medical_history_preexisiting_conditions}" disabled />

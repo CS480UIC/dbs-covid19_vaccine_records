@@ -24,6 +24,9 @@
   <h1>Update Address</h1>
 <form action="<c:url value='/AddressServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="address_search"/>
+	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
 	Update Full Name: <input type="text" name="address_fullname" value="${form.address_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.address_fullname }</span>
 	<br/>
