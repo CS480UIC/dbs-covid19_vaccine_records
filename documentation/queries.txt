@@ -1,0 +1,21 @@
+Priyanka:
+
+Simple query 
+Select p_last_name, p_first_name
+From primary_physician
+Where p_state <> “IL”
+Order by p_last_name;
+
+Aggregate query:
+Select * 
+from primary_physician
+where p_last_name = “Smith”
+Order by p_state DESC;
+
+
+Complex query:
+select mh.notes, pp.p_last_name
+from medical_history mh JOIN primary_physician pp USING(patient_id)
+where mh.contracted_covid IN (‘2020-08-15’) AND pp.p_zip = 60607
+group by pp.p_last_name, mh.notes
+Order by pp.p_last_name;
