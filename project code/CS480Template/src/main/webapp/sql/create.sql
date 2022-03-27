@@ -96,7 +96,7 @@ CREATE TABLE dose_2(
 
 CREATE TABLE booster(
 	patient_id INT NOT NULL UNIQUE,
-	type_b VARCHAR(10) NOT NULL CHECK(type_2 IN ('Moderna', 'Pfizer', 'J&J')),
+	type_b VARCHAR(10) NOT NULL CHECK(type_b IN ('Moderna', 'Pfizer', 'J&J')),
 	lot_num_b VARCHAR(10) NOT NULL,
 	dose_b_date DATE NOT NULL,
 	location_b VARCHAR(50) NOT NULL,
