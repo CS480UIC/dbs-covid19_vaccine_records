@@ -92,7 +92,7 @@ CREATE TABLE dose_2(
 		REFERENCES dose_1(patient_id)
 		ON UPDATE CASCADE
 		ON DELETE CASCADE
-)
+);
 
 CREATE TABLE booster(
 	patient_id INT NOT NULL UNIQUE,
@@ -106,4 +106,4 @@ CREATE TABLE booster(
 		REFERENCES dose_2(patient_id)
 		ON UPDATE CASCADE
 		ON DELETE CASCADE
-)
+);
