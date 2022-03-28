@@ -39,11 +39,8 @@
 <form action="<c:url value='/BoosterServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="booster_update"/>
 				<input type="hidden" name="booster_fullname" value="${booster.booster_fullname }"/>
-	Lot Number for Dose #2: <input type="text" name="dose_2_lot_num" value="${form.dose_1_lot_num }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_1_lot_num }</span>
-	<br/>
-	Date of Dose #2: <input type="date" name="dose_2_date" value="${form.dose_1_date }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_1_date }</span>
+	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	Full Name: <input type="text" name="booster_fullname" value="${form.booster_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_fullname }</span>
