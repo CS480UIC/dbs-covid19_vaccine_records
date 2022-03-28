@@ -24,9 +24,7 @@
   <h1>Read Booster Dose Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${booster.dose_2_lot_num }" disabled/>
-	<br/>
-	Date of Dose #2： <input type="date" name="dose_2_date" value="${booster.dose_2_date }" disabled/>
+	Patient ID： <input type="text" name="patient_id" value="${booster.patient_id }" disabled/>
 	<br/>
 	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
 	<br/>
