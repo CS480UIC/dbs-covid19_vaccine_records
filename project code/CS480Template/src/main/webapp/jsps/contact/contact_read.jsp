@@ -25,8 +25,8 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ContactServletRead'/>" method="post">
 	<input type="hidden" name="method" value="contact_regist"/>
-	Full Name    :<input type="text" name="contact_full_name" value="${form.contact_full_name }"/>
-	<span style="color: red; font-weight: 900">${errors.contact_full_name }</span>
+	Patient ID   :<input type="text" name="contact_patient_id" value="${form.contact_patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_patient_id }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

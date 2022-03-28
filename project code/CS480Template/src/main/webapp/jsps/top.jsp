@@ -51,7 +51,7 @@
 			<a href="<c:url value='/jsps/dose_2/dose_2_menu.jsp'/>" target="body">Dose #2</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/booster/booster_menu.jsp'/>" target="body">Booster Dose</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/primary_physician/primary_physician_menu.jsp'/>" target="body">Primary Physician</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/medical_history/medical_history_menu.jsp'/>" target="body">Medical History</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/medical_history/medical_history_menu.jsp'/>" target="body">Medical History</a> &nbsp;&nbsp;
 		</c:otherwise>
 	</c:choose>
 
