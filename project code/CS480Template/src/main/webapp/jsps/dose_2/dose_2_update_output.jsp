@@ -24,9 +24,7 @@
   <h1>Update Dose #2</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Lot Number for Dose #1： <input type="text" name="dose_1_lot_num" value="${dose_2.dose_1_lot_num }" disabled/>
-	<br/>
-	Date of Dose #1： <input type="date" name="dose_1_date" value="${dose_2.dose_1_date }" disabled/>
+	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
 	<br/>
 	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
 	<br/>
@@ -43,11 +41,8 @@
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="dose_2_update"/>
 				<input type="hidden" name="dose_2_fullname" value="${dose_2.dose_2_fullname }"/>
-	Lot Number for Dose #1: <input type="text" name="dose_1_lot_num" value="${form.dose_1_lot_num }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_1_lot_num }</span>
-	<br/>
-	Date of Dose #1: <input type="date" name="dose_1_date" value="${form.dose_1_date }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_1_date }</span>
+	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
