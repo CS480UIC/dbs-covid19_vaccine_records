@@ -28,7 +28,7 @@ CREATE TABLE address(
 CREATE TABLE contact(
 	patient_id INT UNIQUE NOT NULL,
 	email_address VARCHAR(50) NOT NULL,
-	phone_num INT NOT NULL,
+	phone_num BIGINT SIGNED NOT NULL,
 	
 	PRIMARY KEY(patient_id),
 	FOREIGN KEY(patient_id)
