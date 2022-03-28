@@ -1,3 +1,5 @@
+SET GLOBAL local_infile=1;
+
 LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Patient Responses.csv' 
 INTO TABLE patient 
 FIELDS TERMINATED BY ',' 
@@ -16,7 +18,6 @@ IGNORE 1 ROWS
 (@stamp, @address, @zipcode, @city, @state, @pid, @fullname)
 set patient_id=@pid,street_address=@address,zip_code=@zipcode,city=@city,state=@state;
 
-#Issue: phone number must be integer type to store numbers larger than 7 digits or string
 LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Contact Responses.csv' 
 INTO TABLE contact
 FIELDS TERMINATED BY ',' 
@@ -41,7 +42,6 @@ IGNORE 1 ROWS
 (@stamp, @notes, @preConditions, @contractedDate, @pid)
 set patient_id=@pid, notes=@notes, pre_existing_conditions=@preConditions, contracted_covid=str_to_date(@contractedDate,'%m/%d/%Y');
 
-#Issue: street address should be char
 LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Primary Physician.csv' 
 INTO TABLE primary_physician
 FIELDS TERMINATED BY ',' 
@@ -49,3 +49,25 @@ ENCLOSED BY '"'
 IGNORE 1 ROWS
 (@stamp, @fName, @lName, @zipcode, @phoneNum, @address, @city, @state, @pid)
 set patient_id=@pid, p_first_name=@fName, p_last_name=@lName, p_zip=@zipcode, p_state=@state, p_city=@city, p_phone_num=@phoneNum, p_street_address=@address;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Dose #2.csv' 
+INTO TABLE dose_2
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(@stamp, @fullname, @lotNumber1, @dose1date, @dType, @lotNum, @dose2date, @location, @pid)
+set patient_id=@pid, type_2=@dType, lot_num_2=@lotNum, dose_2_date=str_to_date(@dose2date, '%m/%d/%Y'), location_2=@location;
+
+LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Booster Dose.csv' 
+INTO TABLE booster
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(@stamp, @fullname, @lotNumber2, @dosedate2, @dType, @lotNum, @location, @boosterDate, @pid)
+set patient_id=@pid, type_b=@dType, lot_num_b=@lotNum, dose_b_date=str_to_date(@boosterDate, '%m/%d/%Y'), location_b=@location;
+
+SET FOREIGN_KEY_CHECKS=1;
