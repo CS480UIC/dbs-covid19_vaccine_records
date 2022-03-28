@@ -26,9 +26,7 @@
 <form action="<c:url value='/BoosterServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="booster_delete"/>
 		<input type="hidden" name="booster_fullname" value="${booster.booster_fullname }"/>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${booster.dose_2_lot_num }" disabled/>
-	<br/>
-	Date of Dose #2： <input type="date" name="dose_2_date" value="${booster.dose_2_date }" disabled/>
+	Patient ID： <input type="text" name="patient_id" value="${booster.patient_id }" disabled/>
 	<br/>
 	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
 	<br/>
