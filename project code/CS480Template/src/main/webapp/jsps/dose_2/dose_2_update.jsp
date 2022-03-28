@@ -24,7 +24,7 @@
   <h1>Update Dose #2</h1>
 <form action="<c:url value='/Dose2ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="dose_2_search"/>
-	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
+	Update Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id}</span>
 	Update Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
