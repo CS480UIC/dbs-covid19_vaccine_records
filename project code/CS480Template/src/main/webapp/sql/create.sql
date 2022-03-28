@@ -44,10 +44,10 @@ CREATE TABLE primary_physician(
 	p_zip INT NOT NULL,
 	p_state CHAR(2) NOT NULL,
 	p_city VARCHAR(50) NOT NULL,
-	p_phone_num INT NOT NULL,
-	p_street_address INT NOT NULL,
+	p_phone_num BIGINT SIGNED NOT NULL,
+	p_street_address VARCHAR(50) NOT NULL,
 	
-	PRIMARY KEY(p_phone_num),
+	PRIMARY KEY(p_phone_num, patient_id),
 	FOREIGN KEY(patient_id)
 		REFERENCES patient(patient_id)
 		ON DELETE CASCADE
@@ -55,7 +55,7 @@ CREATE TABLE primary_physician(
 
 
 CREATE TABLE medical_history(
-    	patient_id INT NOT NULL UNIQUE,
+    	patient_id INT UNIQUE NOT NULL,
 	notes VARCHAR(200),
 	pre_existing_conditions VARCHAR(200),
 	contracted_covid DATE,
