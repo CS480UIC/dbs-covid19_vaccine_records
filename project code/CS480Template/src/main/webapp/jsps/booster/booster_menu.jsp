@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Booster Dose</h1>
     <br>
-	<a href="<c:url value='/jsps/booster/booster_create.jsp'/>" target="_parent">Create Dose #2</a> |&nbsp; 
-	<a href="<c:url value='/jsps/booster/booster_read.jsp'/>" target="_parent">Read Dose #2</a> |&nbsp;
-	<a href="<c:url value='/jsps/booster/booster_update.jsp'/>" target="_parent">Update Dose #2</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/booster/booster_delete.jsp'/>" target="_parent">Delete Dose #2</a>	
+	<a href="<c:url value='/jsps/booster/booster_create.jsp'/>" target="_parent">Create Booster</a> |&nbsp; 
+	<a href="<c:url value='/jsps/booster/booster_read.jsp'/>" target="_parent">Read Booster</a> |&nbsp;
+	<a href="<c:url value='/jsps/booster/booster_update.jsp'/>" target="_parent">Update Booster</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/booster/booster_delete.jsp'/>" target="_parent">Delete Booster</a>	
 	    
   </body>
 </html>
