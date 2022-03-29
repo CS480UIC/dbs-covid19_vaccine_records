@@ -7,7 +7,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (@stamp, @pid,@fName, @lName, @dob, @gender, @email)
-set first_name=@fName,last_name=@lName,dob=str_to_date(@dob,'%m/%d/%Y'),patient_id=@pid;
+set first_name=@fName,last_name=@lName,dob=str_to_date(@dob,'%m/%d/%Y'),patient_id=@pid,gender=@gender;
 
 LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Address (Responses).csv' 
 INTO TABLE address
@@ -58,7 +58,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
-(@stamp, @fullname, @lotNumber1, @dose1date, @dType, @lotNum, @dose2date, @location, @pid)
+(@stamp, @fullname, @pid, @dType, @lotNum, @dose2date, @location)
 set patient_id=@pid, type_2=@dType, lot_num_2=@lotNum, dose_2_date=str_to_date(@dose2date, '%m/%d/%Y'), location_2=@location;
 
 LOAD DATA LOCAL INFILE 'C:/Users/William/Desktop/CS480template/CS480Template/src/main/webapp/csvs/Booster Dose.csv' 
@@ -67,7 +67,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
-(@stamp, @fullname, @lotNumber2, @dosedate2, @dType, @lotNum, @location, @boosterDate, @pid)
+(@stamp, @fullname, @pid, @dType, @lotNum, @location, @boosterDate)
 set patient_id=@pid, type_b=@dType, lot_num_b=@lotNum, dose_b_date=str_to_date(@boosterDate, '%m/%d/%Y'), location_b=@location;
 
 SET FOREIGN_KEY_CHECKS=1;
