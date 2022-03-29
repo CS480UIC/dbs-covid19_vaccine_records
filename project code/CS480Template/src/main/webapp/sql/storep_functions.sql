@@ -38,11 +38,15 @@ BEGIN
 	WHERE contracted_covid IS NOT NULL;
 END;
 
-CREATE FUNCTION find_lot_number_1(
-pID INT
-)
-RETURNS VARCHAR(10)
-READS SQL DATA
-	SELECT lot_num_1 
-    FROM dose_1
-    WHERE dose_1.patient_id = pID;
+CREATE FUNCTION get_lot_num(pid INT)
+   RETURNS VARCHAR(10)
+   READS SQL DATA
+BEGIN
+   DECLARE lot_num VARCHAR(10);
+
+   SELECT lot_num_1
+   INTO lot_num
+   FROM dose_1 d1
+   WHERE d1.patient_id = pid;
+
+END;
