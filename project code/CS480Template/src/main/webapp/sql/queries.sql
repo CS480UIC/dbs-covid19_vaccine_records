@@ -1,12 +1,12 @@
 CREATE VIEW numeric_aggregate AS
 SELECT COUNT(*)
 FROM patient
-WHERE gender = ìFî;
+WHERE gender = ‚ÄúF‚Äù;
 
 CREATE VIEW string_aggregate AS
 SELECT * 
 FROM primary_physician
-WHERE p_last_name = ìLewisî
+WHERE p_last_name = ‚ÄúLewis‚Äù
 ORDER BY p_state DESC;
 
 CREATE VIEW dose_2_date_aggregate AS
@@ -22,13 +22,13 @@ GROUP BY(lot_num_1);
 CREATE VIEW gmail_email AS
 Select email_address
 FROM Contact
-LIKE ë%@gmail.comí
+LIKE ‚Äò%@gmail.com‚Äô
 ORDER BY email_address;
 
 CREATE VIEW physicians_illinois AS
 SELECT p_last_name, p_first_name
 FROM primary_physician
-WHERE p_state <> ìILî
+WHERE p_state <> ‚ÄúIL‚Äù
 ORDER BY p_last_name;
 
 CREATE VIEW address_chicago AS
@@ -52,7 +52,11 @@ WHERE EXISTS (SELECT patient_id FROM patient);
 CREATE VIEW complex_join AS
 SELECT mh.notes, pp.p_last_name
 FROM medical_history mh JOIN primary_physician pp USING(patient_id)
-WHERE mh.contracted_covid IN (ë2020-08-15í) AND pp.p_zip = 60607
+WHERE mh.contracted_covid IN (‚Äò2020-08-15‚Äô) AND pp.p_zip = 60607
 GROUP BY pp.p_last_name, mh.notes
 ORDER BY pp.p_last_name;
 
+CREATE VIEW complex_join_p_and_c AS
+SELECT *
+FROM patient p JOIN contact c USING(patient_id)
+WHERE EXISTS(SELECT patient_id FROM patient);
