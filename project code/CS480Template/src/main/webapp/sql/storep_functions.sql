@@ -13,7 +13,7 @@ GO;
 CREATE PROCEDURE patients_with_pfizer AS
 SELECT *
 FROM dose_1
-WHERE type_1 = 'Pfizer'
+WHERE dose_1.type_1 = 'Pfizer'
 GO;
 
 CREATE FUNCTION find_first_name(d DATE)
@@ -38,14 +38,11 @@ BEGIN
 	WHERE contracted_covid IS NOT NULL;
 END;
 
-CREATE FUNCTION find_lot_number(pID INT)
+CREATE FUNCTION find_lot_number_1(
+pID INT
+)
 RETURNS VARCHAR(10)
 READS SQL DATA
-
-BEGIN
-
-	SELECT lot_num_1
-	FROM dose_1
-	WHERE patient_id = pID;
-
-END;
+	SELECT lot_num_1 
+    FROM dose_1
+    WHERE dose_1.patient_id = pID;
