@@ -40,7 +40,8 @@ public class InitializeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try {
+		
+		/*try {
 			userservice.regist(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/user/login.jsp");
 		} catch (ClassNotFoundException | UserException e) {
@@ -49,7 +50,7 @@ public class InitializeServlet extends HttpServlet {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
-		} 
+		} */
 		
 	}
 
