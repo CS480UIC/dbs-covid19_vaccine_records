@@ -26,9 +26,6 @@
 	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Full Name    :<input type="text" name="contact_full_name" value="${form.contact_full_name }"/>
-	<span style="color: red; font-weight: 900">${errors.contact_full_name }</span>
-	<br/>
 	Phone Number：<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
 	<br/>

@@ -28,8 +28,6 @@
 		<input type="hidden" name="contact_full_name" value="${contact.contact_full_name }"/>
 	Patient ID :<input type="text" name="patient_id" value="${contact.patient_id }" disabled/>
 	<br/>
-	Full Name    :<input type="text" name="contact_full_name" value="${contact.contact_full_name }" disabled/>
-	<br/>
 	Phone Number ：<input type="tel" name="contact_phone_num" value="${contact.contact_phone_num }" disabled/>
 	<br/>
 	Email Address	：<input type="email" name="contact_email_address" value="${contact.contact_email_address }" disabled/>
