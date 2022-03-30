@@ -1,4 +1,4 @@
-package user.service;
+package init.service;
 
 import java.util.List;
 
@@ -9,17 +9,17 @@ import user.domain.User;
  * logic functions such as register, login
  * @author Aayush Makharia
  */
-public class UserService {
+public class InitService {
 	private UserDao userDao = new UserDao();
 	
 	/**
 	 * Register a user
 	 */
-	public void regist(User form) throws UserException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void regist(User form) throws InitException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		// check the user name
 		User user = userDao.findByUsername(form.getUsername());
-		if(user.getUsername()!=null && user.getUsername().equals(form.getUsername())) throw new UserException("This user name has been registered!");
+		if(user.getUsername()!=null && user.getUsername().equals(form.getUsername())) throw new InitException("This user name has been registered!");
 		userDao.add(form);
 	}
 	
@@ -27,14 +27,14 @@ public class UserService {
 	/**
 	 * Login function
 	 */
-	public void login(User form) throws UserException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void login(User form) throws InitException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		User user = userDao.findByUsername(form.getUsername());
-		if(user.getUsername()==null) throw new UserException("The user is not in the database");
+		if(user.getUsername()==null) throw new InitException("The user is not in the database");
 		
 		String password = user.getPassword();
 		
 		if(password!=null && !password.equals(form.getPassword()))
-			throw new UserException(" The password is not right");
+			throw new InitException(" The password is not right");
 		
 	}
 	

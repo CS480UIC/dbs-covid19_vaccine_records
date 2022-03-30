@@ -1,4 +1,4 @@
-package user.web.servlet;
+package init.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,13 +19,13 @@ import user.service.UserService;
  * Servlet implementation class UserServlet
  */
 
-public class UserServletRegister extends HttpServlet {
+public class InitializeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UserServletRegister() {
+    public InitializeServlet() {
         super();
     }
 
@@ -40,20 +40,6 @@ public class UserServletRegister extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserService userservice = new UserService();
-		Map<String,String[]> paramMap = request.getParameterMap();
-		User form = new User();
-		List<String> info = new ArrayList<String>();
-		
-		for(String name : paramMap.keySet()) {
-			String[] values = paramMap.get(name);
-			info.add(values[0]);
-		}
-		
-		form.setUsername(info.get(1));
-		form.setPassword(info.get(2));
-		form.setEmail(info.get(3));
-		
 		try {
 			userservice.regist(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/user/login.jsp");
