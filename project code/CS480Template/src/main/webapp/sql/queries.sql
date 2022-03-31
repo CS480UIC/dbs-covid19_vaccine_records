@@ -1,34 +1,32 @@
-CREATE VIEW numeric_aggregate AS
+CREATE VIEW string_aggregate AS
 SELECT COUNT(*)
 FROM patient
 WHERE gender = "F";
 
-CREATE VIEW string_aggregate AS
-SELECT * 
-FROM primary_physician
-WHERE p_last_name = "Lewis"
-ORDER BY p_state DESC;
+CREATE VIEW numeric_aggregate AS
+SELECT MIN(p_phone_num)
+FROM primary_physician;
 
 CREATE VIEW dose_2_date_aggregate AS
-SELECT dose_2_date
+SELECT MAX(dose_2_date)
 FROM dose_2;
 
 CREATE VIEW dose_1_group_aggregate AS
-SELECT type_1
+SELECT COUNT(type_1)
 FROM dose_1
-GROUP BY(lot_num_1);
+GROUP BY(type_1);
 
 
 CREATE VIEW gmail_email AS
 Select email_address
 FROM Contact
-LIKE "%@gmail.com"
+WHERE email_address LIKE "%@gmail.com"
 ORDER BY email_address;
 
 CREATE VIEW physicians_illinois AS
 SELECT p_last_name, p_first_name
 FROM primary_physician
-WHERE p_state <> "IL"
+WHERE p_state = "IL"
 ORDER BY p_last_name;
 
 CREATE VIEW address_chicago AS

@@ -209,7 +209,7 @@ CREATE TABLE `medical_history` (
 
 LOCK TABLES `medical_history` WRITE;
 /*!40000 ALTER TABLE `medical_history` DISABLE KEYS */;
-INSERT INTO `medical_history` VALUES (1,NULL,'Diabetes, High Blood Pressure',NULL),(2,NULL,'asthma',NULL),(3,'Last hospitalization: 1/10/2022','hypertension,10/20/2021',NULL),(4,'last hospitalization: 11-02-2021, allergic to latex','asthma, diabetes','0000-00-00'),(5,NULL,NULL,NULL);
+INSERT INTO `medical_history` VALUES (1,NULL,'Diabetes, High Blood Pressure',NULL),(2,NULL,'asthma',NULL),(3,'Last hospitalization: 1/10/2022','hypertension,10/20/2021',NULL),(4,'last hospitalization: 11-02-2021, allergic to latex','asthma, diabetes','2020-08-15'),(5,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `medical_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
