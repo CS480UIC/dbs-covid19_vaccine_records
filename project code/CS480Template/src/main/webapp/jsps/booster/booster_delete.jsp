@@ -27,9 +27,6 @@
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Full Name: <input type="text" name="booster_fullname" value="${form.booster_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_fullname }</span>
-	<br/>
 	Type： <input type="text" name="booster_type" value="${form.booster_type }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_type }</span>
 	<br/>

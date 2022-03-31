@@ -26,8 +26,6 @@
 <form>
 	Patient ID： <input type="text" name="patient_id" value="${booster.patient_id }" disabled/>
 	<br/>
-	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
-	<br/>
 	Type： <input type="text" name="booster_type" value="${booster.booster_type }" disabled/>
 	<br/>
 	Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${booster.booster_lot_num }" disabled/>

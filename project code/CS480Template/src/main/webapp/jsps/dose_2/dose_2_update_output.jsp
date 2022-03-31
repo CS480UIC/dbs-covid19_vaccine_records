@@ -26,8 +26,6 @@
 <form>
 	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
 	<br/>
-	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
-	<br/>
 	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
 	<br/>
 	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
@@ -40,12 +38,9 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="dose_2_update"/>
-				<input type="hidden" name="dose_2_fullname" value="${dose_2.dose_2_fullname }"/>
+				<input type="hidden" name="patient_id" value="${dose_2.patient_id }"/>
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
-	<br/>
-	Full Name: <input type="text" name="dose_2_fullname" value="${form.dose_2_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_2_fullname }</span>
 	<br/>
 	Type： <input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_type }</span>

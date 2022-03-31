@@ -26,8 +26,6 @@
 <form>
 	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
 	<br/>
-	Full Name: <input type="text" name="dose_2_fullname" value="${dose_2.dose_2_fullname }" disabled/>
-	<br/>
 	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
 	<br/>
 	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>

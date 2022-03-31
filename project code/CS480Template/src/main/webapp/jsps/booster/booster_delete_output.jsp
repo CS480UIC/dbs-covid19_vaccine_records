@@ -25,10 +25,8 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/BoosterServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="booster_delete"/>
-		<input type="hidden" name="booster_fullname" value="${booster.booster_fullname }"/>
+		<input type="hidden" name="patient_id" value="${booster.patient_id }"/>
 	Patient ID： <input type="text" name="patient_id" value="${booster.patient_id }" disabled/>
-	<br/>
-	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
 	<br/>
 	Type： <input type="text" name="booster_type" value="${booster.booster_type }" disabled/>
 	<br/>
