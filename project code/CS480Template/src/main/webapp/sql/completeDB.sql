@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
--- Host: localhost    Database: covid19_vaccine_records
+-- Host: 127.0.0.1    Database: covid19_vaccine_records
 -- ------------------------------------------------------
 -- Server version	8.0.27
 
@@ -162,6 +162,30 @@ INSERT INTO `dose_2` VALUES (1,'Moderna','FW8729','2021-02-05','Walgreens'),(2,'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `entity1`
+--
+
+DROP TABLE IF EXISTS `entity1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `entity1` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entity1`
+--
+
+LOCK TABLES `entity1` WRITE;
+/*!40000 ALTER TABLE `entity1` DISABLE KEYS */;
+/*!40000 ALTER TABLE `entity1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `medical_history`
 --
 
@@ -248,6 +272,31 @@ LOCK TABLES `primary_physician` WRITE;
 INSERT INTO `primary_physician` VALUES (1,'Charles','Watkins',60504,'IL','Aurora',3039071874,'8046 E. Lancaster Street'),(5,'Derrick ','Lewis',60606,'IL','Chicago',3146272903,'3 Brook Dr.'),(2,'Cheryl','Flores',60606,'IL','Chicago',5052710015,'23 Mountainview Lane'),(3,'Crystal ','Holmes',60564,'IL','Naperville',7246699097,'39 Warren Drive '),(4,'Jeremy ','Thompson',60606,'IL','Chicago',8627814565,'569 Thompson Court Apt 7');
 /*!40000 ALTER TABLE `primary_physician` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES ('covid19_vaccine_records','UICCS480Project','mnaray5@uic.edu');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -258,4 +307,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-27 21:34:53
+-- Dump completed on 2022-03-31 18:14:12
