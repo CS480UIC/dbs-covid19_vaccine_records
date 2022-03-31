@@ -157,7 +157,7 @@ CREATE TABLE `dose_2` (
 
 LOCK TABLES `dose_2` WRITE;
 /*!40000 ALTER TABLE `dose_2` DISABLE KEYS */;
-INSERT INTO `dose_2` VALUES (1,'Moderna','FW8729','2021-02-05','Walgreens'),(2,'Moderna','FW8729','2021-01-08','Walgreens'),(3,'Pfizer','FJ7643','2021-08-01','Walgreens'),(4,'J&J','FG8906','2021-05-15','Costco'),(5,'J&J','FG3678','2021-02-10','CVS');
+INSERT INTO `dose_2` VALUES (1,'Moderna','FW8729','2021-02-05','Walgreens'),(2,'Moderna','FW8729','2021-01-08','Walgreens'),(3,'Pfizer','FJ7643','2021-08-01','Walgreens'),(4,'J&J','FG8906','2021-05-15','Costco'),(5,'J&J','FG3678','2021-02-10','Costco');
 /*!40000 ALTER TABLE `dose_2` ENABLE KEYS */;
 UNLOCK TABLES;
 
