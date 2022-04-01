@@ -21,11 +21,11 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 ![updated dose1 read](https://user-images.githubusercontent.com/77519227/161333011-a6a520ed-17e0-4973-b43e-93618b37b033.png)
 
-![dose1_update](https://user-images.githubusercontent.com/77519227/157561957-9314d805-a417-4927-ac56-e43a2a86977a.png)
+![dose1 create](https://user-images.githubusercontent.com/77519227/161334252-256d16e5-59f2-4ee8-b8d6-67565a2bc68a.png)
 
-![dose1_create](https://user-images.githubusercontent.com/77519227/156854577-a9907f95-c048-47b0-bc27-0dba23765138.png)
+![dose1 update](https://user-images.githubusercontent.com/77519227/161334251-8f735d1b-fa4e-4827-99c3-958eacbe2eaa.png)
 
-![dose1_delete](https://user-images.githubusercontent.com/77519227/157804180-fe34b8ce-6a20-4b9d-9475-f54569a42062.png)
+![dose1 delete](https://user-images.githubusercontent.com/77519227/161334250-dcf8c8e7-b47e-4884-82b0-97f2d9a0ba76.png)
 
 # CRUD for Dose 2  
 ![dose2_menu](https://user-images.githubusercontent.com/77519227/157546199-b2474d75-0e53-4b6f-be73-82bfc66ee12c.png)
@@ -54,11 +54,11 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 ![address_read](https://user-images.githubusercontent.com/77519227/156854670-e8415330-d4d4-4cab-b458-c69ca99ab8a2.png)
 
-![address_update](https://user-images.githubusercontent.com/77519227/157547091-a1e4d64c-f19c-41dc-bc65-2ab9a65e5ece.png)
+![update address](https://user-images.githubusercontent.com/77519227/161334509-7ec71ac2-5fdf-41ed-a30d-d1dd01bd901f.png)
 
-![address_create](https://user-images.githubusercontent.com/77519227/156854673-c698f80a-6032-42d9-83b0-f6f8c662d430.png)
+![create address](https://user-images.githubusercontent.com/77519227/161334519-4b7afd3a-e565-42ac-8392-d15a431f8a30.png)
 
-![address_delete](https://user-images.githubusercontent.com/77519227/157547187-0f247d73-719d-4d90-af39-0e75c3745627.png)
+![delete address](https://user-images.githubusercontent.com/77519227/161334524-9eca314d-ae46-4dab-942b-9bcac435d19e.png)
 
 # CRUD for Contact
 ![contact_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/contact_menu.png)
