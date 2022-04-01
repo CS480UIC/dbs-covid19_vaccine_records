@@ -25,8 +25,8 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Dose1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="dose_1_regist"/>
-	Full Name: <input type="text" name="dose_1_fullname" value="${form.dose_1_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_1_fullname }</span>
+	Patient ID: <input type="text" name="dose_1_fullname" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
