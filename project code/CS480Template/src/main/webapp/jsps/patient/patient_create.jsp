@@ -35,6 +35,7 @@
 	Gender(Female, Male, Intersex)	：<input type="text" name="patient_gender" value="${form.patient_gender }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_gender }</span>
 	<br/>
+	<h3>Please use the "Read Patient" tab and input your information to receive your patient ID</h3>
 	<input type="submit" value="Create Patient"/>
 </form>
   </body>
