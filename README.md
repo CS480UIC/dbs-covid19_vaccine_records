@@ -43,11 +43,11 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 ![updated booster read](https://user-images.githubusercontent.com/77519227/161332961-57937a2f-fca8-4efe-b584-c9dcf88f4aa4.png)
 
-![booster_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_update.png)
+![booster_update](https://user-images.githubusercontent.com/77519227/161338453-26ca2b1f-d567-4064-b67d-d7c9f9785415.png)
 
-![booster_create](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_create.png)
+![booster_create](https://user-images.githubusercontent.com/77519227/161338455-d8562afe-6199-4a25-98dd-3d5ec120dc51.png)
 
-![booster_delete](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_delete.png)
+![booster_deletepng](https://user-images.githubusercontent.com/77519227/161338456-cb2e301a-668f-4d07-8536-028dc1706b6c.png)
   
 # CRUD for Address  
 ![address_menu](https://user-images.githubusercontent.com/77519227/157549202-cd5c6bac-e2d4-4431-95c9-c4e9e775d82b.png)
