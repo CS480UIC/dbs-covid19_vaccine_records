@@ -32,11 +32,11 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 
 ![updated dose2 read](https://user-images.githubusercontent.com/77519227/161332991-765576a1-b10e-4b34-ad4d-ccf71f35ff44.png)
 
-![dose2_update](https://user-images.githubusercontent.com/77519227/157546611-1ea2331e-75df-4bad-9f9c-6a26a52a8ac7.png)
+![dose2_update](https://user-images.githubusercontent.com/77519227/161337175-2c89136c-ead0-4e10-bf89-c6aab9130d04.png)
 
-![dose2_create](https://user-images.githubusercontent.com/77519227/156854637-e6f3e88d-5e50-4ca5-ab39-a7e776f41893.png)
+![dose2_create](https://user-images.githubusercontent.com/77519227/161337178-2220cbfb-b9fa-40b2-aeab-cc829a47b68d.png)
 
-![dose2_delete](https://user-images.githubusercontent.com/77519227/157546717-e33bc668-c332-463c-a580-dedd06806562.png)
+![dose2_delete](https://user-images.githubusercontent.com/77519227/161337180-ca0961d4-c2d2-450f-99e6-4adddbd59efb.png)
 
 # CRUD for Booster Dose  
 ![booster_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_menu.png)
