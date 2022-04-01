@@ -58,3 +58,9 @@ CREATE VIEW complex_join_p_and_c AS
 SELECT *
 FROM patient p JOIN contact c USING(patient_id)
 WHERE EXISTS(SELECT patient_id FROM patient);
+
+CREATE VIEW complex_not_exist AS
+SELECT first_name, last_name 
+FROM patient 
+WHERE NOT EXISTS (SELECT * FROM dose_1);
+
