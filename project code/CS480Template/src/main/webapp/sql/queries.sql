@@ -50,7 +50,7 @@ WHERE EXISTS (SELECT patient_id FROM patient);
 CREATE VIEW complex_join AS
 SELECT mh.notes, pp.p_last_name
 FROM medical_history mh JOIN primary_physician pp USING(patient_id)
-WHERE mh.contracted_covid IN ("2020-08-15") AND pp.p_zip = 60607
+WHERE mh.contracted_covid IN ("2020-08-15") AND pp.p_zip = 60606
 GROUP BY pp.p_last_name, mh.notes
 ORDER BY pp.p_last_name;
 
