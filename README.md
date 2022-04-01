@@ -19,7 +19,7 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 # CRUD for Dose 1  
 ![dose1_menu](https://user-images.githubusercontent.com/77519227/157546118-d60f6762-144b-4ba8-9197-f72d033180b4.png)  
 
-![dose1_read](https://user-images.githubusercontent.com/77519227/156854574-0f8c8ae3-2fca-44ba-955a-34d992c2b5a4.png)
+![updated dose1 read](https://user-images.githubusercontent.com/77519227/161333011-a6a520ed-17e0-4973-b43e-93618b37b033.png)
 
 ![dose1_update](https://user-images.githubusercontent.com/77519227/157561957-9314d805-a417-4927-ac56-e43a2a86977a.png)
 
@@ -30,7 +30,7 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 # CRUD for Dose 2  
 ![dose2_menu](https://user-images.githubusercontent.com/77519227/157546199-b2474d75-0e53-4b6f-be73-82bfc66ee12c.png)
 
-![dose2_read](https://user-images.githubusercontent.com/77519227/156854635-5fb9754f-c63f-4798-9cfd-9a29779573e3.png)
+![updated dose2 read](https://user-images.githubusercontent.com/77519227/161332991-765576a1-b10e-4b34-ad4d-ccf71f35ff44.png)
 
 ![dose2_update](https://user-images.githubusercontent.com/77519227/157546611-1ea2331e-75df-4bad-9f9c-6a26a52a8ac7.png)
 
@@ -41,7 +41,7 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 # CRUD for Booster Dose  
 ![booster_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_menu.png)
 
-![booster_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_read.png)
+![updated booster read](https://user-images.githubusercontent.com/77519227/161332961-57937a2f-fca8-4efe-b584-c9dcf88f4aa4.png)
 
 ![booster_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/booster_update.png)
 
