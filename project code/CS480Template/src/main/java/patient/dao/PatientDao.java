@@ -77,7 +77,7 @@ public class PatientDao {
 		    preparestatement.setString(1,form.getFirst_name());
 		    preparestatement.setString(2,form.getLast_name());
 		    preparestatement.setDate(3,form.getDob());
-		    preparestatement.setString(3,form.getGender().toString());
+		    preparestatement.setString(4,form.getGender().toString());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
