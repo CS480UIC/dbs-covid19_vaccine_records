@@ -26,19 +26,19 @@
 <form>
 	Patient ID :<input type="text" name="patient_id" value="${patient.patient_id }" disabled/>
 	<br/>
-	First Name    :<input type="text" name="patient_first_name" value="${patient.patient_first_name }" disabled/>
+	First Name    :<input type="text" name="patient_first_name" value="${patient.first_name }" disabled/>
 	<br/>	
-	Last Name：<input type="text" name="patient_last_name" value="${patient.patient_last_name }" disabled />
+	Last Name：<input type="text" name="patient_last_name" value="${patient.last_name }" disabled />
 	<br/>
-	Date of Birth	：<input type="date" name="patient_dob" value="${patient.patient_dob }" disabled/>
+	Date of Birth	：<input type="date" name="patient_dob" value="${patient.dob }" disabled/>
 	<br/>
-	Gender(Female, Male, Intersex)	：<input type="text" name="patient_gender" value="${patient.patient_gender }" disabled/>
+	Gender(Female, Male, Intersex)	：<input type="text" name="patient_gender" value="${patient.gender }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/PatientServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="patient_first_name" value="${patient.patient_first_name }"/>
+				<input type="hidden" name="patient_id" value="${patient.patient_id }"/>
 	Patient ID :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>

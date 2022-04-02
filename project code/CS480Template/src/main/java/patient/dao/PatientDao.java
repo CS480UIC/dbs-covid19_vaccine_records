@@ -125,11 +125,13 @@ public class PatientDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE patient SET first_name = ?, last_name = ?, dob = ?, gender = ? where patient_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			preparestatement.setString(1,form.getFirst_name());
+			preparestatement.setString(2,form.getLast_name());
+		    preparestatement.setDate(3,form.getDob());
+		    preparestatement.setString(4,form.getGender().toString());
+			preparestatement.setInt(5,form.getPatient_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

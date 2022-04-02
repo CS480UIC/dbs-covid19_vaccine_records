@@ -93,6 +93,18 @@
     <url-pattern>/PatientServletDelete</url-pattern>
   </servlet-mapping>
   
+          <servlet>
+    <description></description>
+    <display-name>PatientServletUpdate</display-name>
+    <servlet-name>PatientServletUpdate</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletUpdate</servlet-name>
+    <url-pattern>/PatientServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>InitializeDB</display-name>
