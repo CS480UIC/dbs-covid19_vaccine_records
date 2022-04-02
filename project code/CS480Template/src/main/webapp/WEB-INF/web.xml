@@ -71,6 +71,17 @@
     <url-pattern>/PatientServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>PatientServletRead</display-name>
+    <servlet-name>PatientServletRead</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletRead</servlet-name>
+    <url-pattern>/PatientServletRead</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>InitializeDB</display-name>
