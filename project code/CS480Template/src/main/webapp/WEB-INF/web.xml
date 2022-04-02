@@ -82,6 +82,17 @@
     <url-pattern>/PatientServletRead</url-pattern>
   </servlet-mapping>
   
+        <servlet>
+    <description></description>
+    <display-name>PatientServletDelete</display-name>
+    <servlet-name>PatientServletDelete</servlet-name>
+    <servlet-class>patient.web.servlet.PatientServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletDelete</servlet-name>
+    <url-pattern>/PatientServletDelete</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>InitializeDB</display-name>

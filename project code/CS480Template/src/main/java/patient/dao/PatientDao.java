@@ -59,6 +59,34 @@ public class PatientDao {
 		return patient;
 	}	
 	
+	public Patient findByID(Integer patient_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Patient patient = new Patient();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+		    String sql = "select * from patient where patient_id = ?";
+		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setInt(1,patient_id_p);
+		    ResultSet resultSet = preparestatement.executeQuery();
+
+		    while(resultSet.next()){
+		    	Integer patient_id= Integer.parseInt(resultSet.getString("patient_id"));
+
+		    	if(patient_id == patient_id_p){
+		    		patient.setPatient_id((resultSet.getInt("patient_id")));
+		    		patient.setFirst_name(resultSet.getString("first_name"));
+		    		patient.setLast_name(resultSet.getString("last_name"));
+		    		patient.setDob(java.sql.Date.valueOf(resultSet.getString("dob")));
+		    		patient.setGender(resultSet.getString("gender").charAt(0));
+		    	}
+		    }
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return patient;
+	}
+	
 	/**
 	 * insert Patient
 	 * @param form
@@ -116,14 +144,14 @@ public class PatientDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String patient_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from patient where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,Integer.parseInt(patient_id_p));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
