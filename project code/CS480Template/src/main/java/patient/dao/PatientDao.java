@@ -137,6 +137,7 @@ public class PatientDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+
 	}
 	
 	
@@ -151,7 +152,7 @@ public class PatientDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "delete from patient where patient_id = ?";
+			String sql = "delete from patient where patient_id = ?"; 
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,Integer.parseInt(patient_id_p));
 		    preparestatement.executeUpdate();

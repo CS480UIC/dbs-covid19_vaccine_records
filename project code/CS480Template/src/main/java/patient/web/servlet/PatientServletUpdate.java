@@ -80,6 +80,7 @@ public class PatientServletUpdate extends HttpServlet {
 			form.setLast_name(request.getParameter("patient_last_name"));
 			form.setDob(java.sql.Date.valueOf(request.getParameter("patient_dob")));
 			form.setGender(request.getParameter("patient_gender").charAt(0));
+			form.setPatient_id(Integer.parseInt(request.getParameter("patient_id")));
 
 			try {
 				patientdao.update(form);
