@@ -114,7 +114,7 @@ CREATE TABLE `dose_1` (
   `lot_num_1` varchar(10) NOT NULL,
   `dose_1_date` date NOT NULL,
   `location_1` varchar(50) NOT NULL,
-  PRIMARY KEY (`patient_id`,`lot_num_1`,`dose_1_date`),
+  PRIMARY KEY (`patient_id`),
   UNIQUE KEY `patient_id` (`patient_id`),
   CONSTRAINT `dose_1_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE,
   CONSTRAINT `dose_1_chk_1` CHECK ((`type_1` in (_utf8mb4'Moderna',_utf8mb4'Pfizer',_utf8mb4'J&J')))
