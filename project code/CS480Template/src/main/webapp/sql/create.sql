@@ -73,7 +73,7 @@ CREATE TABLE dose_1(
 	dose_1_date DATE NOT NULL,
 	location_1 VARCHAR(50) NOT NULL,
 	
-	PRIMARY KEY (patient_id, lot_num_1, dose_1_date),
+	PRIMARY KEY (patient_id),
 	FOREIGN KEY(patient_id)
 		REFERENCES patient(patient_id)
 		ON DELETE CASCADE
