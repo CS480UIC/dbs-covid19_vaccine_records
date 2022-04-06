@@ -23,15 +23,16 @@
   <body>
   <h1>Update Contact</h1>
 <form action="<c:url value='/ContactServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<input type="hidden" name="method" value="contact_search_update"/>
+	Input Patient ID :<input type="text" name="contact_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>
+	<!-- Update Email Address   :<input type="text" name="contact_email_address" value="${form.contact_email_address }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_email_address }</span>
 	<br/>
 	Update Phone Number   :<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
-	<br/>
-	Update Email Address   :<input type="text" name="contact_email_address" value="${form.contact_email_address }"/>
-	<span style="color: red; font-weight: 900">${errors.contact_email_address }</span>
+	-->
 	<br/>
 	<input type="submit" value="Update Contact"/>
 </form>

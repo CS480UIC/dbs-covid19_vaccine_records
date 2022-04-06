@@ -24,12 +24,13 @@
   <h1>Read Contact Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Patient ID :<input type="text" name="patient_id" value="${contact.patient_id }" disabled/>
+	Patient ID :<input type="text" name="contact_patient_id" value="${contact.patient_id }" disabled/>
 	<br/>
-	Phone Number ：<input type="tel" name="contact_phone_num" value="${contact.contact_phone_num }" disabled/>
+	Email Address	：<input type="email" name="contact_email_address" value="${contact.email_address }" disabled/>
 	<br/>
-	Email Address	：<input type="email" name="contact_email_address" value="${contact.contact_email_address }" disabled/>
+	Phone Number ：<input type="tel" name="contact_phone_num" value="${contact.phone_num }" disabled/>
 	<br/>
+
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

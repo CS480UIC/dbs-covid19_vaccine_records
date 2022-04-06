@@ -25,13 +25,17 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ContactServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="contact_delete"/>
-		<input type="hidden" name="contact_full_name" value="${contact.contact_full_name }"/>
-	Patient ID :<input type="text" name="patient_id" value="${contact.patient_id }" disabled/>
+	<input type="hidden" name="contact_patient_id" value="${contact.patient_id}"/>
+	Patient ID :<input type="text" name="contact_patient_id" value="${contact.patient_id }" disabled/>
+	<script type="text/javascript">
+	console.log("hi");
+	</script>
+	<br/>	
+	Email Address：<input type="email" name="contact_email_address" value="${contact.email_address }" disabled/>
 	<br/>
-	Phone Number ：<input type="tel" name="contact_phone_num" value="${contact.contact_phone_num }" disabled/>
+	Phone Number ：<input type="tel" name="contact_phone_num" value="${contact.phone_num }" disabled/>
 	<br/>
-	Email Address	：<input type="email" name="contact_email_address" value="${contact.contact_email_address }" disabled/>
-	<br/>
+
 	<input type="submit" value="Delete Contact"/>
 </form>
 

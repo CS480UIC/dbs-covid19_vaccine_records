@@ -26,23 +26,23 @@
 <form>
 	Patient ID :<input type="text" name="patient_id" value="${contact.patient_id }" disabled/>
 	<br/>
-	Phone Number：<input type="tel" name="contact_phone_num" value="${contact.contact_phone_num }" disabled />
+	Email Address	：<input type="email" name="contact_email_address" value="${contact.email_address }" disabled/>
 	<br/>
-	Email Address	：<input type="email" name="contact_email_address" value="${contact.contact_email_address }" disabled/>
+	Phone Number：<input type="tel" name="contact_phone_num" value="${contact.phone_num }" disabled />
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/ContactServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="contact_full_name" value="${contact.contact_full_name }"/>
-	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+		<input type="hidden" name="method" value="contact_update"/>
+		<input type="hidden" name="contact_patient_id" value="${contact.patient_id}"/>	
+	Input Patient ID :<input type="text" name="contact_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
-	<br/>
-	Phone Number：<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
-	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
 	<br/>
 	Email Address	：<input type="text" name="contact_email_address" value="${form.contact_email_address }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_email_address }</span>
+	<br/>
+	Phone Number：<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
 	<br/>
 	<input type="submit" value="Update Contact"/>
 </form>

@@ -24,15 +24,16 @@
   <h1>Delete Contact</h1>
 <form action="<c:url value='/ContactServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="contact_search"/>
-	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	Patient ID :<input type="text" name="contact_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	<br/>	
+	<!--  Email Address   :<input type="text" name="contact_email_address" value="${form.contact_email_address }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_email_address }</span>
 	<br/>
 	Phone Number   :<input type="tel" name="contact_phone_num" value="${form.contact_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_phone_num }</span>
-	<br/>
-	Email Address   :<input type="text" name="contact_email_address" value="${form.contact_email_address }"/>
-	<span style="color: red; font-weight: 900">${errors.contact_email_address }</span>
-	<br/>
+	<br/>-->
+
 	<input type="submit" value="Delete Contact"/>
 </form>
   </body>

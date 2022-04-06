@@ -60,7 +60,7 @@
     <url-pattern>/UserServletRegister</url-pattern>
   </servlet-mapping>
   
-      <servlet>
+    <servlet>
     <description></description>
     <display-name>PatientServletCreate</display-name>
     <servlet-name>PatientServletCreate</servlet-name>
@@ -82,7 +82,7 @@
     <url-pattern>/PatientServletRead</url-pattern>
   </servlet-mapping>
   
-        <servlet>
+    <servlet>
     <description></description>
     <display-name>PatientServletDelete</display-name>
     <servlet-name>PatientServletDelete</servlet-name>
@@ -93,7 +93,7 @@
     <url-pattern>/PatientServletDelete</url-pattern>
   </servlet-mapping>
   
-          <servlet>
+    <servlet>
     <description></description>
     <display-name>PatientServletUpdate</display-name>
     <servlet-name>PatientServletUpdate</servlet-name>
@@ -104,6 +104,49 @@
     <url-pattern>/PatientServletUpdate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>ContactServletCreate</display-name>
+    <servlet-name>ContactServletCreate</servlet-name>
+    <servlet-class>contact.web.servlet.ContactServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactServletCreate</servlet-name>
+    <url-pattern>/ContactServletCreate</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>ContactServletRead</display-name>
+    <servlet-name>ContactServletRead</servlet-name>
+    <servlet-class>contact.web.servlet.ContactServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactServletRead</servlet-name>
+    <url-pattern>/ContactServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>ContactServletDelete</display-name>
+    <servlet-name>ContactServletDelete</servlet-name>
+    <servlet-class>contact.web.servlet.ContactServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactServletDelete</servlet-name>
+    <url-pattern>/ContactServletDelete</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>ContactServletUpdate</display-name>
+    <servlet-name>ContactServletUpdate</servlet-name>
+    <servlet-class>contact.web.servlet.ContactServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactServletUpdate</servlet-name>
+    <url-pattern>/ContactServletUpdate</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
