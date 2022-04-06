@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<h3 align="center"> Count </h3>
+	<h3 align="center"> Gmail Emails </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
 		<th>Email Address</th>

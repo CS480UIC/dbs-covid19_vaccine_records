@@ -56,7 +56,7 @@ public class PatientServletDelete extends HttpServlet {
 						request.getRequestDispatcher("/jsps/patient/patient_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Patient not found OR Please delete all other aspects of patient first (ie.e contact, address, medical history) before deleting the patient");
+				request.setAttribute("msg", "Patient not found");
 				request.getRequestDispatcher("/jsps/patient/patient_read_output.jsp").forward(request, response);
 			}
 		}
