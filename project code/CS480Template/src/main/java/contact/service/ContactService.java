@@ -1,6 +1,8 @@
 package contact.service;
 
 
+import java.util.List;
+
 import contact.dao.ContactDao;
 import contact.domain.Contact;
 
@@ -24,5 +26,9 @@ public class ContactService {
 		if(contact.getPatient_id()!=null && contact.getPatient_id().equals(form.getPatient_id()))throw new ContactException("The contact for this patient id has been registered!");
 		contactDao.add(form);
 	}
-
+	
+	public List<Object> findGmail() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return contactDao.findGmail();
+		
+	}
 }

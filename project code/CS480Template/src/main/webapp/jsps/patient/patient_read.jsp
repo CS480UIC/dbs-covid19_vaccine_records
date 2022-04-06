@@ -31,6 +31,9 @@
 	Last Name    :<input type="text" name="patient_last_name" value="${form.patient_last_name }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_last_name }</span>
 	<br/>
+	Date of Birth:<input type="date" name="patient_dob" value="${form.patient_dob }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_dob }</span>
+	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>

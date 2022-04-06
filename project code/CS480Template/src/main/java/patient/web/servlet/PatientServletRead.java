@@ -41,7 +41,7 @@ public class PatientServletRead extends HttpServlet {
 		PatientDao patientDao = new PatientDao();
 		
 		try {
-			patient = patientDao.findByFirstLast(request.getParameter("patient_first_name"), request.getParameter("patient_last_name"));
+			patient = patientDao.findByFirstLast(request.getParameter("patient_first_name"), request.getParameter("patient_last_name"), java.sql.Date.valueOf(request.getParameter("patient_dob")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {

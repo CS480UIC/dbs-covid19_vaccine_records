@@ -6,14 +6,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import contact.domain.Contact;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -124,5 +124,29 @@ public class ContactDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	
+	public List<Object> findGmail() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			String sql = "select * from gmail_email";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Contact contact = new Contact();
+	    		contact.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
+	    		contact.setEmail_address(resultSet.getString("email_address"));
+	    		contact.setPhone_num(new BigInteger(resultSet.getString("phone_num")));
+	    		list.add(contact);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

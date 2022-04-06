@@ -1,5 +1,5 @@
 CREATE VIEW string_aggregate AS
-SELECT COUNT(*)
+SELECT COUNT(*) AS Count
 FROM patient
 WHERE gender = "F";
 
@@ -18,7 +18,7 @@ GROUP BY(type_1);
 
 
 CREATE VIEW gmail_email AS
-Select email_address
+Select *
 FROM Contact
 WHERE email_address LIKE "%@gmail.com"
 ORDER BY email_address;

@@ -1,18 +1,19 @@
 package patient.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import patient.domain.Patient;
+
 
 /**
  * DDL functions performed in database
@@ -29,7 +30,7 @@ public class PatientDao {
 	 */
 	private String MySQL_password = "UICCS480Project"; //TODO change password
 
-	public Patient findByFirstLast(String first_name_p, String last_name_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public Patient findByFirstLast(String first_name_p, String last_name_p, Date dob_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Patient patient = new Patient();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -43,6 +44,7 @@ public class PatientDao {
 		    while(resultSet.next()){
 		    	String first_name= (resultSet.getString("first_name"));
 		    	String last_name= (resultSet.getString("last_name"));
+		    	Date dob = (java.sql.Date.valueOf(resultSet.getString("dob")));
 
 		    	if(first_name.equals(first_name_p) && last_name.equals(last_name_p)){
 		    		patient.setPatient_id((resultSet.getInt("patient_id")));
@@ -161,4 +163,5 @@ public class PatientDao {
 			throw new RuntimeException(e);
 		}
 	}
+
 }
