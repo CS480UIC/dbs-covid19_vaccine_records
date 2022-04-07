@@ -25,8 +25,11 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/PrimaryPhysicianServletRead'/>" method="post">
 	<input type="hidden" name="method" value="primary_physician_regist"/>
-	Full Name: <input type="text" name="primary_physician_fullname" value="${form.primary_physician_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_fullname }</span>
+	First Name: <input type="text" name="primary_physician_first_name" value="${form.primary_physician_first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.primary_physician_first_name }</span>
+	<br/>
+	Last Name    :<input type="text" name="primary_physician_last_name" value="${form.primary_physician_last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.primary_physician_last_name }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
