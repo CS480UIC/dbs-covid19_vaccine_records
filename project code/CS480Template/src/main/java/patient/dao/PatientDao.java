@@ -9,10 +9,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import patient.domain.FPatientCount;
+
 //import java.util.ArrayList;
 //import java.util.List;
 
 import patient.domain.Patient;
+import user.domain.User;
 
 
 /**
@@ -164,4 +167,28 @@ public class PatientDao {
 		}
 	}
 
+	
+	public List<Object> findFemalePatients() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			String sql = "select * from string_aggregate";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				FPatientCount fPatient = new FPatientCount();
+				fPatient.setCount(Integer.parseInt(resultSet.getString("Count")));
+	    
+	    		list.add(fPatient);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+		
 }
+

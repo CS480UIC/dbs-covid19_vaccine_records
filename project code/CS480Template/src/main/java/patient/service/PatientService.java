@@ -27,6 +27,11 @@ public class PatientService {
 		//if(entity1()!=null && entity1.getFirst_name().equals(form.getFirst_name())) throw new PatientException("This user name has been registered!");
 		patientDao.add(form);
 	}
+
+	public List<Object> findFemalePatients() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return patientDao.findFemalePatients();
+		
+	}
 	
 
 }

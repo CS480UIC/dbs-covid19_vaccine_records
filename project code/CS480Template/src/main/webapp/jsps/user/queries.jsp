@@ -27,6 +27,9 @@
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
  	<br>
     <a href="<c:url value='/gmailEmails'/>" target="body">Please list patients with Gmail email addresses</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/stringAggregate'/>" target="body">Please list all female patients</a>&nbsp;&nbsp;
+    
     
   </body>
 </html>

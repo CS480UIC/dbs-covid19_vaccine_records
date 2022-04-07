@@ -206,6 +206,16 @@
     <url-pattern>/gmailEmails</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>stringAggregate</display-name>
+    <servlet-name>stringAggregate</servlet-name>
+    <servlet-class>patient.web.servlet.stringAggregate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stringAggregate</servlet-name>
+    <url-pattern>/stringAggregate</url-pattern>
+  </servlet-mapping>
   
   
   
