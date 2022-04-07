@@ -24,9 +24,12 @@
   <h1>Read Medical History</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/MedicalHistoryServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Full Name :<input type="text" name="medical_history_fullname" value="${form.medical_history_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.patient_first_name }</span>
+	<input type="hidden" name="method" value="medical_history_regist"/>
+	First Name: <input type="text" name="medical_history_first_name" value="${form.medical_history_first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.medical_history_first_name }</span>
+	<br/>
+	Last Name    :<input type="text" name="medical_history_last_name" value="${form.medical_history_last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.medical_history_last_name }</span>
 	<br/>
 	
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
