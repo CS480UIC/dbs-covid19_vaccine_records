@@ -24,20 +24,22 @@
   <h1>Read Primary Physician Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Patient ID :<input type="text" name="primary_physician_patient_id" value="${primary_physician.patient_id }" disabled/>
+	Patient ID :<input type="text" name="patient_id" value="${primary_physician.patient_id }"disabled/>
 	<br/>
-	First Name: <input type="text" name="primary_physician_first_name" value="${primary_physician.p_first_name }" disabled/>
+	First name： <input type="text" name="primary_physician_first_name" value="${primary_physician.p_first_name }"disabled/>
 	<br/>
-	Last Name ： <input type="text" name="primary_physician_last_name" value="${primary_physician.p_last_name }" disabled/>
+	Last name: <input type="text" name="primary_physician_last_name" value="${primary_physician.p_last_name }"disabled/>
 	<br/>
-	Street Address： <input type="text" name="primary_physician_street_address" value="${primary_physician.p_street_address}" disabled/>
+	Street Address： <input type="text" name="p_street_address" value="${primary_physician.p_street_address }"disabled/>
 	<br/>
-	City： <input type="text" name="primary_physician_city" value="${primary_physician.p_city}" disabled/>
+	City： <input type="text" name="primary_physician_city" value="${primary_physician.p_city }"disabled/>
 	<br/>
-	Zip： <input type="number" name="primary_physician_zip" value="${primary_physician.p_zip}" disabled/>
+	State： <input type="text" name="primary_physician_state" value="${primary_physician.p_state }"disabled/>
 	<br/>
-	Phone Number： <input type="tel" name="primary_physician_phone_num" value="${primary_physician.p_phone_num}" disabled/>
-	<br/>
+	Zip： <input type="number" name="primary_physician_zip" value="${primary_physician.p_zip }"disabled/>
+	</br>
+	Phone number： <input type="tel" name="primary_physician_phone_num" value="${primary_physician.p_phone_num }"disabled/>
+	<input type="submit" value="Create Primary Physician"/>
 </form>
 
 

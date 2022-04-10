@@ -71,16 +71,16 @@ public class Primary_physicianDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "insert into primary_physician (patient_id,p_first_name, p_last_name, p_zip, p_state, p_city, p_phone_num, p_street_address) values(?,?,?,?,?,?,?,?)";
+			String sql = "insert into primary_physician (patient_id, p_first_name, p_last_name, p_street_address, p_city, p_state, p_zip, p_phone_num) values(?,?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getPatient_id());
 		    preparestatement.setString(2,form.getp_first_name());
 		    preparestatement.setString(3,form.getp_last_name());
-		    preparestatement.setInt(4,form.getp_zip());
-		    preparestatement.setString(5,form.getp_state());
-		    preparestatement.setString(6,form.getp_city());
-		    preparestatement.setLong(7,Long.parseLong(form.getp_phone_num().toString()));
-		    preparestatement.setString(8,form.getp_street_address());
+		    preparestatement.setString(4,form.getp_street_address());
+		    preparestatement.setString(5,form.getp_city()); 
+		    preparestatement.setString(6,form.getp_state());
+		    preparestatement.setInt(7,form.getp_zip());
+		    preparestatement.setLong(8,Long.parseLong(form.getp_phone_num().toString()));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -89,35 +89,35 @@ public class Primary_physicianDao {
 	}
 	
 	
-	/**
-	 * @param form
-	 * @throws ClassNotFoundException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 */
-	public void update(Primary_physician form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-			
-			String sql = "UPDATE primary_physician SET p_first_name = ?, p_last_name = ?, p_zip = ?, p_state = ?, p_city = ?, p_phone_num=?, p_street_address=? where patient_id = ?;";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getp_first_name());
-			preparestatement.setString(2,form.getp_last_name());
-		    preparestatement.setInt(3,form.getp_zip());
-		    preparestatement.setString(4,form.getp_state());
-		    preparestatement.setString(5,form.getp_city());
-		    preparestatement.setLong(6,Long.parseLong(form.getp_phone_num().toString()));
-		    preparestatement.setString(7,form.getp_street_address());
-		    preparestatement.setInt(8,form.getPatient_id());
-		    preparestatement.executeUpdate();
-		    connect.close();
-		} catch(SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-	
-	
+//	/**
+//	 * @param form
+//	 * @throws ClassNotFoundException
+//	 * @throws InstantiationException
+//	 * @throws IllegalAccessException
+//	 */
+//	public void update(Primary_physician form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+//		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+//			
+//			String sql = "UPDATE primary_physician SET p_first_name = ?, p_last_name = ?, p_zip = ?, p_state = ?, p_city = ?, p_phone_num=?, p_street_address=? where patient_id = ?;";
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//		    preparestatement.setString(1,form.getp_first_name());
+//			preparestatement.setString(2,form.getp_last_name());
+//		    preparestatement.setInt(3,form.getp_zip());
+//		    preparestatement.setString(4,form.getp_state());
+//		    preparestatement.setString(5,form.getp_city());
+//		    preparestatement.setLong(6,Long.parseLong(form.getp_phone_num().toString()));
+//		    preparestatement.setString(7,form.getp_street_address());
+//		    preparestatement.setInt(8,form.getPatient_id());
+//		    preparestatement.executeUpdate();
+//		    connect.close();
+//		} catch(SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+//	}
+//	
+//	
 	/**
 	 * @param patient_id_p
 	 * @throws ClassNotFoundException

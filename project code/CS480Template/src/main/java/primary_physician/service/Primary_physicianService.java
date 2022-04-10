@@ -22,7 +22,7 @@ public class Primary_physicianService {
 	public void create(Primary_physician form) throws Primary_physicianException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
 		Primary_physician entity1 = primary_physicianDao.findByID(form.getPatient_id());
-		if(entity1.getPatient_id()!=null && entity1.getPatient_id().equals(form.getPatient_id())) throw new Primary_physicianException("This patient has been registered!");
+		if(entity1.getPatient_id()!=null && entity1.getPatient_id() == form.getPatient_id()) throw new Primary_physicianException("This primary physician has been registered!");
 		primary_physicianDao.add(form);
 	}
 

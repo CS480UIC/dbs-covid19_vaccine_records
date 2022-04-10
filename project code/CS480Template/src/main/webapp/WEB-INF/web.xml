@@ -170,7 +170,16 @@
     <url-pattern>/Primary_physicianServletRead</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet>
+    <description></description>
+    <display-name>Primary_physicianServletDelete</display-name>
+    <servlet-name>Primary_physicianServletDelete</servlet-name>
+    <servlet-class>primary_physician.web.servlet.Primary_physicianServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Primary_physicianServletDelete</servlet-name>
+    <url-pattern>/Primary_physicianServletDelete</url-pattern>
+  </servlet-mapping>
   
   
   

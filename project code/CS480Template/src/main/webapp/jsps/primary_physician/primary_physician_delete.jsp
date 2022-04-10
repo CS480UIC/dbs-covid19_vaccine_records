@@ -24,22 +24,9 @@
   <h1>Delete Primary Physician</h1>
 <form action="<c:url value='/Primary_physicianServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="primary_physician_search"/>
-	Patient ID :<input type="text" name="method" />:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	Patient ID :<input type="text" name="method"  name="primary_physician_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	First Name: <input type="text" name="primary_physician_first_name" value="${primary_physician.primary_physician_first_name }" disabled/>
-	<br/>
-	Last Name ： <input type="text" name="primary_physician_last_name" value="${primary_physician.primary_physician_last_name }" disabled/>
-	<br/>
-	Street Address： <input type="text" name="primary_physician_street_address" value="${primary_physician.primary_physician_street_address}" disabled/>
-	<br/>
-	City： <input type="text" name="primary_physician_city" value="${primary_physician.primary_physician_city}" disabled/>
-	<br/>
-	State： <input type="text" name="primary_physician_state" value="${primary_physician.primary_physician_state}" disabled/>
-	<br/>
-	Zip： <input type="number" name="primary_physician_zip" value="${primary_physician.primary_physician_zip}" disabled/>
-	<br/>
-	Phone Number： <input type="tel" name="primary_physician_phone_num" value="${primary_physician.primary_physician_phone_num}" disabled/>
 	<input type="submit" value="Delete Primary Physician"/>
 </form>
   </body>

@@ -54,11 +54,16 @@ public class Primary_physicianServletCreate extends HttpServlet {
 		form.setPatient_id(Integer.parseInt(info.get(0)));
 		form.setp_first_name(info.get(1));
 		form.setp_last_name(info.get(2));		
-		form.setp_street_address(info.get(4));
-		form.setp_city(info.get(5));
-		form.setp_state(info.get(6));
-		form.setp_zip(Integer.parseInt(info.get(7)));
-		form.setp_phone_num(new BigInteger (info.get(8)));
+		form.setp_street_address(info.get(3));
+		form.setp_city(info.get(4));
+		form.setp_state(info.get(5));
+		form.setp_zip(Integer.parseInt(info.get(6)));
+		form.setp_phone_num(new BigInteger (info.get(7)));
+		
+		
+		
+		
+		
 		
 		try {
 			entity1service.create(form);
