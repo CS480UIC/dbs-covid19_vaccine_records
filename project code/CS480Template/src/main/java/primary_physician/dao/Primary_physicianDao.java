@@ -25,33 +25,37 @@ public class Primary_physicianDao {
 	private String MySQL_user = "covid19_vaccine_records"; //TODO change user
 	
 	/**
-	 * password of your username to connect to the database
+	 * password of your user name to connect to the database
 	 */
 	private String MySQL_password = "UICCS480Project"; //TODO change password
 
-	public Primary_physician findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Primary_physician entity1 = new Primary_physician();
+	public Primary_physician findByID(Integer patient_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Primary_physician primary_physician = new Primary_physician();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from primary_physician where patient_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,patient_id_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	Integer patient_id = Integer.parseInt(resultSet.getString("patient_id"));
+		    	if(patient_id == patient_id_p){
+		    		primary_physician.setp_first_name(resultSet.getString("p_first_name"));
+		    		primary_physician.setp_last_name(resultSet.getString("p_last_name"));
+		    		primary_physician.setp_zip(resultSet.getInt("p_zip"));	
+		    		primary_physician.setp_state(resultSet.getString("p_state"));
+		    		primary_physician.setp_city(resultSet.getString("p_city"));
+		    		primary_physician.setp_zip(resultSet.getInt("p_zip"));
+		    		primary_physician.setp_street_address(resultSet.getString("p_street_address"));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return primary_physician;
 	}	
 	
 	/**

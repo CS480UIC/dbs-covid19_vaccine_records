@@ -41,7 +41,7 @@ public class Primary_physicianServletRead extends HttpServlet {
 		Primary_physicianDao entity1Dao = new Primary_physicianDao();
 		
 		try {
-			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+			entity1 = entity1Dao.findByID(request.getParameter("username"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
