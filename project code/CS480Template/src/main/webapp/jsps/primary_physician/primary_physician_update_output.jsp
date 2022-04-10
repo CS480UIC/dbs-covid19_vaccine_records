@@ -38,7 +38,7 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/PrimaryPhysicianServletUpdate'/>" method="post">
+<form action="<c:url value='/Primary_physicianServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="primary_physician_full_name" value="${primary_physician.primary_physician_full_name }"/>
 	Patient ID : <input type="text" name="patient_id" value="${form.patient_id }"/>

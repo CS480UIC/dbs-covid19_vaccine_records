@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Primary Physician</h1>
-<form action="<c:url value='/PrimaryPhysicianServletDelete'/>" method="post">
+<form action="<c:url value='/Primary_physicianServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="primary_physican_search"/>
 	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>

@@ -22,7 +22,7 @@
   
   <body>
   <h1>Primary Physician</h1>
-<form action="<c:url value='/PrimaryPhysicianServletCreate'/>" method="post">
+<form action="<c:url value='/Primary_physicianServletCreate'/>" method="post">
 	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>

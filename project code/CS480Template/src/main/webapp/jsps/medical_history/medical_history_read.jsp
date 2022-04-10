@@ -25,12 +25,10 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/MedicalHistoryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="medical_history_regist"/>
-	First Name: <input type="text" name="medical_history_first_name" value="${form.medical_history_first_name }"/>
-	<span style="color: red; font-weight: 900">${errors.medical_history_first_name }</span>
+	Patient ID: <input type="text" name="medical_history_patient_id" value="${form.medical_history_patient_id}"/>
+	<span style="color: red; font-weight: 900">${errors.medical_history_patient_id }</span>
 	<br/>
-	Last Name    :<input type="text" name="medical_history_last_name" value="${form.medical_history_last_name }"/>
-	<span style="color: red; font-weight: 900">${errors.medical_history_last_name }</span>
-	<br/>
+	
 	
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
