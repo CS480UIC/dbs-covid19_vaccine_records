@@ -159,6 +159,19 @@
     <url-pattern>/Primary_physicianServletCreate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>Primary_physicianServletRead</display-name>
+    <servlet-name>Primary_physicianServletRead</servlet-name>
+    <servlet-class>primary_physician.web.servlet.Primary_physicianServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Primary_physicianServletRead</servlet-name>
+    <url-pattern>/Primary_physicianServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   
   
   

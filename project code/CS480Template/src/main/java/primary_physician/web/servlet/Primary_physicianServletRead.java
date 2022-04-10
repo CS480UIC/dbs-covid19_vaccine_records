@@ -56,7 +56,7 @@ public class Primary_physicianServletRead extends HttpServlet {
 					request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
+			request.setAttribute("msg", "Primary Physician for patient not found");
 			request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 		}
 	}

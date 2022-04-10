@@ -56,8 +56,8 @@ public class Primary_physicianServletDelete extends HttpServlet {
 						request.getRequestDispatcher("/jsps/primary_physician/primary_physician_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Primary Physician for patient not found");
+				request.getRequestDispatcher("/jsps/primary_physician/primary_physician.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("primary_physician_delete"))

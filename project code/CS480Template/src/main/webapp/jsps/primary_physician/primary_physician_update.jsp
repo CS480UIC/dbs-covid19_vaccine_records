@@ -23,11 +23,11 @@
   <body>
   <h1>Update Primary Physician</h1>
 <form action="<c:url value='/Primary_physicianServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<input type="hidden" name="method" value="primary_physician_update"/>
+	Input Patient ID :<input type="text" name="primary_physician_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Update First Name   :<input type="text" name="primary_physician_first_name" value="${form.primary_physician_first_name}"/>
+	<!-- Update First Name   :<input type="text" name="primary_physician_first_name" value="${form.primary_physician_first_name}"/>
 	<span style="color: red; font-weight: 900">${errors.primary_physician_first_name}</span>
 	<br/>
 	Update Last Name   :<input type="text" name="primary_physician_last_name" value="${form.primary_physician_last_name}"/>
@@ -47,6 +47,8 @@
 	</br>
 	Update Phone number： <input type="tel" name="primary_physician_phone_num" value="${form.primary_physician_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.p_phone_num }</span>
+	-->
+	</br>
 	<input type="submit" value="Update Primary Physician"/>
 	
 	

@@ -1,6 +1,7 @@
 package primary_physician.web.servlet;
 
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -41,13 +42,13 @@ public class Primary_physicianServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Primary_physicianDao entity1dao = new Primary_physicianDao();
-		Primary_physician entity1 = null;
+		Primary_physicianDao primary_physicianDao = new Primary_physicianDao();
+		Primary_physician primary_physician = null;
 
-		if(method.equals("search"))
+		if(method.equals("primary_physician_search"))
 		{
 			try {
-				entity1 = entity1dao.findByID(request.getParameter("username"));
+				primary_physician = primary_physicianDao.findByID(Integer.parseInt(request.getParameter("primary_physician_patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,17 +57,17 @@ public class Primary_physicianServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(primary_physician.getPatient_id()!=null){
+				request.setAttribute("primary_physician", primary_physician);
+				request.getRequestDispatcher("/jsps/primary_physician/primary_physician_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Primary Physician not found");
+				request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("update"))
+		else if(method.equals("primary_physician_update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
 			Primary_physician form = new Primary_physician();
@@ -76,12 +77,17 @@ public class Primary_physicianServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setPatient_id(Integer.parseInt(info.get(0)));
+			form.setp_first_name(info.get(1));
+			form.setp_last_name(info.get(2));		
+			form.setp_street_address(info.get(4));
+			form.setp_city(info.get(5));
+			form.setp_state(info.get(6));
+			form.setp_zip(Integer.parseInt(info.get(7)));
+			form.setp_phone_num(new BigInteger (info.get(8)));
 
 			try {
-				entity1dao.update(form);
+				primary_physicianDao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +96,8 @@ public class Primary_physicianServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Primary Physician Updated");
+			request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 		}
 	}
 }
