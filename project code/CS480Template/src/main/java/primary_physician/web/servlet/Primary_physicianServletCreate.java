@@ -1,6 +1,7 @@
 package primary_physician.web.servlet;
 
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -50,9 +51,14 @@ public class Primary_physicianServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setPatient_id(Integer.parseInt(info.get(0)));
+		form.setp_first_name(info.get(1));
+		form.setp_last_name(info.get(2));		
+		form.setp_street_address(info.get(4));
+		form.setp_city(info.get(5));
+		form.setp_state(info.get(6));
+		form.setp_zip(Integer.parseInt(info.get(7)));
+		form.setp_phone_num(new BigInteger (info.get(8)));
 		
 		try {
 			entity1service.create(form);

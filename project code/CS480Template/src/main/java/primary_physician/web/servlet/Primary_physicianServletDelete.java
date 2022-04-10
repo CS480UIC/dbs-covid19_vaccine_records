@@ -36,12 +36,12 @@ public class Primary_physicianServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Primary_physicianDao entity1Dao = new Primary_physicianDao();
-		Primary_physician entity1 = null;
-		if(method.equals("search"))
+		Primary_physicianDao primary_physicianDao = new Primary_physicianDao();
+		Primary_physician primary_physician = null;
+		if(method.equals("primary_physician_search"))
 		{
 			try {
-				entity1 = entity1Dao.findByID(request.getParameter("username"));
+				primary_physician = primary_physicianDao.findByID(Integer.parseInt(request.getParameter("primary_physician_patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class Primary_physicianServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(primary_physician.getPatient_id() != null){
+						System.out.println(primary_physician.getPatient_id());
+						request.setAttribute("primary_physician", primary_physician);
+						request.getRequestDispatcher("/jsps/primary_physician/primary_physician_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
 				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("delete"))
+		else if(method.equals("primary_physician_delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				primary_physicianDao.delete(request.getParameter("primary_physician_patient_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +71,8 @@ public class Primary_physicianServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Primary Physician Deleted");
+			request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 		}
 	}
 }

@@ -10,7 +10,7 @@ import primary_physician.domain.Primary_physician;
  *
  */
 public class Primary_physicianService {
-	private Primary_physicianDao entity1Dao = new Primary_physicianDao();
+	private Primary_physicianDao primary_physicianDao = new Primary_physicianDao();
 	
 	/**
 	 * register a Entity1
@@ -21,27 +21,9 @@ public class Primary_physicianService {
 	 */
 	public void create(Primary_physician form) throws Primary_physicianException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Primary_physician entity1 = entity1Dao.findByID(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new Primary_physicianException("This user name has been registered!");
-		entity1Dao.add(form);
+		Primary_physician entity1 = primary_physicianDao.findByID(form.getPatient_id());
+		if(entity1.getPatient_id()!=null && entity1.getPatient_id().equals(form.getPatient_id())) throw new Primary_physicianException("This patient has been registered!");
+		primary_physicianDao.add(form);
 	}
-	/**
-	 * Login function
-	 * @param form
-	 * @return
-	 * @throws UserException 
-	 * @throws ClassNotFoundException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 */
-	public void login(Primary_physician form) throws Primary_physicianException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Primary_physician user = entity1Dao.findByID(form.getUsername());
-		if(user.getUsername()==null) throw new Primary_physicianException("The user is not in the database");
-		
-		String password = user.getPassword();
-		
-		if(password!=null && !password.equals(form.getPassword()))
-			throw new Primary_physicianException(" The password is not right");
-		
-	}
+
 }

@@ -150,6 +150,25 @@
   
   <servlet>
     <description></description>
+    <display-name>Primary_physicianServletCreate</display-name>
+    <servlet-name>Primary_physicianServletCreate</servlet-name>
+    <servlet-class>primary_physician.web.servlet.Primary_physicianServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Primary_physicianServletCreate</servlet-name>
+    <url-pattern>/Primary_physicianServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+    <description></description>
     <display-name>InitializeDB</display-name>
     <servlet-name>InitializeDB</servlet-name>
     <servlet-class>init.web.servlet.InitializeServlet</servlet-class>
