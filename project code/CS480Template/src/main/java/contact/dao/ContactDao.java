@@ -56,7 +56,7 @@ public class ContactDao {
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert Contact
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
