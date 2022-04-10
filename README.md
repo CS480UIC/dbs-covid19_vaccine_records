@@ -86,7 +86,7 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 # CRUD for Primary Physician
 ![primary_physician_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_menu.jpg)
 
-![primary_physician_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_read.jpg)
+![primary_physician_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_read.png)
 
 ![primary_physician_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/primaryphys_update.jpg)
 
@@ -98,7 +98,7 @@ The idea for this project is to create a database to keep track of Covid-19 reco
 # CRUD for Medical History
 ![medical_history_menu](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_menu.jpg)
 
-![medical_history_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_read.jpg)
+![medical_history_read](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_read.png)
 
 ![medical_history_update](https://github.com/CS480UIC/dbs-covid19_vaccine_records/blob/main/screenshots/medhistory_update.jpg)
 
