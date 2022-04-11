@@ -182,10 +182,28 @@
   </servlet-mapping>
   
   
+  <servlet>
+    <description></description>
+    <display-name>Primary_physicianServletUpdate</display-name>
+    <servlet-name>Primary_physicianServletUpdate</servlet-name>
+    <servlet-class>primary_physician.web.servlet.Primary_physicianServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Primary_physicianServletUpdate</servlet-name>
+    <url-pattern>/Primary_physicianServletUpdate</url-pattern>
+  </servlet-mapping>
   
   
-  
-  
+  <servlet>
+    <description></description>
+    <display-name>Medical_HistoryServletCreate</display-name>
+    <servlet-name>Medical_HistoryServletCreate</servlet-name>
+    <servlet-class>medical_history.web.servlet.Medical_HistoryServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Medical_HistoryServletCreate</servlet-name>
+    <url-pattern>/Medical_HistoryServletCreate</url-pattern>
+  </servlet-mapping>
   
   
   

@@ -26,45 +26,45 @@
 <form>
 	Patient ID :<input type="text" name="patient_id" value="${primary_physician.patient_id }"disabled/>
 	<br/>
-	First name： <input type="text" name="primary_physician_first_name" value="${primary_physician.p_first_name }"disabled/>
+	First name： <input type="text" name="p_first_name" value="${primary_physician.p_first_name }"disabled/>
 	<br/>
-	Last name: <input type="text" name="primary_physician_last_name" value="${primary_physician.p_last_name }"disabled/>
+	Last name: <input type="text" name="p_last_name" value="${primary_physician.p_last_name }"disabled/>
 	<br/>
 	Street Address： <input type="text" name="p_street_address" value="${primary_physician.p_street_address }"disabled/>
 	<br/>
-	City： <input type="text" name="primary_physician_city" value="${primary_physician.p_city }"disabled/>
+	City： <input type="text" name="p_city" value="${primary_physician.p_city }"disabled/>
 	<br/>
-	State： <input type="text" name="primary_physician_state" value="${primary_physician.p_state }"disabled/>
+	State： <input type="text" name="p_state" value="${primary_physician.p_state }"disabled/>
 	<br/>
-	Zip： <input type="number" name="primary_physician_zip" value="${primary_physician.p_zip }"disabled/>
+	Zip： <input type="number" name="p_zip" value="${primary_physician.p_zip }"disabled/>
 	</br>
-	Phone number： <input type="tel" name="primary_physician_phone_num" value="${primary_physician.p_phone_num }"disabled/>
+	Phone number： <input type="tel" name="p_phone_num" value="${primary_physician.p_phone_num }"disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Primary_physicianServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="primary_physician_update"/>
-	<input type="hidden" name="primary_physician_patient_id" value="${primary_physician.primary_physician_patient_id }"/>
-	Patient ID : <input type="text" name="primary_physician_patient_id" value="${primary_physician.patient_id }"/>
+	<input type="hidden" name="primary_physician_patient_id" value="${primary_physician.patient_id }"/>
+	Input Patient ID : <input type="text" name="primary_physician_patient_id" value="${primary_physician.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	First Name：<input type="text" name="primary_physician_first_name" value="${form.p_first_name }"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_first_name}</span>
+	First Name：<input type="text" name="p_first_name" value="${form.p_first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.p_first_name}</span>
 	<br/>
-	Last Name	：<input type="text" name="primary_physician_last_name" value="${form.p_last_name }"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_last_name }</span>
+	Last Name	：<input type="text" name="p_last_name" value="${form.p_last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.p_last_name }</span>
 	<br/>
-	Street Address：<input type="text" name="primary_physician_street_address" value="${form.p_street_address}"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_first_name}</span>
+	Street Address：<input type="text" name="p_street_address" value="${form.p_street_address}"/>
+	<span style="color: red; font-weight: 900">${errors.p_first_name}</span>
 	<br/>
-	City：<input type="text" name="primary_physician_city" value="${form.p_city}"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_fcity}</span>
+	City：<input type="text" name="p_city" value="${form.p_city}"/>
+	<span style="color: red; font-weight: 900">${errors.p_city}</span>
 	<br/>
-	Zip：<input type="number" name="primary_physician_zip" value="${form.p_zip}"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_zip}</span>
+	Zip：<input type="number" name="p_zip" value="${form.p_zip}"/>
+	<span style="color: red; font-weight: 900">${errors.p_zip}</span>
 	<br/>
-	Phone Number：<input type="tel" name="primary_physician_phone_num" value="${form.p_phone_num}"/>
-	<span style="color: red; font-weight: 900">${errors.primary_physician_phone_num}</span>
+	Phone Number：<input type="tel" name="p_phone_num" value="${form.p_phone_num}"/>
+	<span style="color: red; font-weight: 900">${errors.p_phone_num}</span>
 	<br/>
 	<input type="submit" value="Update Primary Physician"/>
 </form>
