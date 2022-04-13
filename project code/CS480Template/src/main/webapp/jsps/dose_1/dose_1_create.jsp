@@ -41,6 +41,7 @@
 	Date of Dose: <input type="date" name="dose_1_date" value="${form.dose_1_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_1_date }</span>
 	<br/>
+	<p>If you recieved the Johnson and Johnson vaccine, please use the same information from this page onto the dose #2 page. Thank you!</p>
 	<input type="submit" value="Create Dose 1"/>
 </form>
   </body>
