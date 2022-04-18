@@ -3,7 +3,6 @@ package primary_physician.web.servlet;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +44,7 @@ public class Primary_physicianServletUpdate extends HttpServlet {
 		Primary_physicianDao primary_physicianDao = new Primary_physicianDao();
 		Primary_physician primary_physician = null;
 
-		if(method.equals("primary_physician_search"))
+		if(method.equals("primary_physician_search_update"))
 		{
 			try {
 				primary_physician = primary_physicianDao.findByID(Integer.parseInt(request.getParameter("primary_physician_patient_id")));
@@ -77,14 +76,14 @@ public class Primary_physicianServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPatient_id(Integer.parseInt(info.get(0)));
-			form.setp_first_name(info.get(1));
-			form.setp_last_name(info.get(2));		
-			form.setp_street_address(info.get(4));
-			form.setp_city(info.get(5));
-			form.setp_state(info.get(6));
-			form.setp_zip(Integer.parseInt(info.get(7)));
-			form.setp_phone_num(new BigInteger (info.get(8)));
+			form.setPatient_id(Integer.parseInt(request.getParameter("primary_physician_patient_id")));
+			form.setp_first_name(request.getParameter("p_first_name"));
+			form.setp_last_name(request.getParameter("p_last_name"));		
+			form.setp_street_address(request.getParameter("p_street_address"));
+			form.setp_city(request.getParameter("p_city"));
+			form.setp_state(request.getParameter("p_state"));
+			form.setp_zip(Integer.parseInt(request.getParameter("p_zip")));
+			form.setp_phone_num(new BigInteger (request.getParameter("p_phone_num")));
 
 			try {
 				primary_physicianDao.update(form);
