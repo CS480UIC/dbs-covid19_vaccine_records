@@ -26,25 +26,25 @@
 <form>
 	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
 	<br/>
-	Notes:<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
+	Notes:<input type="text" name="medical_history_notes" value="${medical_history.notes}" disabled/>
 	<br/>	
-	Pre-existing Conditions：<input type="text" name="medical_history_preexisiting_conditions" value="${medical_history.medical_history_preexisiting_conditions}" disabled />
+	Pre-existing Conditions：<input type="text" name="medical_history_pre_exisiting_conditions" value="${medical_history.pre_exisiting_conditions}" disabled />
 	<br/>
-	Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${medical_history.medical_history_contracted_covid}" disabled/>
+	Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${medical_history.contracted_covid}" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/MedicalHistoryServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="medical_history_fullname" value="${medical_history.medical_history_fullname }"/>
-	Patient ID : <input type="text" name="patient_id" value="${form.patient_id }"/>
+		<input type="hidden" name="method" value="medical_history_update"/>
+		<input type="hidden" name="medical_history_patient_id" value="${medical_history.patient_id }"/>
+	Input Patient ID : <input type="text" name="medical_history_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Update Notes:<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
+	Update Notes:<input type="text" name="medical_history_notes" value="${form.medical_history_notes}" />
 	<br/>	
-	Update Pre-existing Conditions：<input type="text" name="medical_history_preexisiting_conditions" value="${medical_history.medical_history_preexisiting_conditions}" disabled />
+	Update Pre-existing Conditions：<input type="text" name="medical_history_pre_exisiting_conditions" value="${form.medical_history_pre_exisiting_conditions}"  />
 	<br/>
-	Update Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${medical_history.medical_history_contracted_covid}" disabled/>
+	Update Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${form.medical_history_contracted_covid}" />
 	<br/>
 	<input type="submit" value="Update Medical History"/>
 </form>
