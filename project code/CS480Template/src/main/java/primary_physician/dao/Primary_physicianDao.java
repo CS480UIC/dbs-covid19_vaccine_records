@@ -1,5 +1,6 @@
 package primary_physician.dao;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -42,13 +43,14 @@ public class Primary_physicianDao {
 		    while(resultSet.next()){
 		    	Integer patient_id = Integer.parseInt(resultSet.getString("patient_id"));
 		    	if(patient_id == patient_id_p){
+		    		primary_physician.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
 		    		primary_physician.setp_first_name(resultSet.getString("p_first_name"));
 		    		primary_physician.setp_last_name(resultSet.getString("p_last_name"));
-		    		primary_physician.setp_zip(resultSet.getInt("p_zip"));	
-		    		primary_physician.setp_state(resultSet.getString("p_state"));
-		    		primary_physician.setp_city(resultSet.getString("p_city"));
-		    		primary_physician.setp_zip(resultSet.getInt("p_zip"));
 		    		primary_physician.setp_street_address(resultSet.getString("p_street_address"));
+		    		primary_physician.setp_city(resultSet.getString("p_city"));
+		    		primary_physician.setp_state(resultSet.getString("p_state"));
+		    		primary_physician.setp_zip(resultSet.getInt("p_zip"));	
+		    		primary_physician.setp_phone_num(new BigInteger(resultSet.getString("p_phone_num")));
 		    	}
 		    }
 		    connect.close();
@@ -95,29 +97,29 @@ public class Primary_physicianDao {
 //	 * @throws InstantiationException
 //	 * @throws IllegalAccessException
 //	 */
-//	public void update(Primary_physician form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-//			
-//			String sql = "UPDATE primary_physician SET p_first_name = ?, p_last_name = ?, p_zip = ?, p_state = ?, p_city = ?, p_phone_num=?, p_street_address=? where patient_id = ?;";
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,form.getp_first_name());
-//			preparestatement.setString(2,form.getp_last_name());
-//		    preparestatement.setInt(3,form.getp_zip());
-//		    preparestatement.setString(4,form.getp_state());
-//		    preparestatement.setString(5,form.getp_city());
-//		    preparestatement.setLong(6,Long.parseLong(form.getp_phone_num().toString()));
-//		    preparestatement.setString(7,form.getp_street_address());
-//		    preparestatement.setInt(8,form.getPatient_id());
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
-//	
-//	
+	public void update(Primary_physician form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			
+			String sql = "UPDATE primary_physician SET p_first_name = ?, p_last_name = ?, p_street_address=?, p_city = ?, p_state = ?, p_zip = ?, p_phone_num=?  where patient_id = ?;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,form.getp_first_name());
+			preparestatement.setString(2,form.getp_last_name());
+			preparestatement.setString(3,form.getp_street_address());
+			preparestatement.setString(4,form.getp_city());
+			preparestatement.setString(5,form.getp_state());
+			preparestatement.setInt(6,form.getp_zip());
+		    preparestatement.setLong(7,Long.parseLong(form.getp_phone_num().toString()));
+		    preparestatement.setInt(8,form.getPatient_id());
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
 	/**
 	 * @param patient_id_p
 	 * @throws ClassNotFoundException
