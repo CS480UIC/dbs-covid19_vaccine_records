@@ -22,20 +22,13 @@
   
   <body>
   <h1>Delete Medical History</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/MedicalHistoryServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="medical_history_delete"/>
-	<input type="hidden" name="medical_history_patient_id" value="${medical_history.patient_id}"/>
-	Patient ID :<input type="text" name="medical_history_patient_id" value="${medical_history.patient_id }" disabled/>
+	<input type="hidden" name="method" value="medical_history_search"/>
+	Patient ID :<input type="text" name="medical_history_patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Notes:<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
-	<br/>
-	Pre-existing Conditions：<input type="text" name="medical_history_pre_existing_conditions" value="${medical_history.pre_existing_conditions }" disabled/>
-	<br/>
-	Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${medical_history.contracted_covid }" disabled/>
-	<br/>
+	
 	<input type="submit" value="Delete Medical History"/>
 </form>
-
-</body>
+  </body>
 </html>
