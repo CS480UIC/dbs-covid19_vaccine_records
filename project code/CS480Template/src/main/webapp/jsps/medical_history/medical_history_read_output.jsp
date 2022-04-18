@@ -24,13 +24,13 @@
   <h1>Read Medical History Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Patient ID :<input type="text" name="patient_id" value="${medical_history.patient_id }" disabled/>
+	Patient ID :<input type="text" name="medical_history_patient_id" value="${medical_history.patient_id }" disabled/>
 	<br/>
-	Notes    :<input type="text" name="medical_history_notes" value="${medical_history.medical_history_notes}" disabled/>
+	Notes    :<input type="text" name="medical_history_notes" value="${medical_history.notes}" disabled/>
 	<br/>
-	Pre-existing Conditions：<input type="text" name="medical_history_preexisting_conditions" value="${medical_history.medical_history_preexisting_conditions}" disabled/>
+	Pre-existing Conditions：<input type="text" name="medical_history_pre_existing_conditions" value="${medical_history.pre_existing_conditions}" disabled/>
 	<br/>
-	Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${medical_history.medical_history_contracted_covid }" disabled/>
+	Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${medical_history.contracted_covid }" disabled/>
 	<br/>
 </form>
 
