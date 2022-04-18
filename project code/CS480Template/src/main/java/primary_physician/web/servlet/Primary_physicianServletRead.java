@@ -51,7 +51,7 @@ public class Primary_physicianServletRead extends HttpServlet {
 		}
 		
 		if(primary_physician.getPatient_id()!=null){
-					//System.out.println(primary_physician);
+					System.out.println(primary_physician);
 					request.setAttribute("primary_physician", primary_physician);
 					request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 			}
