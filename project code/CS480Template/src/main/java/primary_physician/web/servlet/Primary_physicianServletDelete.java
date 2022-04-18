@@ -51,13 +51,13 @@ public class Primary_physicianServletDelete extends HttpServlet {
 			}
 		
 			if(primary_physician.getPatient_id() != null){
-						System.out.println(primary_physician.getPatient_id());
+						//System.out.println(primary_physician.getPatient_id());
 						request.setAttribute("primary_physician", primary_physician);
 						request.getRequestDispatcher("/jsps/primary_physician/primary_physician_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Primary Physician for patient not found");
-				request.getRequestDispatcher("/jsps/primary_physician/primary_physician.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/primary_physician/primary_physician_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("primary_physician_delete"))
