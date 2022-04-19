@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Address Output</title>
+    <title>Delete Address</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,23 +21,25 @@
   </head>
   
   <body>
-  <h1>Read Address Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Patient ID :<input type="text" name="patient_id" value="${address.patient_id }" disabled/>
+  <h1>Delete Address</h1>
+<form action="<c:url value='/AddressServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="address_search"/>
+	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Full Name: <input type="text" name="address_fullname" value="${address.address_fullname }" disabled/>
+	Address: <input type="text" name="address_streetaddress" value="${form.address_streetaddress }"/>
+	<span style="color: red; font-weight: 900">${errors.address_streetaddress }</span>
 	<br/>
-	Street address ： <input type="text" name="address_streetaddress" value="${address.address_streetaddress }" disabled/>
+	Zip code： <input type="text" name="address_zip_code" value="${form.address_zip_code }"/>
+	<span style="color: red; font-weight: 900">${errors.address_zip_code }</span>
 	<br/>
-	Zip code: <input type="text" name="address_zipcode" value="${address.address_zipcode }" disabled/>
+	City： <input type="text" name="address_city" value="${form.address_city }"/>
+	<span style="color: red; font-weight: 900">${errors.address_city }</span>
 	<br/>
-	City： <input type="text" name="address_city" value="${address.address_city }" disabled/>
+	State： <input type="text" name="address_state" value="${form.address_state }"/>
+	<span style="color: red; font-weight: 900">${errors.address_state }</span>
 	<br/>
-	State： <input type="text" name="address_state" value="${address.address_state }" disabled/>
-	<br/>
+	<input type="submit" value="Delete Address"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>
