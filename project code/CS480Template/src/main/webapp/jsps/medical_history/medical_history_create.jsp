@@ -29,7 +29,7 @@
 	Notes:<input type="text" name="medical_history_notes" value="${form.medical_history_notes}"/>
 	<span style="color: red; font-weight: 900">${errors.medical_history_notes }</span>
 	<br/>
-	Pre-existing Conditions：<input type="text" name="medical_history_pre_existing_conditions" value="${form.medical_history_preexisting_conditions}"/>
+	Pre-existing Conditions：<input type="text" name="medical_history_pre_existing_conditions" value="${form.medical_history_pre_existing_conditions}"/>
 	<span style="color: red; font-weight: 900">${errors.medical_history_preexisting_conditions}</span>
 	<br/>
 	Contracted Covid：<input type="date" name="medical_history_contracted_covid" value="${form.medical_history_contracted_covid }"/>
