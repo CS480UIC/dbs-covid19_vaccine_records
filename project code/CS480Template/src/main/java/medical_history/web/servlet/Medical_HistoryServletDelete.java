@@ -35,46 +35,46 @@ public class Medical_HistoryServletDelete extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		String method = request.getParameter("method");
-//		Medical_HistoryDao entity1Dao = new Medical_HistoryDao();
-//		Medical_History entity1 = null;
-//		if(method.equals("search"))
-//		{
-//			try {
-//				entity1 = entity1Dao.findByUsername(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//		
-//			if(entity1.getUsername()!=null){
-//						System.out.println(entity1);
-//						request.setAttribute("entity1", entity1);
-//						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
-//				}
-//				else{
-//				request.setAttribute("msg", "Entity not found");
-//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//		}
-//		else if(method.equals("delete"))
-//		{	
-//			try {
-//				entity1Dao.delete(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//			request.setAttribute("msg", "Entity Deleted");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
-//	}
+		String method = request.getParameter("method");
+		Medical_HistoryDao medicalHistoryDao = new Medical_HistoryDao();
+		Medical_History medicalHistory = null;
+		if(method.equals("medical_history_search"))
+		{
+			try {
+				medicalHistory = medicalHistoryDao.findByID(Integer.parseInt(request.getParameter("medical_history_patient_id")));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+		
+			if(medicalHistory.getPatient_id()!=null){
+						//System.out.println(medicalHistory);
+						request.setAttribute("medical_history", medicalHistory);
+						request.getRequestDispatcher("/jsps/medical_history/medical_history_delete_output.jsp").forward(request, response);			
+				}
+				else{
+				request.setAttribute("msg", "Medical History not found");
+				request.getRequestDispatcher("/jsps/medical_history/medical_history_read_output.jsp").forward(request, response);
+			}
+		}
+		else if(method.equals("medical_history_delete"))
+		{	
+			try {
+				medicalHistoryDao.delete(request.getParameter("medical_history_patient_id"));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "Medical History Deleted");
+			request.getRequestDispatcher("/jsps/medical_history/medical_history_read_output.jsp").forward(request, response);
+		}
+	}
 }
 
 
