@@ -40,60 +40,65 @@ public class Medical_HistoryServletUpdate extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//		String method = request.getParameter("method");
-//		Medical_HistoryDao entity1dao = new Medical_HistoryDao();
-//		Medical_History entity1 = null;
-//
-//		if(method.equals("search"))
-//		{
-//			try {
-//				entity1 = entity1dao.findByUsername(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//
-//			if(entity1.getUsername()!=null){
-//				request.setAttribute("entity1", entity1);
-//				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
-//
-//			}
-//			else{
-//				request.setAttribute("msg", "Entity not found");
-//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//		}
-//		else if(method.equals("update"))
-//		{
-//			Map<String,String[]> paramMap = request.getParameterMap();
-//			Medical_History form = new Medical_History();
-//			List<String> info = new ArrayList<String>();
-//
-//			for(String name : paramMap.keySet()) {
-//				String[] values = paramMap.get(name);
-//				info.add(values[0]);
-//			}
-//			form.setPassword(info.get(2));
-//			form.setEmail(info.get(3));
-//			form.setUsername(request.getParameter("username"));
-//
-//			try {
-//				entity1dao.update(form);
-//
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//			request.setAttribute("msg", "Entity Updated");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
-//	}
+		String method = request.getParameter("method");
+		Medical_HistoryDao medicalHistoryDao = new Medical_HistoryDao();
+		Medical_History medical_history = null;
+
+		if(method.equals("medical_history_search_update"))
+		{
+			try {
+				medical_history = medicalHistoryDao.findByID(Integer.parseInt(request.getParameter("medical_history_patient_id")));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+
+			if(medical_history.getPatient_id()!=null){
+				request.setAttribute("medical_history", medical_history);
+				request.getRequestDispatcher("/jsps/medical_history/medical_history_update_output.jsp").forward(request, response);
+
+			}
+			else{
+				request.setAttribute("msg", "Medical History not found");
+				request.getRequestDispatcher("/jsps/medical_history/medical_history_read_output.jsp").forward(request, response);
+			}
+		}
+		else if(method.equals("medical_history_update"))
+		{
+			Map<String,String[]> paramMap = request.getParameterMap();
+			Medical_History form = new Medical_History();
+			List<String> info = new ArrayList<String>();
+
+			for(String name : paramMap.keySet()) {
+				String[] values = paramMap.get(name);
+				info.add(values[0]);
+			}
+			form.setNotes(request.getParameter("medical_history_notes"));
+			form.setPre_existing_conditions(request.getParameter("medical_history_pre_exisiting_conditions"));
+			form.setContracted_covid(java.sql.Date.valueOf(request.getParameter("medical_history_contracted_covid")));
+			form.setPatient_id(Integer.parseInt(request.getParameter("medical_history_patient_id")));
+
+			
+			
+			
+			
+			try {
+				medicalHistoryDao.update(form);
+
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "Medical History Updated");
+			request.getRequestDispatcher("/jsps/medical_history/medical_history_read_output.jsp").forward(request, response);
+		}
+	}
 }
 
 
