@@ -27,10 +27,7 @@
 	Patient ID :<input type="hidden" name="method" value="search"/>:<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Full Name: <input type="text" name="address_fullname" value="${form.address_fullname }"/>
-	<span style="color: red; font-weight: 900">${errors.address_fullname }</span>
-	<br/>
-	Street Address: <input type="text" name="address_streetaddress" value="${form.address_streetaddress }"/>
+	Address: <input type="text" name="address_streetaddress" value="${form.address_streetaddress }"/>
 	<span style="color: red; font-weight: 900">${errors.address_streetaddress }</span>
 	<br/>
 	Zip code： <input type="text" name="address_zip_code" value="${form.address_zip_code }"/>
