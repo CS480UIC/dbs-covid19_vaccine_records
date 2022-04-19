@@ -23,7 +23,7 @@
   <body>
   <h1>Read Medical History</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/MedicalHistoryServletRead'/>" method="post">
+<form action="<c:url value='/Medical_HistoryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="medical_history_regist"/>
 	Patient ID: <input type="text" name="medical_history_patient_id" value="${form.medical_history_patient_id}"/>
 	<span style="color: red; font-weight: 900">${errors.medical_history_patient_id }</span>
