@@ -1,4 +1,4 @@
-package medical_history.web.servlet;
+ package medical_history.web.servlet;
 
 import java.io.IOException;
 
@@ -37,29 +37,29 @@ public class Medical_HistoryServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		Medical_History entity1 = null;
-//		Medical_HistoryDao entity1Dao = new Medical_HistoryDao();
-//		
-//		try {
-//			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
-//		} catch (ClassNotFoundException e1) {
-//			e1.printStackTrace();
-//		} catch (InstantiationException e1) {
-//			e1.printStackTrace();
-//		} catch (IllegalAccessException e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//		if(entity1.getUsername()!=null){
-//					System.out.println(entity1);
-//					request.setAttribute("entity1", entity1);
-//					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//			else{
-//			request.setAttribute("msg", "Entity not found");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
-//	}
+		Medical_History medical_history = null;
+		Medical_HistoryDao medical_historyDao = new Medical_HistoryDao();
+		
+		try {
+			medical_history = medical_historyDao.findByID(Integer.parseInt(request.getParameter("medical_history_patient_id")));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(medical_history.getPatient_id()!=null){
+					System.out.println(medical_history);
+					request.setAttribute("medical_history", medical_history);
+					request.getRequestDispatcher("/jsps/medical_history/medical_history_read_output.jsp").forward(request, response);
+			}
+			else{
+			request.setAttribute("msg", "Medical History not found");
+			request.getRequestDispatcher("/jsps/medical_history/medical_history_read_output.jsp").forward(request, response);
+		}
+	}
 }
 
 
