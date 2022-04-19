@@ -194,7 +194,7 @@
   </servlet-mapping>
   
   
-  <servlet>
+<servlet>
     <description></description>
     <display-name>Medical_HistoryServletCreate</display-name>
     <servlet-name>Medical_HistoryServletCreate</servlet-name>
@@ -204,6 +204,48 @@
     <servlet-name>Medical_HistoryServletCreate</servlet-name>
     <url-pattern>/Medical_HistoryServletCreate</url-pattern>
   </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>Medical_HistoryServletRead</display-name>
+    <servlet-name>Medical_HistoryServletRead</servlet-name>
+    <servlet-class>medical_history.web.servlet.Medical_HistoryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Medical_HistoryServletRead</servlet-name>
+    <url-pattern>/Medical_HistoryServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>Medical_HistoryServletUpdate</display-name>
+    <servlet-name>Medical_HistoryServletUpdate</servlet-name>
+    <servlet-class>medical_history.web.servlet.Medical_HistoryServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Medical_HistoryServletUpdate</servlet-name>
+    <url-pattern>/Medical_HistoryServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Medical_HistoryServletDelete</display-name>
+    <servlet-name>Medical_HistoryServletDelete</servlet-name>
+    <servlet-class>medical_history.web.servlet.Medical_HistoryServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Medical_HistoryServletDelete</servlet-name>
+    <url-pattern>/Medical_HistoryServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   
   
   
