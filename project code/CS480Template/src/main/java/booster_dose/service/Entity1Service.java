@@ -1,4 +1,4 @@
-package entity1.service;
+package booster_dose.service;
 
 
 import entity1.dao.Entity1Dao;

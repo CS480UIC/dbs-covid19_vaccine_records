@@ -1,4 +1,4 @@
-package entity1.domain;
+package booster_dose.domain;
 
 /**
  * User object

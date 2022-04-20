@@ -1,4 +1,4 @@
-package entity1.dao;
+package booster_dose.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ import entity1.domain.Entity1;
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class Booster_DoseDao {
 	
 	/**
 	 * user name to connect to the database 

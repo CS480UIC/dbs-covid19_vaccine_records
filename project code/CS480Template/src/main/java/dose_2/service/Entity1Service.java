@@ -1,4 +1,4 @@
-package entity1.service;
+package dose_2.service;
 
 
 import entity1.dao.Entity1Dao;

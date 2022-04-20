@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package dose_2.web.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

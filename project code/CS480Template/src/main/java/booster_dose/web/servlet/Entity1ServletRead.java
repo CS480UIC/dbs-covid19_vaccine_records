@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package booster_dose.web.servlet;
 
 import java.io.IOException;
 

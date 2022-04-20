@@ -1,4 +1,4 @@
-package entity1.domain;
+package dose_2.domain;
 
 /**
  * User object

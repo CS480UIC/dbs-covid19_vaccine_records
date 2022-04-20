@@ -1,4 +1,4 @@
-package entity1.service;
+package booster_dose.service;
 
 public class Entity1Exception extends Exception {
 
