@@ -44,7 +44,7 @@ public class Booster_DoseServletUpdate extends HttpServlet {
 		Booster_DoseDao booster_dosedao = new Booster_DoseDao();
 		Booster_Dose booster_dose = null;
 
-		if(method.equals("search"))
+		if(method.equals("booster_dose_search"))
 		{
 			try {
 				booster_dose = booster_dosedao.findByID(Integer.parseInt(request.getParameter("patient_id")));
@@ -57,7 +57,7 @@ public class Booster_DoseServletUpdate extends HttpServlet {
 			}
 
 			if(booster_dose.getPatient_id()!=null){
-				request.setAttribute("entity1", booster_dose);
+				request.setAttribute("booster_dose", booster_dose);
 				request.getRequestDispatcher("/jsps/booster_dose/booster_dose_update_output.jsp").forward(request, response);
 
 			}
@@ -66,7 +66,7 @@ public class Booster_DoseServletUpdate extends HttpServlet {
 				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("update"))
+		else if(method.equals("booster_dose_update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
 			Booster_Dose form = new Booster_Dose();
