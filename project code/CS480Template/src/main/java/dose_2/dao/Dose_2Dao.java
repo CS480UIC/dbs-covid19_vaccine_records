@@ -95,7 +95,7 @@ public class Dose_2Dao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE dose_2 SET type_2 = ?, lot_num_2 = ?, dose_2_dat = ?, location_2 = ? where patient_id = ?";
+			String sql = "UPDATE dose_2 SET type_2 = ?, lot_num_2 = ?, dose_2_date = ?, location_2 = ? where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setInt(1,form.getPatient_id());
 		    preparestatement.setString(2,form.getType());
