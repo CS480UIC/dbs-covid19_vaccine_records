@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Dose #2</h1>
-<form action="<c:url value='/Dose2ServletDelete'/>" method="post">
+<form action="<c:url value='/Dose_2ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="dose_2_search"/>
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
