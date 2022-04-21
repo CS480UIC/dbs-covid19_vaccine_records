@@ -36,7 +36,7 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Dose_2ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="dose_2_update"/>
 				<input type="hidden" name="patient_id" value="${dose_2.patient_id }"/>
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
