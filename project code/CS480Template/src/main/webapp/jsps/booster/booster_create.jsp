@@ -22,7 +22,7 @@
   
   <body>
   <h1>Booster Dose</h1>
-<form action="<c:url value='/BoosterServletCreate'/>" method="post">
+<form action="<c:url value='/Booster_DoseServletCreate'/>" method="post">
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br>
@@ -32,11 +32,11 @@
 	Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${form.booster_lot_num }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_lot_num }</span>
 	<br/>
-	Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
-	<br/>
 	Date of Booster Dose: <input type="date" name="booster_date" value="${form.booster_date }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_date }</span>
+	<br/>
+	Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
 	<br/>
 	<input type="submit" value="Create Booster Dose"/>
 </form>
