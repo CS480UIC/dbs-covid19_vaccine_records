@@ -24,21 +24,21 @@
   <h1>Update Booster Dose</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Full Name: <input type="text" name="booster_fullname" value="${booster.booster_fullname }" disabled/>
+	Full Name: <input type="text" name="patient_id" value="${booster_dose.patient_id }" disabled/>
 	<br/>
-	Type： <input type="text" name="booster_type" value="${booster.booster_type }" disabled/>
+	Type： <input type="text" name="booster_type" value="${booster_dose.type_b }" disabled/>
 	<br/>
-	Lot Number： <input type="text" name="booster_lot_num" value="${booster.booster_lot_num }" disabled/>
+	Lot Number： <input type="text" name="booster_lot_num" value="${booster_dose.lot_num_b }" disabled/>
 	<br/>
-	Location： <input type="text" name="booster_location" value="${booster.booster_location }" disabled/>
+	Date of Dose： <input type="date" name="booster_date" value="${booster_dose.dose_b_date }" disabled/>
 	<br/>
-	Date of Dose： <input type="date" name="booster_date" value="${booster.booster_date }" disabled/>
+	Location： <input type="text" name="booster_location" value="${booster.location_b }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/BoosterServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="booster_update"/>
-				<input type="hidden" name="patient_id" value="${booster.patient_id }"/>
+		<input type="hidden" name="method" value="booster_dose_update"/>
+				<input type="hidden" name="patient_id" value="${booster_dose.patient_id }"/>
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
@@ -48,11 +48,11 @@
 	Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${form.booster_lot_num }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_lot_num }</span>
 	<br/>
-	Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
-	<br/>
 	Date of Booster Dose: <input type="date" name="booster_date" value="${form.booster_date }"/>
 	<span style="color: red; font-weight: 900">${errors.booster_date }</span>
+	<br/>
+	Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
+	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
 	<br/>
 	<input type="submit" value="Update Booster Dose"/>
 </form>
