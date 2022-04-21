@@ -32,11 +32,11 @@
 	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_lot_num }</span>
 	<br/>
-	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
-	<br/>
 	Date of Dose #2: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
+	<br/>
+	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
 	<br/>
 	<input type="submit" value="Create Dose 2"/>
 </form>
