@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import booster_dose.dao.Booster_DoseDao;
+import booster_dose.domain.Booster_Dose;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class Booster_DoseServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public Booster_DoseServletRead() {
         super();
     }
     
@@ -37,11 +37,11 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
-		Entity1Dao entity1Dao = new Entity1Dao();
+		Booster_Dose booster_dose = null;
+		Booster_DoseDao booster_doseDao = new Booster_DoseDao();
 		
 		try {
-			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+			booster_dose = booster_doseDao.findByID(Integer.parseInt(request.getParameter("patient_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class Entity1ServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(booster_dose.getPatient_id()!=null){
+					System.out.println(booster_dose);
+					request.setAttribute("booster_dose", booster_dose);
+					request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
 		}
 	}
 }
