@@ -28,13 +28,13 @@
 		<input type="hidden" name="patient_id" value="${dose_2.patient_id }"/>
 	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
 	<br/>
-	Type： <input type="text" name="dose_2_type" value="${dose_2.type }" disabled/>
+	Type： <input type="text" name="dose_2_type" value="${dose_2.type_2 }" disabled/>
 	<br/>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.lot_num }" disabled/>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.lot_num_2 }" disabled/>
 	<br/>
-	Location： <input type="text" name="dose_2_location" value="${dose_2.location }" disabled/>
+	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
 	<br/>
-	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.date }" disabled/>
+	Location： <input type="text" name="dose_2_location" value="${dose_2.location_2 }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Dose #2"/>
 </form>
