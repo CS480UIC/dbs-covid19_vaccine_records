@@ -22,22 +22,10 @@
   
   <body>
   <h1>Update Booster Dose</h1>
-<form action="<c:url value='/BoosterServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="booster_search"/>
-	Update Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
+<form action="<c:url value='/Booster_DoseServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="booster_dose_search"/>
+	Search Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
-	<br/>
-	Update Type： <input type="text" name="booster_type" value="${form.booster_type }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_type }</span>
-	<br/>
-	Update Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${form.booster_lot_num }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_lot_num }</span>
-	<br/>
-	Update Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
-	<br/>
-	Update Date of Booster Dose: <input type="date" name="booster_date" value="${form.booster_date }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_date }</span>
 	<br/>
 	<input type="submit" value="Update Booster Dose"/>
 </form>
