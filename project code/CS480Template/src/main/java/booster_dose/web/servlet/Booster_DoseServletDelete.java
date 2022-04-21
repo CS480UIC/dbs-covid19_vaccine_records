@@ -38,7 +38,7 @@ public class Booster_DoseServletDelete extends HttpServlet {
 		String method = request.getParameter("method");
 		Booster_DoseDao booster_doseDao = new Booster_DoseDao();
 		Booster_Dose booster_dose = null;
-		if(method.equals("search"))
+		if(method.equals("booster_dose_search"))
 		{
 			try {
 				booster_dose = booster_doseDao.findByID(Integer.parseInt(request.getParameter("patient_id")));
@@ -60,10 +60,10 @@ public class Booster_DoseServletDelete extends HttpServlet {
 				request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("delete"))
+		else if(method.equals("booster_dose_delete"))
 		{	
 			try {
-				booster_doseDao.delete(request.getParameter("patient_Id"));
+				booster_doseDao.delete(request.getParameter("patient_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
