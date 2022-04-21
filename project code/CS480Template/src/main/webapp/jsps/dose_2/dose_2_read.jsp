@@ -23,7 +23,7 @@
   <body>
   <h1>Read Dose #2</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Dose2ServletRead'/>" method="post">
+<form action="<c:url value='/Dose_2ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="dose_2_regist"/>
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
