@@ -24,15 +24,15 @@
   <h1>Read Booster Dose Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Patient ID： <input type="text" name="patient_id" value="${booster.patient_id }" disabled/>
+	Patient ID： <input type="text" name="patient_id" value="${booster_dose.patient_id }" disabled/>
 	<br/>
-	Type： <input type="text" name="booster_type" value="${booster.booster_type }" disabled/>
+	Type： <input type="text" name="booster_type" value="${booster_dose.type_b }" disabled/>
 	<br/>
-	Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${booster.booster_lot_num }" disabled/>
+	Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${booster_dose.lot_num_b }" disabled/>
 	<br/>
-	Location： <input type="text" name="booster_location" value="${booster.booster_location }" disabled/>
+	Date of Booster Dose： <input type="date" name="booster_date" value="${booster_dose.dose_b_date }" disabled/>
 	<br/>
-	Date of Booster Dose： <input type="date" name="booster_date" value="${booster.booster_date }" disabled/>
+	Location： <input type="text" name="booster_location" value="${booster_dose.location_b }" disabled/>
 	<br/>
 </form>
 
