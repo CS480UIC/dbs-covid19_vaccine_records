@@ -44,7 +44,7 @@ public class Dose_2ServletUpdate extends HttpServlet {
 		Dose_2Dao dose_2dao = new Dose_2Dao();
 		Dose_2 dose_2 = null;
 
-		if(method.equals("search"))
+		if(method.equals("dose_2_search"))
 		{
 			try {
 				dose_2 = dose_2dao.findByID(Integer.parseInt(request.getParameter("patient_id")));
@@ -57,7 +57,7 @@ public class Dose_2ServletUpdate extends HttpServlet {
 			}
 
 			if(dose_2.getPatient_id()!=null){
-				request.setAttribute("entity1", dose_2);
+				request.setAttribute("dose_2", dose_2);
 				request.getRequestDispatcher("/jsps/dose_2/dose_2_update_output.jsp").forward(request, response);
 
 			}
@@ -66,7 +66,7 @@ public class Dose_2ServletUpdate extends HttpServlet {
 				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("update"))
+		else if(method.equals("dose_2_update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
 			Dose_2 form = new Dose_2();
