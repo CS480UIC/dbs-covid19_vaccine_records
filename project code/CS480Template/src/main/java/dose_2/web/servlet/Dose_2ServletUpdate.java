@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import dose_2.dao.Dose_2Dao;
+import dose_2.domain.Dose_2;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletUpdate extends HttpServlet {
+public class Dose_2ServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Entity1ServletUpdate() {
+	public Dose_2ServletUpdate() {
 		super();
 	}
 
@@ -41,13 +41,13 @@ public class Entity1ServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		Dose_2Dao dose_2dao = new Dose_2Dao();
+		Dose_2 dose_2 = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByUsername(request.getParameter("username"));
+				dose_2 = dose_2dao.findByID(Integer.parseInt(request.getParameter("patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,9 +56,9 @@ public class Entity1ServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(dose_2.getPatient_id()!=null){
+				request.setAttribute("entity1", dose_2);
+				request.getRequestDispatcher("/jsps/dose_2/dose_2_update_output.jsp").forward(request, response);
 
 			}
 			else{
@@ -69,19 +69,21 @@ public class Entity1ServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Entity1 form = new Entity1();
+			Dose_2 form = new Dose_2();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setPatient_id(Integer.parseInt(info.get(0)));
+			form.setType(info.get(1));
+			form.setLotNum(info.get(2));
+			form.setDateOfDose(java.sql.Date.valueOf(info.get(3)));
+			form.setLocation(info.get(4));
 
 			try {
-				entity1dao.update(form);
+				dose_2dao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
