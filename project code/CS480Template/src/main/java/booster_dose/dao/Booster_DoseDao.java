@@ -12,7 +12,7 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import entity1.domain.Entity1;
+import booster_dose.domain.Booster_Dose;
 
 /**
  * DDL functions performed in database
@@ -29,49 +29,53 @@ public class Booster_DoseDao {
 	 */
 	private String MySQL_password = "UICCS480Project"; //TODO change password
 
-	public Entity1 findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 entity1 = new Entity1();
+	public Booster_Dose findByID(Integer patient_id_input) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Booster_Dose booster_dose = new Booster_Dose();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from booster_dose where patient_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,patient_id_input);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	String patient_id_search = resultSet.getString("username");
+		    	if(patient_id_search.equals(patient_id_input)){
+		    		booster_dose.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
+		    		booster_dose.setType(resultSet.getString("type_b"));
+		    		booster_dose.setLotNum(resultSet.getString("lot_num_b"));
+		    		booster_dose.setDateOfDose(java.sql.Date.valueOf(resultSet.getString("dose_b_date")));
+		    		booster_dose.setLocation(resultSet.getString("location_b"));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return booster_dose;
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert Booster_Dose
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Booster_Dose form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into booster_dose (patient_id, type_b, lot_num_b, dose_b_date, location_b) values(?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,form.getPatient_id());
+		    preparestatement.setString(2,form.getType());
+		    preparestatement.setString(3,form.getLotNum());
+		    preparestatement.setDate(4,form.getDateOfDose());
+		    preparestatement.setString(5,form.getLocation());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -86,16 +90,18 @@ public class Booster_DoseDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Booster_Dose form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE booster_dose SET type_b = ?, lot_num_b = ?, dose_b_date = ?, location_2 = ? where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			preparestatement.setInt(1,form.getPatient_id());
+		    preparestatement.setString(2,form.getType());
+		    preparestatement.setString(3,form.getLotNum());
+		    preparestatement.setDate(4,form.getDateOfDose());
+		    preparestatement.setString(5,form.getLocation());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -110,14 +116,14 @@ public class Booster_DoseDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String patient_id_input) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from booster_dose where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,Integer.parseInt(patient_id_input));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
