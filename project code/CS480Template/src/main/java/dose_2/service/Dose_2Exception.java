@@ -1,17 +1,17 @@
 package dose_2.service;
 
-public class Entity1Exception extends Exception {
+public class Dose_2Exception extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Entity1Exception() {
+	public Dose_2Exception() {
 		super();
 	}
 
-	public Entity1Exception(String message) {
+	public Dose_2Exception(String message) {
 		super(message);
 	}
 
