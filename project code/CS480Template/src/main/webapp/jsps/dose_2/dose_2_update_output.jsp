@@ -26,13 +26,13 @@
 <form>
 	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
 	<br/>
-	Type： <input type="text" name="dose_2_type" value="${dose_2.dose_2_type }" disabled/>
+	Type： <input type="text" name="dose_2_type" value="${dose_2.type_2 }" disabled/>
 	<br/>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.dose_2_lot_num }" disabled/>
-	<br/>
-	Location： <input type="text" name="dose_2_location" value="${dose_2.dose_2_location }" disabled/>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.lot_num_2 }" disabled/>
 	<br/>
 	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
+	<br/>
+	Location： <input type="text" name="dose_2_location" value="${dose_2.location_2 }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
@@ -48,11 +48,11 @@
 	Lot Number： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_lot_num }</span>
 	<br/>
-	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
-	<br/>
 	Date of Dose #2: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
+	<br/>
+	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
+	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
 	<br/>
 	<input type="submit" value="Update Dose #2"/>
 </form>
