@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import dose_2.dao.Dose_2Dao;
+import dose_2.domain.Dose_2;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class Dose_2ServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public Dose_2ServletRead() {
         super();
     }
     
@@ -37,11 +37,11 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
-		Entity1Dao entity1Dao = new Entity1Dao();
+		Dose_2 dose_2 = null;
+		Dose_2Dao dose_2Dao = new Dose_2Dao();
 		
 		try {
-			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+			dose_2 = dose_2Dao.findByID(Integer.parseInt(request.getParameter("patient_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class Entity1ServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		if(dose_2.getPatient_id()!=null){
+					System.out.println(dose_2);
+					request.setAttribute("dose_2", dose_2);
+					request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 		}
 	}
 }
