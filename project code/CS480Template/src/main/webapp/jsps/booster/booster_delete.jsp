@@ -22,22 +22,10 @@
   
   <body>
   <h1>Delete Booster Dose</h1>
-<form action="<c:url value='/BoosterServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="booster_search"/>
+<form action="<c:url value='/Booster_DoseServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="booster_dose_search"/>
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
-	<br/>
-	Type： <input type="text" name="booster_type" value="${form.booster_type }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_type }</span>
-	<br/>
-	Lot Number： <input type="text" name="booster_lot_num" value="${form.booster_lot_num }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_lot_num }</span>
-	<br/>
-	Location： <input type="text" name="booster_location" value="${form.booster_location }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_location }</span>
-	<br/>
-	Date of Dose: <input type="date" name="booster_date" value="${form.booster_date }"/>
-	<span style="color: red; font-weight: 900">${errors.booster_date }</span>
 	<br/>
 	<input type="submit" value="Delete Booster Dose"/>
 </form>
