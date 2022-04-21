@@ -6,21 +6,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import dose_2.dao.Dose_2Dao;
+import dose_2.domain.Dose_2;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletDelete extends HttpServlet {
+public class Dose_2ServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletDelete() {
+    public Dose_2ServletDelete() {
         super();
     }
     
@@ -36,12 +36,12 @@ public class Entity1ServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1Dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		Dose_2Dao dose_2Dao = new Dose_2Dao();
+		Dose_2 dose_2 = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+				dose_2 = dose_2Dao.findByID(Integer.parseInt(request.getParameter("patient_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class Entity1ServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(dose_2.getPatient_id()!=null){
+						System.out.println(dose_2);
+						request.setAttribute("dose_2", dose_2);
+						request.getRequestDispatcher("/jsps/dose_2/dose_2_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				dose_2Dao.delete(request.getParameter("patient_Id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -72,7 +72,7 @@ public class Entity1ServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 		}
 	}
 }
