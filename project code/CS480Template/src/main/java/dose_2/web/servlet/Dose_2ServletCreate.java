@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.Entity1;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import dose_2.domain.Dose_2;
+import dose_2.service.Dose_2Exception;
+import dose_2.service.Dose_2Service;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class Dose_2ServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public Dose_2ServletCreate() {
         super();
     }
 
@@ -41,24 +41,26 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		Dose_2Service dose_2service = new Dose_2Service();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Entity1 form = new Entity1();
+		Dose_2 form = new Dose_2();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setPatient_id(Integer.parseInt(info.get(0)));
+		form.setType(info.get(1));
+		form.setLotNum(info.get(2));
+		form.setDateOfDose(java.sql.Date.valueOf(info.get(3)));
+		form.setLocation(info.get(4));
 		
 		try {
-			entity1service.create(form);
+			dose_2service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | Dose_2Exception e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();
