@@ -38,7 +38,7 @@ public class Dose_2ServletDelete extends HttpServlet {
 		String method = request.getParameter("method");
 		Dose_2Dao dose_2Dao = new Dose_2Dao();
 		Dose_2 dose_2 = null;
-		if(method.equals("search"))
+		if(method.equals("dose_2_search"))
 		{
 			try {
 				dose_2 = dose_2Dao.findByID(Integer.parseInt(request.getParameter("patient_id")));
@@ -60,10 +60,10 @@ public class Dose_2ServletDelete extends HttpServlet {
 				request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("delete"))
+		else if(method.equals("dose_2_delete"))
 		{	
 			try {
-				dose_2Dao.delete(request.getParameter("patient_Id"));
+				dose_2Dao.delete(request.getParameter("patient_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
