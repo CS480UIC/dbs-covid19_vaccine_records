@@ -32,7 +32,7 @@
     <br>
     <a href="<c:url value='/ILPhys'/>" target="body">Please list all Illinois Primary Physicians</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/stringAggregate'/>" target="body">Please list all Patients who contracted covid after 08-15-2020</a>&nbsp;&nbsp;
+    <a href="<c:url value='/CovidDate'/>" target="body">Please list all Patients who contracted covid after 08-15-2020</a>&nbsp;&nbsp;
     
     
   </body>
