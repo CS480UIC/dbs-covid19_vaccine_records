@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import medical_history.domain.Medical_History;
+import primary_physician.domain.Primary_physician;
 
 /**
  * DDL functions performed in database
@@ -126,5 +126,27 @@ public class Medical_HistoryDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findCovidDate() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			String sql = "select * from covid_2020";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Medical_History medical_history = new Medical_History();
+				medical_history.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
+				medical_history.setContracted_covid(java.sql.Date.valueOf(resultSet.getString("contracted_covid")));		
+	    		list.add(medical_history);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }
