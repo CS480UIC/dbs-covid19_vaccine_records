@@ -1,6 +1,8 @@
 package medical_history.service;
 
 
+import java.util.List;
+
 import medical_history.dao.Medical_HistoryDao;
 import medical_history.domain.Medical_History;
 
@@ -26,4 +28,8 @@ public class Medical_HistoryService {
 		entity1Dao.add(form);
 	}
 	
+	public List<Object> findCovidDate() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return entity1Dao.findCovidDate();
+		
+	}
 }
