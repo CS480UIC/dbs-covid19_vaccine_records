@@ -295,6 +295,19 @@
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>ILPhys</display-name>
+    <servlet-name>ILPhys</servlet-name>
+    <servlet-class>primary_physician.web.servlet.ILPhys</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ILPhys</servlet-name>
+    <url-pattern>/ILPhys</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   
     <servlet>
     <description></description>
