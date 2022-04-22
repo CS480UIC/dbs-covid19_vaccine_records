@@ -1,36 +1,58 @@
-package primary_physician.service;
+package primary_physician.web.servlet;
 
-
+import java.io.IOException;
 import java.util.List;
 
-import primary_physician.dao.Primary_physicianDao;
-import primary_physician.domain.Primary_physician;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import contact.service.ContactService;
+import primary_physician.service.Primary_physicianService;
 
 /**
  * logic functions such as register, login
  * @author Priyanka Patel
  *
  */
-public class Primary_physicianService {
-	private Primary_physicianDao primary_physicianDao = new Primary_physicianDao();
-	
-	/**
-	 * register a Entity1
-	 * @param form
-	 * @throws ClassNotFoundException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 */
-	public void create(Primary_physician form) throws Primary_physicianException, ClassNotFoundException, InstantiationException, IllegalAccessException{
-		// check the primary key of Entity1
-		Primary_physician entity1 = primary_physicianDao.findByID(form.getPatient_id());
-		if(entity1.getPatient_id()!=null && entity1.getPatient_id() == form.getPatient_id()) throw new Primary_physicianException("This primary physician has been registered!");
-		primary_physicianDao.add(form);
+
+
+public class ILPhys extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request,response);
 	}
-	
-	public List<Object> findILPhys() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		return primary_physicianDao.findILPhys();
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Primary_physicianService primary_physicianService = new Primary_physicianService();
+		try {
+			request.setAttribute("PrimaryPhysicianList", primary_physicianService.findILPhys());
+		} catch (InstantiationException | IllegalAccessException
+				| ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		/*try {
+			List<Object> li = contactService.findall();
+			for(int i = 0; i < li.size();i++){
+				System.out.println(li.get(i).toString());
+			}
+			
+		} catch (InstantiationException | IllegalAccessException
+				| ClassNotFoundException e) {
+			e.printStackTrace();
+		}*/
 		
+		
+		request.getRequestDispatcher("/jsps/primary_physician/q_il_phys.jsp").forward(request, response);
 	}
 
 }
+
+
+
+
