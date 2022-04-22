@@ -1,6 +1,8 @@
 package primary_physician.service;
 
 
+import java.util.List;
+
 import primary_physician.dao.Primary_physicianDao;
 import primary_physician.domain.Primary_physician;
 
@@ -24,6 +26,11 @@ public class Primary_physicianService {
 		Primary_physician entity1 = primary_physicianDao.findByID(form.getPatient_id());
 		if(entity1.getPatient_id()!=null && entity1.getPatient_id() == form.getPatient_id()) throw new Primary_physicianException("This primary physician has been registered!");
 		primary_physicianDao.add(form);
+	}
+	
+	public List<Object> findILPhys() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return primary_physicianDao.findILPhys();
+		
 	}
 
 }
