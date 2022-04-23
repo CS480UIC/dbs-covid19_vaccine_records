@@ -42,6 +42,8 @@ public class PatientDao {
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,first_name_p);
 		    preparestatement.setString(2, last_name_p);
+		    preparestatement.setDate(2, dob_p);
+
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){

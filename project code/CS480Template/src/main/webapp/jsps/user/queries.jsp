@@ -28,7 +28,7 @@
  	<br>
     <a href="<c:url value='/gmailEmails'/>" target="body">Please list patients with Gmail email addresses</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/stringAggregate'/>" target="body">Please list all female patients</a>&nbsp;&nbsp;
+    <a href="<c:url value='/stringAggregate'/>" target="body">Please list the count of female patients</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/ILPhys'/>" target="body">Please list all Illinois Primary Physicians</a>&nbsp;&nbsp;
     <br>
