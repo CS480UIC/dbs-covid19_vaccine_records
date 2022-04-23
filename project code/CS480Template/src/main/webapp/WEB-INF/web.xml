@@ -244,6 +244,94 @@
     <url-pattern>/Medical_HistoryServletDelete</url-pattern>
   </servlet-mapping>
   
+      <servlet>
+    <description></description>
+    <display-name>Dose1ServletCreate</display-name>
+    <servlet-name>Dose1ServletCreate</servlet-name>
+    <servlet-class>dose1.web.servlet.Dose1ServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose1ServletCreate</servlet-name>
+    <url-pattern>/Dose1ServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Dose1ServletRead</display-name>
+    <servlet-name>Dose1ServletRead</servlet-name>
+    <servlet-class>dose1.web.servlet.Dose1ServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose1ServletRead</servlet-name>
+    <url-pattern>/Dose1ServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Dose1ServletDelete</display-name>
+    <servlet-name>Dose1ServletDelete</servlet-name>
+    <servlet-class>dose1.web.servlet.Dose1ServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose1ServletDelete</servlet-name>
+    <url-pattern>/Dose1ServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Dose1ServletUpdate</display-name>
+    <servlet-name>Dose1ServletUpdate</servlet-name>
+    <servlet-class>dose1.web.servlet.Dose1ServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose1ServletUpdate</servlet-name>
+    <url-pattern>/Dose1ServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>AddressServletCreate</display-name>
+    <servlet-name>AddressServletCreate</servlet-name>
+    <servlet-class>address.web.servlet.AddressServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddressServletCreate</servlet-name>
+    <url-pattern>/AddressServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AddressServletRead</display-name>
+    <servlet-name>AddressServletRead</servlet-name>
+    <servlet-class>address.web.servlet.AddressServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddressServletRead</servlet-name>
+    <url-pattern>/AddressServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AddressServletDelete</display-name>
+    <servlet-name>AddressServletDelete</servlet-name>
+    <servlet-class>address.web.servlet.AddressServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddressServletDelete</servlet-name>
+    <url-pattern>/AddressServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AddressServletUpdate</display-name>
+    <servlet-name>AddressServletUpdate</servlet-name>
+    <servlet-class>address.web.servlet.AddressServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddressServletUpdate</servlet-name>
+    <url-pattern>/AddressServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   
   
   
