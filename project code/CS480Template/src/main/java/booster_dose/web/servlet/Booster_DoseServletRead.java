@@ -52,12 +52,12 @@ public class Booster_DoseServletRead extends HttpServlet {
 		
 		if(booster_dose.getPatient_id()!=null){
 					System.out.println(booster_dose);
-					request.setAttribute("booster_dose", booster_dose);
-					request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
+					request.setAttribute("booster", booster_dose);
+					request.getRequestDispatcher("/jsps/booster/booster_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/booster/booster_read_output.jsp").forward(request, response);
 		}
 	}
 }
