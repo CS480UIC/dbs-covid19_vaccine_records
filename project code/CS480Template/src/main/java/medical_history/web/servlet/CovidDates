@@ -14,7 +14,7 @@ import medical_history.service.Medical_HistoryService;
  * Servlet implementation class findAll
  */
 
-public class CovidDate extends HttpServlet {
+public class CovidDates extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
