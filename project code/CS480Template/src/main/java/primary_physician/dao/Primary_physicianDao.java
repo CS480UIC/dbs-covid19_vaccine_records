@@ -176,7 +176,6 @@ public class Primary_physicianDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				System.out.println("testing here");
 				PPComplex ppExist = new PPComplex();
 				ppExist.setPp_state(resultSet.getString("p_state"));    
 	    		list.add(ppExist);
