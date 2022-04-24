@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import medical_history.domain.CovidDate;
+
 //import java.util.ArrayList;
 //import java.util.List;
 
@@ -133,14 +135,14 @@ public class Medical_HistoryDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-			String sql = "select * from covid_2020";
+			String sql = "select * from complex_join_covid";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Medical_History medical_history = new Medical_History();
-				medical_history.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
-				medical_history.setContracted_covid(java.sql.Date.valueOf(resultSet.getString("contracted_covid")));		
-	    		list.add(medical_history);
+				CovidDate covid_date = new CovidDate();
+				covid_date.setNotes(resultSet.getString("notes"));
+				covid_date.setP_last_name(resultSet.getString("p_last_name"));		
+	    		list.add(covid_date);
 			 }
 			connect.close();
 		} catch(SQLException e) {
