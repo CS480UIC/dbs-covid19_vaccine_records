@@ -52,7 +52,7 @@ public class Booster_DoseServletDelete extends HttpServlet {
 		
 			if(booster_dose.getPatient_id()!=null){
 						System.out.println(booster_dose);
-						request.setAttribute("booster_dose", booster_dose);
+						request.setAttribute("booster", booster_dose);
 						request.getRequestDispatcher("/jsps/booster/booster_delete_output.jsp").forward(request, response);			
 				}
 				else{
