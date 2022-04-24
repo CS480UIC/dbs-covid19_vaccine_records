@@ -34,7 +34,7 @@ public class Booster_DoseDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-		    String sql = "select * from booster_dose where patient_id=?";
+		    String sql = "select * from booster where patient_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,patient_id_input);
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -69,7 +69,7 @@ public class Booster_DoseDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "insert into booster_dose (patient_id, type_b, lot_num_b, dose_b_date, location_b) values(?,?,?,?,?)";
+			String sql = "insert into booster (patient_id, type_b, lot_num_b, dose_b_date, location_b) values(?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getPatient_id());
 		    preparestatement.setString(2,form.getType());
@@ -95,7 +95,7 @@ public class Booster_DoseDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE booster_dose SET type_b = ?, lot_num_b = ?, dose_b_date = ?, location_2 = ? where patient_id = ?";
+			String sql = "UPDATE booster SET type_b = ?, lot_num_b = ?, dose_b_date = ?, location_2 = ? where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setInt(1,form.getPatient_id());
 		    preparestatement.setString(2,form.getType());
@@ -121,7 +121,7 @@ public class Booster_DoseDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "delete from booster_dose where patient_id = ?";
+			String sql = "delete from booster where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,Integer.parseInt(patient_id_input));
 		    preparestatement.executeUpdate();
