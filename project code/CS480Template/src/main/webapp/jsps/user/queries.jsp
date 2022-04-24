@@ -32,7 +32,7 @@
     <br>
     <a href="<c:url value='/ILPhys'/>" target="body">Please list all Illinois Primary Physicians</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/CovidDate'/>" target="body">Please list all Patients who contracted covid after 08-15-2020</a>&nbsp;&nbsp;
+    <a href="<c:url value='/CovidDates'/>" target="body">Please list all Patients who contracted covid on 01-05-2022 and have their primary physician's zip code in 60606</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/complexExist'/>" target="body">Please list all States for Primary Physicians that have existing Patient ID's</a>&nbsp;&nbsp;
     
