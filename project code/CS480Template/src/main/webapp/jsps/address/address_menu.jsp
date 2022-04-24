@@ -7,7 +7,7 @@
   <head>
     <base href="">
     
-    <title>Dose #1</title>
+    <title>Address</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Dose #1</h1>
+    <h1>CRUD operations for Address</h1>
     <br>
-	<a href="<c:url value='/jsps/dose_1/dose_1_create.jsp'/>" target="_parent">Create Dose #1</a> |&nbsp; 
-	<a href="<c:url value='/jsps/dose_1/dose_1_read.jsp'/>" target="_parent">Read Dose #1</a> |&nbsp;
-	<a href="<c:url value='/jsps/dose_1/dose_1_update.jsp'/>" target="_parent">Update Dose #1</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/dose_1/dose_1_delete.jsp'/>" target="_parent">Delete Dose #1</a>	
+	<a href="<c:url value='/jsps/address/address_create.jsp'/>" target="_parent">Create Address</a> |&nbsp; 
+	<a href="<c:url value='/jsps/address/address_read.jsp'/>" target="_parent">Read Address</a> |&nbsp;
+	<a href="<c:url value='/jsps/address/address_update.jsp'/>" target="_parent">Update Address</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/address/address_delete.jsp'/>" target="_parent">Delete Address</a>	
 	    
   </body>
 </html>
