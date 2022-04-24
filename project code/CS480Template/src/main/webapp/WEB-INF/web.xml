@@ -471,7 +471,7 @@
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
   
-    <servlet>
+   <servlet>
     <description></description>
     <display-name>ILPhys</display-name>
     <servlet-name>ILPhys</servlet-name>
@@ -482,16 +482,15 @@
     <url-pattern>/ILPhys</url-pattern>
   </servlet-mapping>
   
-  
-    <servlet>
+  <servlet>
     <description></description>
-    <display-name>CovidDate</display-name>
-    <servlet-name>CovidDate</servlet-name>
-    <servlet-class>medical_history.web.servlet.CovidDate</servlet-class>
+    <display-name>CovidDates</display-name>
+    <servlet-name>CovidDates</servlet-name>
+    <servlet-class>medical_history.web.servlet.CovidDates</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CovidDate</servlet-name>
-    <url-pattern>/CovidDate</url-pattern>
+    <servlet-name>CovidDates</servlet-name>
+    <url-pattern>/CovidDates</url-pattern>
   </servlet-mapping>
   
   
