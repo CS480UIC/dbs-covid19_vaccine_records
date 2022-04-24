@@ -26,11 +26,9 @@
 <form>
 	Patient ID: <input type="text" name="patient_id" value="${address.patient_id }" disabled/>
 	<br/>
-	<%-- Type: <input type="text" name="patient_id" value="${dose_1.type }" disabled/> --%>
+	Street Address：<input type="text" name="address_street_address" value="${address.address }" disabled/>
 	<br/>
-	<%-- Street Address：<input type="text" name="address_street_address" value="${address.street_address }" disabled/> --%>
-	<br/>
-	<%-- Zip Code：<input type="text" name="address_zip_code" value="${address.zipCode }" disabled/> --%>
+	 Zip Code：<input type="text" name="address_zip_code" value="${address.zip }" disabled/>
 	<br/>
 	City : <input type="text" name="address_city" value="${address.city }" disabled/>
 	<br/>

@@ -26,7 +26,7 @@
 <form>
 	Patient ID: <input type="text" name="patient_id" value="${dose_1.patient_id }" disabled/>
 	<br/>
-	<%-- Type: <input type="text" name="patient_id" value="${dose_1.type }" disabled/> --%>
+	Type: <input type="text" name="patient_id" value="${dose_1.dose_type}" disabled/>
 	<br/>
 	Lot Number：<input type="text" name="dose_1_lot_num" value="${dose_1.lot_num }" disabled/>
 	<br/>
