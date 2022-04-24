@@ -23,6 +23,8 @@
   <body>
   <h1>Create Medical History</h1>
 <form action="<c:url value='/Medical_HistoryServletCreate'/>" method="post">
+	Type "-" if you do not know the information of that field
+	<br/>
 	Patient ID :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
