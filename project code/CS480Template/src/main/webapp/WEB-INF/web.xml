@@ -257,6 +257,17 @@
   
     <servlet>
     <description></description>
+    <display-name>Dose_2ServletCreate</display-name>
+    <servlet-name>Dose_2ServletCreate</servlet-name>
+    <servlet-class>dose_2.web.servlet.Dose_2ServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose_2ServletCreate</servlet-name>
+    <url-pattern>/Dose_2ServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
     <display-name>Dose1ServletRead</display-name>
     <servlet-name>Dose1ServletRead</servlet-name>
     <servlet-class>dose1.web.servlet.Dose1ServletRead</servlet-class>
@@ -264,6 +275,17 @@
   <servlet-mapping>
     <servlet-name>Dose1ServletRead</servlet-name>
     <url-pattern>/Dose1ServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Dose_2ServletRead</display-name>
+    <servlet-name>Dose_2ServletRead</servlet-name>
+    <servlet-class>dose_2.web.servlet.Dose_2ServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose_2ServletRead</servlet-name>
+    <url-pattern>/Dose_2ServletRead</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -279,6 +301,17 @@
   
     <servlet>
     <description></description>
+    <display-name>Dose_2ServletDelete</display-name>
+    <servlet-name>Dose_2ServletDelete</servlet-name>
+    <servlet-class>dose_2.web.servlet.Dose_2ServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose_2ServletDelete</servlet-name>
+    <url-pattern>/Dose_2ServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
     <display-name>Dose1ServletUpdate</display-name>
     <servlet-name>Dose1ServletUpdate</servlet-name>
     <servlet-class>dose1.web.servlet.Dose1ServletUpdate</servlet-class>
@@ -286,6 +319,17 @@
   <servlet-mapping>
     <servlet-name>Dose1ServletUpdate</servlet-name>
     <url-pattern>/Dose1ServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Dose_2ServletUpdate</display-name>
+    <servlet-name>Dose_2ServletUpdate</servlet-name>
+    <servlet-class>dose_2.web.servlet.Dose_2ServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dose_2ServletUpdate</servlet-name>
+    <url-pattern>/Dose_2ServletUpdate</url-pattern>
   </servlet-mapping>
   
   <servlet>
