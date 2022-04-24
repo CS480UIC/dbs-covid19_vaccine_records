@@ -8,16 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center"> After 08-15-2020 Covid Dates Table </h3>
+	<h3 align="center">01-05-2022 Covid Dates & 60606 Primary Physician Zip Code Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>Patient ID</th>
-		<th>Contracted COVID-19 Date</th>
+		<th>Notes</th>
+		<th>Primary Physician Last Name</th>
 	</tr>
 <c:forEach items="${CovidDateList}" var="medical_history">
 	<tr>
-		<td>${medical_history.patient_id}</td>
-		<td>${medical_history.contracted_covid}</td>
+		<td>${medical_history.notes}</td>
+		<td>${medical_history.p_last_name}</td>
 	</tr>
 </c:forEach>
 </table>
