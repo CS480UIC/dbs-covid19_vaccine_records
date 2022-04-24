@@ -45,6 +45,8 @@
 <form action="<c:url value='/Primary_physicianServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="primary_physician_update"/>
 	<input type="hidden" name="primary_physician_patient_id" value="${primary_physician.patient_id }"/>
+	Type "-" if you do not know the information of that field
+	<br/>
 	Input Patient ID : <input type="text" name="primary_physician_patient_id" value="${primary_physician.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
@@ -68,6 +70,7 @@
 	<br/>
 	Phone Number：<input type="tel" name="p_phone_num" value="${form.p_phone_num}"/>
 	<span style="color: red; font-weight: 900">${errors.p_phone_num}</span>
+	Do not add dashes (Ex. 1234567890)
 	<br/>
 	<input type="submit" value="Update Primary Physician"/>
 </form>
