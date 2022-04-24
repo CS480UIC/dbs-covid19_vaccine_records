@@ -13,9 +13,9 @@
 	<tr>
 		<th>State</th>
 	</tr>
-<c:forEach items="${complextExist}" var="complex_pp">
+<c:forEach items="${complextExist}" var="PPComplex">
 	<tr>
-		<td>${complex_pp.state}</td>
+		<td>${PPComplex.pp_state}</td>
 	</tr>
 </c:forEach>
 </table>
