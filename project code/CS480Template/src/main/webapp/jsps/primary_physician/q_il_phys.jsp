@@ -11,13 +11,13 @@
 	<h3 align="center"> IL Physician Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>First Name</th>
 		<th>Last Name</th>
+		<th>First Name</th>
 	</tr>
 <c:forEach items="${PrimaryPhysicianList}" var="primary_physician">
 	<tr>
-		<td>${primary_physician.p_first_name}</td>
 		<td>${primary_physician.p_last_name}</td>
+		<td>${primary_physician.p_first_name}</td>
 	</tr>
 </c:forEach>
 </table>
