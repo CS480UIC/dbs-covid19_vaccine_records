@@ -60,6 +60,9 @@
 	City：<input type="text" name="p_city" value="${form.p_city}"/>
 	<span style="color: red; font-weight: 900">${errors.p_city}</span>
 	<br/>
+	State：<input type="text" name="p_state" value="${form.p_state}"/>
+	<span style="color: red; font-weight: 900">${errors.p_state}</span>
+	<br/>
 	Zip：<input type="number" name="p_zip" value="${form.p_zip}"/>
 	<span style="color: red; font-weight: 900">${errors.p_zip}</span>
 	<br/>
