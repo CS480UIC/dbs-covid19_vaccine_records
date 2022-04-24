@@ -53,11 +53,11 @@ public class Booster_DoseServletDelete extends HttpServlet {
 			if(booster_dose.getPatient_id()!=null){
 						System.out.println(booster_dose);
 						request.setAttribute("booster_dose", booster_dose);
-						request.getRequestDispatcher("/jsps/booster_dose/booster_dose_delete_output.jsp").forward(request, response);			
+						request.getRequestDispatcher("/jsps/booster/booster_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/booster/booster_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("booster_dose_delete"))
@@ -72,7 +72,7 @@ public class Booster_DoseServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/booster_dose/booster_dose_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/booster/booster_read_output.jsp").forward(request, response);
 		}
 	}
 }
