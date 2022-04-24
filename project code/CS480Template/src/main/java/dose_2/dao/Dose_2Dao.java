@@ -40,8 +40,8 @@ public class Dose_2Dao {
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String patient_id_search = Integer.parseInt(resultSet.getString("patient_id"));
-		    	if(patient_id_search.equals(patient_id_input)){
+		    	Integer patient_id_search = Integer.parseInt(resultSet.getString("patient_id"));
+		    	if(patient_id_search == (patient_id_input)){
 		    		dose_2.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
 		    		dose_2.setType(resultSet.getString("type_2"));
 		    		dose_2.setLotNum(resultSet.getString("lot_num_2"));
