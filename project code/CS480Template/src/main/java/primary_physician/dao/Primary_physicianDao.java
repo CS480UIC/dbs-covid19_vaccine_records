@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import primary_physician.domain.PPComplex;
+
 //import java.util.ArrayList;
 //import java.util.List;
 
@@ -156,6 +158,28 @@ public class Primary_physicianDao {
 				primary_physician.setp_first_name(resultSet.getString("p_first_name"));
 	    		primary_physician.setp_last_name(resultSet.getString("p_last_name"));
 	    		list.add(primary_physician);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+
+	public List<Object> complexExist() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			String sql = "select * from complex_exist";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				System.out.println("testing here");
+				PPComplex ppExist = new PPComplex();
+				ppExist.setPp_state(resultSet.getString("p_state"));    
+	    		list.add(ppExist);
 			 }
 			connect.close();
 		} catch(SQLException e) {

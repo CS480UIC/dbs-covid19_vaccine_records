@@ -32,7 +32,7 @@ public class complexExist extends HttpServlet {
 				| ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		try {
+		/*try {
 			List<Object> li = pp_service.findall();
 			for(int i = 0; i < li.size();i++){
 				System.out.println(li.get(i).toString());
@@ -41,10 +41,10 @@ public class complexExist extends HttpServlet {
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		
-		request.getRequestDispatcher("/jsps/user/q1_list_users.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/primary_physician/q_complex_exist.jsp").forward(request, response);
 	}
 
 }

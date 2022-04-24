@@ -476,6 +476,17 @@
     <url-pattern>/stringAggregate</url-pattern>
   </servlet-mapping>
   
+      <servlet>
+    <description></description>
+    <display-name>complexExist</display-name>
+    <servlet-name>complexExist</servlet-name>
+    <servlet-class>primary_physician.web.servlet.complexExist</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>complexExist</servlet-name>
+    <url-pattern>/complexExist</url-pattern>
+  </servlet-mapping>
+  
   
   
   <welcome-file-list>

@@ -33,4 +33,9 @@ public class Primary_physicianService {
 		
 	}
 
+	public List<Object> complexExist() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		// TODO Auto-generated method stub
+		return primary_physicianDao.complexExist();
+	}
+
 }

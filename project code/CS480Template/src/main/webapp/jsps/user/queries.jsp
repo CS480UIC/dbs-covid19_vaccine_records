@@ -34,7 +34,7 @@
     <br>
     <a href="<c:url value='/CovidDate'/>" target="body">Please list all Patients who contracted covid after 08-15-2020</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/findAll'/>" target="body">Please list all States for Primary Physicians that have existing Patient ID's</a>&nbsp;&nbsp;
+    <a href="<c:url value='/complexExist'/>" target="body">Please list all States for Primary Physicians that have existing Patient ID's</a>&nbsp;&nbsp;
     
     
   </body>
