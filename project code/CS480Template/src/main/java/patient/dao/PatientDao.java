@@ -38,11 +38,11 @@ public class PatientDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-		    String sql = "select * from patient where first_name = ? and last_name=?";
+		    String sql = "select * from patient where first_name = ? and last_name=? and dob = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,first_name_p);
 		    preparestatement.setString(2, last_name_p);
-		    preparestatement.setDate(2, dob_p);
+		    preparestatement.setDate(3, dob_p);
 
 		    ResultSet resultSet = preparestatement.executeQuery();
 
@@ -51,7 +51,7 @@ public class PatientDao {
 		    	String last_name= (resultSet.getString("last_name"));
 		    	Date dob = (java.sql.Date.valueOf(resultSet.getString("dob")));
 
-		    	if(first_name.equals(first_name_p) && last_name.equals(last_name_p)){
+		    	if(first_name.equals(first_name_p) && last_name.equals(last_name_p)&&dob.equals(dob_p)){
 		    		patient.setPatient_id((resultSet.getInt("patient_id")));
 		    		patient.setFirst_name(resultSet.getString("first_name"));
 		    		patient.setLast_name(resultSet.getString("last_name"));

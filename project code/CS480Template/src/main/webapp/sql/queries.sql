@@ -43,8 +43,8 @@ ORDER BY patient_id;
 
 
 CREATE VIEW complex_exist AS
-SELECT state
-FROM address 
+SELECT p_state
+FROM primary_physician 
 WHERE EXISTS (SELECT patient_id FROM patient);
 
 CREATE VIEW complex_join AS
