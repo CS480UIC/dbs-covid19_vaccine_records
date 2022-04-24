@@ -150,13 +150,14 @@ public class Primary_physicianDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
-			String sql = "select * from illinois_prim_phys";
+			String sql = "select * from physicians_illinois";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
 				Primary_physician primary_physician = new Primary_physician();
+				primary_physician.setp_last_name(resultSet.getString("p_last_name"));
 				primary_physician.setp_first_name(resultSet.getString("p_first_name"));
-	    		primary_physician.setp_last_name(resultSet.getString("p_last_name"));
+	    		
 	    		list.add(primary_physician);
 			 }
 			connect.close();
