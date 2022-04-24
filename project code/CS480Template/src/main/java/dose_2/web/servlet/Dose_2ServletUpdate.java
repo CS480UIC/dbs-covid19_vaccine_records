@@ -63,7 +63,7 @@ public class Dose_2ServletUpdate extends HttpServlet {
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("dose_2_update"))
@@ -93,7 +93,7 @@ public class Dose_2ServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/dose_2/dose_2_read_output.jsp").forward(request, response);
 		}
 	}
 }
