@@ -1,3 +1,4 @@
+
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -23,9 +24,11 @@
   <body>
   <h1>Create Primary Physician</h1>
 <form action="<c:url value='/Primary_physicianServletCreate'/>" method="post">
-	
+    Type "-" if you do not know the information of that field
+	<br/>
 	Patient ID :<input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
+	
 	<br/>
 	First name： <input type="text" name="p_first_name" value="${form.p_first_name }"/>
 	<span style="color: red; font-weight: 900">${errors.p_first_name }</span>
@@ -47,6 +50,7 @@
 	</br>
 	Phone number： <input type="tel" name="p_phone_num" value="${form.p_phone_num }"/>
 	<span style="color: red; font-weight: 900">${errors.p_phone_num }</span>
+	Do not add dashes (Ex. 1234567890)
 	<input type="submit" value="Create Primary Physician"/>
 </form>
   </body>
