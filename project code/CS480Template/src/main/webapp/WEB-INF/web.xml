@@ -248,7 +248,7 @@
     <description></description>
     <display-name>Dose1ServletCreate</display-name>
     <servlet-name>Dose1ServletCreate</servlet-name>
-    <servlet-class>dose1.web.servlet.Dose1ServletCreate</servlet-class>
+    <servlet-class>dose_1.web.servlet.Dose1ServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Dose1ServletCreate</servlet-name>
@@ -281,7 +281,7 @@
     <description></description>
     <display-name>Dose1ServletRead</display-name>
     <servlet-name>Dose1ServletRead</servlet-name>
-    <servlet-class>dose1.web.servlet.Dose1ServletRead</servlet-class>
+    <servlet-class>dose_1.web.servlet.Dose1ServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Dose1ServletRead</servlet-name>
@@ -314,7 +314,7 @@
     <description></description>
     <display-name>Dose1ServletDelete</display-name>
     <servlet-name>Dose1ServletDelete</servlet-name>
-    <servlet-class>dose1.web.servlet.Dose1ServletDelete</servlet-class>
+    <servlet-class>dose_1.web.servlet.Dose1ServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Dose1ServletDelete</servlet-name>
@@ -347,7 +347,7 @@
     <description></description>
     <display-name>Dose1ServletUpdate</display-name>
     <servlet-name>Dose1ServletUpdate</servlet-name>
-    <servlet-class>dose1.web.servlet.Dose1ServletUpdate</servlet-class>
+    <servlet-class>dose_1.web.servlet.Dose1ServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Dose1ServletUpdate</servlet-name>
