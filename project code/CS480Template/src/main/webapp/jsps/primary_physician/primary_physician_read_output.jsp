@@ -39,7 +39,7 @@
 	Zip： <input type="number" name="p_zip" value="${primary_physician.p_zip }"disabled/>
 	</br>
 	Phone number： <input type="tel" name="p_phone_num" value="${primary_physician.p_phone_num }"disabled/>
-	<input type="submit" value="Create Primary Physician"/>
+	
 </form>
 
 
