@@ -37,6 +37,8 @@
 <form action="<c:url value='/Medical_HistoryServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="medical_history_update"/>
 		<input type="hidden" name="medical_history_patient_id" value="${medical_history.patient_id }"/>
+	Type "-" if you do not know the information of that field
+	<br/>
 	Input Patient ID : <input type="text" name="medical_history_patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
