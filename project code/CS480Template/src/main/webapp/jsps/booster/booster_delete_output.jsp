@@ -25,16 +25,16 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Booster_DoseServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="booster_dose_delete"/>
-		<input type="hidden" name="patient_id" value="${booster_dose.patient_id }"/>
-	Patient ID： <input type="text" name="patient_id" value="${booster_dose.patient_id }" disabled/>
+		<input type="hidden" name="patient_id" value="${booster.patient_id }"/>
+	Patient ID： <input type="text" name="patient_id" value="${booster.patient_id }" disabled/>
 	<br/>
-	Type： <input type="text" name="booster_type" value="${booster_dose.type_b }" disabled/>
+	Type： <input type="text" name="booster_type" value="${booster.type }" disabled/>
 	<br/>
-	Lot Number： <input type="text" name="booster_lot_num" value="${booster_dose.lot_num_b }" disabled/>
+	Lot Number for Booster Dose： <input type="text" name="booster_lot_num" value="${booster.lot_number }" disabled/>
 	<br/>
-	Date of Dose： <input type="date" name="booster_date" value="${booster_dose.dose_b_date }" disabled/>
+	Date of Booster Dose： <input type="date" name="booster_date" value="${booster.date_of_dose }" disabled/>
 	<br/>
-	Location： <input type="text" name="booster_location" value="${booster_dose.location_b }" disabled/>
+	Location： <input type="text" name="booster_location" value="${booster.location }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Booster Dose"/>
 </form>

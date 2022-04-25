@@ -26,13 +26,13 @@
 <form>
 	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
 	<br/>
-	Type： <input type="text" name="dose_2_type" value="${dose_2.type_2 }" disabled/>
+	Type： <input type="text" name="dose_2_type" value="${dose_2.type }" disabled/>
 	<br/>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.lot_num_2 }" disabled/>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.lot_number }" disabled/>
 	<br/>
-	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.dose_2_date }" disabled/>
+	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.date_of_dose }" disabled/>
 	<br/>
-	Location： <input type="text" name="dose_2_location" value="${dose_2.location_2 }" disabled/>
+	Location： <input type="text" name="dose_2_location" value="${dose_2.location }" disabled/>
 	<br/>
 </form>
 

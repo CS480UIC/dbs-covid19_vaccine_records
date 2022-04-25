@@ -26,17 +26,17 @@
 	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
 	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
-	Type： <input type="text" name="dose_2_type" value="${form.dose_2_type }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_2_type }</span>
+	Type： <input type="text" name="dose_2_type" value="${form.type_2 }"/>
+	<span style="color: red; font-weight: 900">${errors.type_2 }</span>
 	<br/>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${form.dose_2_lot_num }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_2_lot_num }</span>
+	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${form.lot_num_2 }"/>
+	<span style="color: red; font-weight: 900">${errors.lot_num_2 }</span>
 	<br/>
 	Date of Dose #2: <input type="date" name="dose_2_date" value="${form.dose_2_date }"/>
 	<span style="color: red; font-weight: 900">${errors.dose_2_date }</span>
 	<br/>
-	Location： <input type="text" name="dose_2_location" value="${form.dose_2_location }"/>
-	<span style="color: red; font-weight: 900">${errors.dose_2_location }</span>
+	Location： <input type="text" name="dose_2_location" value="${form.location_2 }"/>
+	<span style="color: red; font-weight: 900">${errors.location_2 }</span>
 	<br/>
 	<input type="submit" value="Create Dose 2"/>
 </form>

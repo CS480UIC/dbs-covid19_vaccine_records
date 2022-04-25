@@ -44,8 +44,8 @@ public class Booster_DoseDao {
 		    	if(patient_id_search == patient_id_input){
 		    		booster_dose.setPatient_id(Integer.parseInt(resultSet.getString("patient_id")));
 		    		booster_dose.setType(resultSet.getString("type_b"));
-		    		booster_dose.setLotNum(resultSet.getString("lot_num_b"));
-		    		booster_dose.setDateOfDose(java.sql.Date.valueOf(resultSet.getString("dose_b_date")));
+		    		booster_dose.setLot_number(resultSet.getString("lot_num_b"));
+		    		booster_dose.setDate_of_dose(java.sql.Date.valueOf(resultSet.getString("dose_b_date")));
 		    		booster_dose.setLocation(resultSet.getString("location_b"));
 		    	}
 		    }
@@ -73,8 +73,8 @@ public class Booster_DoseDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getPatient_id());
 		    preparestatement.setString(2,form.getType());
-		    preparestatement.setString(3,form.getLotNum());
-		    preparestatement.setDate(4,form.getDateOfDose());
+		    preparestatement.setString(3,form.getLot_number());
+		    preparestatement.setDate(4,form.getDate_of_dose());
 		    preparestatement.setString(5,form.getLocation());
 		    preparestatement.executeUpdate();
 		    connect.close();
@@ -95,13 +95,13 @@ public class Booster_DoseDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE booster SET type_b = ?, lot_num_b = ?, dose_b_date = ?, location_2 = ? where patient_id = ?";
+			String sql = "UPDATE booster SET type_b = ?, lot_num_b = ?, dose_b_date = ?, location_b = ? where patient_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-			preparestatement.setInt(1,form.getPatient_id());
-		    preparestatement.setString(2,form.getType());
-		    preparestatement.setString(3,form.getLotNum());
-		    preparestatement.setDate(4,form.getDateOfDose());
-		    preparestatement.setString(5,form.getLocation());
+		    preparestatement.setString(1,form.getType());
+		    preparestatement.setString(2,form.getLot_number());
+		    preparestatement.setDate(3,form.getDate_of_dose());
+		    preparestatement.setString(4,form.getLocation());
+		    preparestatement.setInt(5,form.getPatient_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

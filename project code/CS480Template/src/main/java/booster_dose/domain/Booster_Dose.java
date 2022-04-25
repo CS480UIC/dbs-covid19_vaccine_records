@@ -36,19 +36,19 @@ public class Booster_Dose {
 		this.type = type;
 	}
 	
-	public String getLotNum() {
+	public String getLot_number() {
 		return this.lot_number;
 	}
 	
-	public void setLotNum(String lot_number) {
+	public void setLot_number(String lot_number) {
 		this.lot_number = lot_number;
 	}
 	
-	public Date getDateOfDose() {
+	public Date getDate_of_dose() {
 		return this.date_of_dose;
 	}
 	
-	public void setDateOfDose(Date date_of_dose) {
+	public void setDate_of_dose(Date date_of_dose) {
 		this.date_of_dose = date_of_dose;
 	}
 	

@@ -22,22 +22,12 @@
   
   <body>
   <h1>Delete Dose #2</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Dose_2ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="dose_2_delete"/>
-		<input type="hidden" name="patient_id" value="${dose_2.patient_id }"/>
-	Patient ID： <input type="text" name="patient_id" value="${dose_2.patient_id }" disabled/>
-	<br/>
-	Type： <input type="text" name="dose_2_type" value="${dose_2.type }" disabled/>
-	<br/>
-	Lot Number for Dose #2： <input type="text" name="dose_2_lot_num" value="${dose_2.lot_number }" disabled/>
-	<br/>
-	Date of Dose #2： <input type="date" name="dose_2_date" value="${dose_2.date_of_dose }" disabled/>
-	<br/>
-	Location： <input type="text" name="dose_2_location" value="${dose_2.location }" disabled/>
+	<input type="hidden" name="method" value="dose_2_search"/>
+	Patient ID: <input type="text" name="patient_id" value="${form.patient_id }"/>
+	<span style="color: red; font-weight: 900">${errors.patient_id }</span>
 	<br/>
 	<input type="submit" value="Delete Dose #2"/>
 </form>
-
-</body>
+  </body>
 </html>

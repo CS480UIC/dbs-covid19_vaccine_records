@@ -76,11 +76,11 @@ public class Dose_2ServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPatient_id(Integer.parseInt(info.get(0)));
-			form.setType(info.get(1));
-			form.setLotNum(info.get(2));
-			form.setDateOfDose(java.sql.Date.valueOf(info.get(3)));
-			form.setLocation(info.get(4));
+			form.setPatient_id(Integer.parseInt(info.get(1)));
+			form.setType(info.get(2));
+			form.setLot_number(info.get(3));
+			form.setDate_of_dose(java.sql.Date.valueOf(info.get(4)));
+			form.setLocation(info.get(5));
 
 			try {
 				dose_2dao.update(form);

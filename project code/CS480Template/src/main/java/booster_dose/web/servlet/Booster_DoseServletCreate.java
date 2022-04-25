@@ -52,8 +52,8 @@ public class Booster_DoseServletCreate extends HttpServlet {
 		}
 		form.setPatient_id(Integer.parseInt(info.get(0)));
 		form.setType(info.get(1));
-		form.setLotNum(info.get(2));
-		form.setDateOfDose(java.sql.Date.valueOf(info.get(3)));
+		form.setLot_number(info.get(2));
+		form.setDate_of_dose(java.sql.Date.valueOf(info.get(3)));
 		form.setLocation(info.get(4));
 		
 		try {
