@@ -530,6 +530,17 @@
     <url-pattern>/complexExist</url-pattern>
   </servlet-mapping>
   
+  	<servlet>
+    <description></description>
+    <display-name>LatestByType</display-name>
+    <servlet-name>LatestByType</servlet-name>
+    <servlet-class>dose_2.web.servlet.LatestByType</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LatestByType</servlet-name>
+    <url-pattern>/LatestByType</url-pattern>
+  </servlet-mapping>
+  
   
   
   <welcome-file-list>

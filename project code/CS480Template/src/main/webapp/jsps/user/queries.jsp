@@ -35,7 +35,8 @@
     <a href="<c:url value='/CovidDates'/>" target="body">Please list all Patients who contracted covid on 01-05-2022 and have their primary physician's zip code in 60606</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/complexExist'/>" target="body">Please list all States for Primary Physicians that have existing Patient ID's</a>&nbsp;&nbsp;
-    
+    <br>
+    <a href="<c:url value='/LatestByType'/>" target="body">Please list the latest second dose date that was administered for each vaccine type</a>&nbsp;&nbsp;
     
   </body>
 </html>

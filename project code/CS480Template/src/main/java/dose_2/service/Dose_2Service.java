@@ -1,6 +1,8 @@
 package dose_2.service;
 
 
+import java.util.List;
+
 import dose_2.dao.Dose_2Dao;
 import dose_2.domain.Dose_2;
 
@@ -24,5 +26,10 @@ public class Dose_2Service {
 		Dose_2 dose_2 = dose_2Dao.findByID(form.getPatient_id());
 		if(dose_2.getPatient_id()!=null && dose_2.getPatient_id().equals(form.getPatient_id())) throw new Dose_2Exception("This user name has been registered!");
 		dose_2Dao.add(form);
+	}
+	
+	public List<Object> findLatestDoseByType() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return dose_2Dao.findLatestDoseByType();
+		
 	}
 }

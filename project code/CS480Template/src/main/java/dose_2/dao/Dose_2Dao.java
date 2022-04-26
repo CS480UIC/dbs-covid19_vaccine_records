@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import dose_2.domain.Dose_2;
+import patient.domain.FPatientCount;
 
 /**
  * DDL functions performed in database
@@ -129,5 +129,28 @@ public class Dose_2Dao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findLatestDoseByType() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			String sql = "select * from dose_2_date_aggregate";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Dose_2 dose_date_aggregate = new Dose_2();
+				dose_date_aggregate.setDate_of_dose(java.sql.Date.valueOf(resultSet.getString("latest_date")));
+				dose_date_aggregate.setType(resultSet.getString("type_2"));
+	    
+	    		list.add(dose_date_aggregate);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

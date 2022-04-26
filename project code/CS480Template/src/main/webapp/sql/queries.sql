@@ -8,8 +8,9 @@ SELECT MIN(p_phone_num)
 FROM primary_physician;
 
 CREATE VIEW dose_2_date_aggregate AS
-SELECT MAX(dose_2_date)
-FROM dose_2;
+SELECT type_2, MAX(dose_2_date) AS latest_date
+FROM dose_2
+GROUP BY type_2;
 
 CREATE VIEW dose_1_group_aggregate AS
 SELECT COUNT(type_1)
