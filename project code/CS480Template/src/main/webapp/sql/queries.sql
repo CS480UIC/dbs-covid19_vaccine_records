@@ -4,7 +4,7 @@ FROM patient
 WHERE gender = "F";
 
 CREATE VIEW numeric_aggregate AS
-SELECT MIN(p_phone_num)
+SELECT MIN(p_phone_num) AS Phone
 FROM primary_physician;
 
 CREATE VIEW dose_2_date_aggregate AS
