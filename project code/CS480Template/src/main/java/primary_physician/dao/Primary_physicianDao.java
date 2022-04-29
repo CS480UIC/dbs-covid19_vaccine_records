@@ -188,4 +188,28 @@ public class Primary_physicianDao {
 		return list;
 		
 	}
+	
+	
+	public List<Object> minAggPhone() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/covid19_vaccine_records", MySQL_user, MySQL_password);
+			String sql = "select * from numeric_aggregate";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Primary_physician primary_physician = new Primary_physician();
+				primary_physician.setp_phone_num(new BigInteger(resultSet.getString("Phone")));
+	    		list.add(primary_physician);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	
 }
