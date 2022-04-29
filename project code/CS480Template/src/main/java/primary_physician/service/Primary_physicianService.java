@@ -37,5 +37,11 @@ public class Primary_physicianService {
 		// TODO Auto-generated method stub
 		return primary_physicianDao.complexExist();
 	}
+	
+	public List<Object> minAggPhone() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		// TODO Auto-generated method stub
+		return primary_physicianDao.minAggPhone();
+	}
+
 
 }
