@@ -420,7 +420,16 @@
     <url-pattern>/AddressServletUpdate</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet>
+    <description></description>
+    <display-name>minPhone</display-name>
+    <servlet-name>minPhone</servlet-name>
+    <servlet-class>primary_physician.web.servlet.minPhone</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>minPhone</servlet-name>
+    <url-pattern>/minPhone</url-pattern>
+  </servlet-mapping>
   
   
   
